@@ -1,0 +1,14 @@
+file_format: "1"
+id: lynx
+name: Lynx
+type: shield
+url: https://github.com/dhruvinsh/lynx
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - lynx_left
+  - lynx_right
+

@@ -1,0 +1,12 @@
+if SHIELD_LYNX_LEFT
+  config ZMK_KEYBOARD_NAME
+    default "Lynx"
+
+  config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+endif
+
+if SHIELD_LYNX_LEFT || SHIELD_LYNX_RIGHT
+  config ZMK_SPLIT
+    default y
+endif
