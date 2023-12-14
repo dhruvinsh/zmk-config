@@ -1,5 +1,5 @@
 // vim: set ts=2 sw=2 ft=devicetree:
-// Inspired from zmk/cradio
+// Copied from cradio for reference
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
