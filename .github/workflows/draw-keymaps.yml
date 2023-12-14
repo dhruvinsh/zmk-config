@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "config/*.keymap"
+      - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
 
 jobs:
