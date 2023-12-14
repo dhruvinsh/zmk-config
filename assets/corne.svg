@@ -319,6 +319,10 @@ path.combo {
 <text x="0" y="0" class="key tap">Del</text>
 <use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-8" y="24" height="16" width="16.0" class="key hold glyph mdi:apple-keyboard-option"/>
 </g>
+<g class="combo combopos-0">
+<rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
+<text x="900" y="51" class="combo tap">Bspc</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 471)" class="layer-SYM">

@@ -306,6 +306,10 @@ path.combo {
 <text x="0" y="0" class="key tap">Bspc</text>
 <text x="0" y="40" class="key hold">SYM</text>
 </g>
+<g class="combo combopos-0">
+<rect rx="4" ry="4" x="791" y="39" width="38" height="38" class="combo"/>
+<text x="810" y="58" class="combo tap">Bspc</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 480)" class="layer-SYM">

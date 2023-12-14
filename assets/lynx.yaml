@@ -112,3 +112,7 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
+combos:
+- p: [6, 7]
+  k: Bspc
+  l: [DEF]
