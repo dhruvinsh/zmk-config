@@ -1,0 +1,123 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x5_3}
+layers:
+  DEF:
+  - [Q, W, F, P, B, J, L, U, Y, '''']
+  - - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: T, h: '$$mdi:apple-keyboard-command$$'}
+    - G
+    - M
+    - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: O, h: '$$mdi:apple-keyboard-shift$$'}
+  - [Z, X, C, D, B, K, H, ',', ., /]
+  - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
+    - {t: '$$mdi:keyboard-tab$$', h: NAV}
+    - ENTER
+    - SPACE
+    - {t: Bspc, h: SYM}
+    - {t: Del, h: '$$mdi:apple-keyboard-option$$'}
+  SYM:
+  - - INS
+    - '1'
+    - '2'
+    - '3'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - HOME
+    - $$mdi:chevron-double-down$$
+    - $$mdi:chevron-double-up$$
+    - END
+    - ':'
+  - - Del
+    - '4'
+    - '5'
+    - '6'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - LARW
+    - DARW
+    - UARW
+    - RARW
+    - SEMI
+  - - $$mdi:alpha-w-box$$
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {t: '$$mdi:minus-circle-outline$$', type: none}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - Esc
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
+    - {t: '$$mdi:minus-circle-outline$$', type: none}
+  NAV:
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - '{'
+    - (
+    - )
+    - {t: '$$mdi:transfer$$', type: trans}
+    - ^
+    - LPAR
+    - RPAR
+    - '}'
+    - '~'
+  - ['!', '@', '#', $, '%', ASTRK, '-', '=', \, '`']
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - '&'
+    - _
+    - +
+    - '|'
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {t: '$$mdi:minus-circle-outline$$', type: none}
+    - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:minus-circle-outline$$', type: none}
+  FUN:
+  - - {t: '$$mdi:backup-restore$$', type: bootloader}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - - $$mdi:progress-download$$
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - $$mdi:progress-download$$
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - $$mdi:bluetooth-off$$
+    - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {t: '$$mdi:minus-circle-outline$$', type: none}
+    - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
+    - {t: '$$mdi:minus-circle-outline$$', type: none}
