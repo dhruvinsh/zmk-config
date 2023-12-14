@@ -20,3 +20,9 @@ This repository tracks my keyboard configuration.
 - 2x 750mah 403450 Liter Battery
 - 36x Gateron Oil Kings
 - 36x Honey Milk JP XDA PBT Keycaps
+
+## Keymap
+
+This awesome keymap is created via [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+
+![Keymap](./assets/corne.svg)
