@@ -14,8 +14,8 @@
       compatible = "zmk,combos";
       combo_bspc {
         timeout-ms = <40>;
-        bidings = <&kp BSPC>;
-        key-position = <6 7>;
+        bindings = <&kp BSPC>;
+        key-positions = <6 7>;
         layers = <DEF>;
         require-prior-idle-ms = <100>;
       };

@@ -11,7 +11,7 @@
 #define FUN 3
 
 // Now import if any extra external layers needed
-#include <combo.dtsi>
+#include "combos.dtsi"
 
 #ifdef THREE_THUMBS
 #  define TL_DEF &mt LGUI TAB
