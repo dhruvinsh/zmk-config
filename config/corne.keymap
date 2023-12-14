@@ -1,0 +1,11 @@
+// vim: set ts=2 sw=2 ft=devicetree:
+
+#define THREE_THUMBS
+
+#include "base.dtsi"
+
+/ {
+    chosen {
+        zmk,matrix_transform = &five_column_transform;
+    };
+};
