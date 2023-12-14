@@ -1,0 +1,330 @@
+draw_config:
+  # key size
+  key_h: 90
+  key_w: 90
+
+  # key radius
+  key_rx: 4
+  key_ry: 4
+
+  # line spacing between text line
+  line_spacing: 1
+
+  # combo box size
+  combo_h: 38
+  combo_w: 38
+
+  # padding from edge of cap to top and bottom legends
+  small_pad: 4
+
+  # padding between keys
+  inner_pad_w: 1.5
+  inner_pad_h: 1.5
+
+  # padding between layers
+  outer_pad_w: 30
+  outer_pad_h: 30
+
+  # gap between two halves, does it work?
+  split_gap: 30.0
+
+  append_colon_to_layer_header: false
+
+  shrink_wide_legends: 5
+
+  glyph_tap_size: 20
+  glyph_hold_size: 16
+  glyph_shifted_size: 14
+
+  arc_radius: 6.0
+  arc_scale: 1.0
+
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: inherit;
+    }
+
+    /* root DOM */
+    svg.keymap {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        font-size: 18px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        background: #26233a;
+    }
+
+    rect.key {
+        fill: #21202e ; /* switch background key color */
+        stroke: #403d52; /* switch border color */
+        stroke-width: 1;
+    }
+
+    /* default key side styling, only used is draw_key_sides is set */
+    rect.side {
+        filter: brightness(90%);
+    }
+
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+        fill: #524f67;
+    }
+
+    /* color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: #e0def4;
+    }
+
+    /* color accent for ghost (optional) keys */
+    rect.ghost, rect.combo.ghost {
+        stroke-dasharray: 4, 4;
+        stroke-width: 2;
+    }
+
+    text {
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    /* main layer keys text */
+    text.tap, text.combo, use.tap {
+        fill: #e0def4;
+    }
+    text.hold {
+        fill: #31748f;
+        font-size: 16px; /* simlar to glyph_hold_size */
+    }
+    use.hold {
+        fill: #31748f;
+    }
+
+    /* styling for layer labels */
+    text.label {
+        font-weight: bold;
+        text-anchor: start;
+        fill: #e0def4;
+        stroke-width: 0;
+        paint-order: stroke;
+        text-transform: uppercase;
+    }
+
+    /* styling for combo tap, and key hold/shifted label text */
+    text.combo, text.shifted {
+    }
+
+    text.hold {
+        text-anchor: middle;
+        dominant-baseline: auto;
+    }
+
+    text.shifted {
+        text-anchor: middle;
+        dominant-baseline: hanging;
+        font-size: 16px;
+        fill: #f6c177;
+    }
+
+    /* styling for hold/shifted label text in combo box */
+    text.combo.hold, text.combo.shifted {
+        font-size: 8px;
+    }
+
+    /* lighter symbol for transparent keys */
+    rect.trans {
+        fill: #403d52;
+    }
+    use.trans {
+        fill: #6e6a86;
+    }
+
+    /* styling for combo dendrons */
+    path.combo {
+        stroke-width: 1;
+        stroke: gray;
+        fill: none;
+    }
+
+    /* Start Tabler Icons Cleanup */
+    /* cannot use height/width with glyphs */
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: 2;
+    }
+    /* hide tabler's default box */
+    .icon-tabler > path[stroke="none"][fill="none"] {
+        visibility: hidden;
+    }
+    /* End Tabler Icons Cleanup */
+
+parse_config:
+  mark_alternate_layer_activators: true
+  sticky_label: $$mdi:gesture-tap-hold$$
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
+
+  raw_binding_map:
+    # Layers
+    "&lt_spc NAV 0":
+      tap: $$mdi:keyboard-space$$
+      hold: nav
+    "&lt FN RET":
+      tap: $$mdi:keyboard-return$$
+      hold: fn
+    "&smart_num NUM 0":
+      tap: $$mdi:numeric$$
+      hold: num
+    "&smart_shft":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: shift
+
+    # Modifiers
+    "&caps_word": $$mdi:alpha-w-box$$
+    "&swapper": $$mdi:swap-horizontal$$
+    NAV_BSPC:
+      tap: $$mdi:backspace-outline$$
+      hold: $$mdi:backspace$$
+    "&hml LA(LCTRL) TAB": $$mdi:keyboard-tab$$
+    "&hml_repeat LS(LCTRL) 0": $$mdi:repeat$$
+    "&hmr_lpar_lt RS(LCTRL) 0":
+      tap: (
+      shifted: <
+    "&hmr_rpar_gt LA(LCTRL) 0":
+      tap: )
+      shifted: ">"
+
+    "&kt RSHIFT":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:toggle-switch$$
+    # Empty
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+    # Whitespace
+    "&bkspc_del":
+      type: backspace
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
+
+    # Bluetooth
+    "&bt BT_SEL 0":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 1
+    "&bt BT_SEL 1":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 2
+    "&bt BT_SEL 2":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 3
+    "&bt BT_SEL 3":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 4
+    "&bt BT_SEL 4":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 5
+    "&bt BT_CLR":
+      tap: $$mdi:bluetooth-off$$
+    "&out OUT_TOG":
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+    # Reset
+    "&sys_reset":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      tap: $$mdi:progress-download$$
+
+  zmk_keycode_map:
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    K_CANCEL: $$mdi:cancel$$
+    COMMA: ","
+    DOT: "."
+    QMARK: "?"
+    EXCL: "!"
+    COLON: ":"
+    SEMICOLON: ";"
+    SQT: "'"
+
+    ESC: "Esc"
+    GRAVE: "`"
+    RETURN: "⏎"
+    HASH: "#"
+    AT: "@"
+    DLLR: "$"
+    PRCNT: "%"
+    BSLH: "\\"
+    EQUAL: "="
+    TILDE: "~"
+    BSPC: "Bspc"
+    DEL: "Del"
+    STAR: "*"
+    CARET: "^"
+    PLUS: "+"
+    AMPS: "&"
+    FSLH: "/"
+    UNDER: "_"
+    MINUS: "-"
+    PIPE: "|"
+    LBKT: "{"
+    RBKT: "}"
+    LBRC: "("
+    RBRC: ")"
+    LT: "<"
+    GT: ">"
+    PG_UP: $$mdi:chevron-double-up$$
+    PG_DN: $$mdi:chevron-double-down$$
+
+    LEFT: ←
+    RIGHT: →
+    UP: ↑
+    DOWN: ↓
+    TAB: $$mdi:keyboard-tab$$
+    C_REWIND: "⏮"
+    C_FAST_FORWARD: "⏭"
+    C_PAUSE: "⏯"
+    C_MUTE: $$mdi:volume-mute$$
+    C_VOLUME_DOWN: $$mdi:volume-minus$$
+    C_VOLUME_UP: $$mdi:volume-plus$$
+    C_VOL_DN: $$mdi:volume-minus$$
+    C_VOL_UP: $$mdi:volume-plus$$
+    C_PP: $$mdi:play-pause$$
+    C_PREV: $$mdi:skip-previous$$
+    C_NEXT: $$mdi:skip-next$$
+    C_BRIGHTNESS_DEC: "☀↓"
+    C_BRIGHTNESS_INC: "☀↑"
+    LA(LEFT): ↞
+    LA(RIGHT): ↠
+    LG(LEFT): ⇤
+    LG(RIGHT): ⇥
+    "LS(LC(LG(LALT)))": "HYPER"
+    "RS(RC(RG(RALT)))": "HYPER"
+    "LC(LG(LALT))": "MEH"
+    "RC(RG(RALT))": "MEH"
+    "LG(Q)": "⌘Q"
+    "LG(W)": "⌘W"
+    "LG(GRAVE)": "⌘`"
+    "LG(Z)": "⌘Z"
+    "LG(X)": "⌘X"
+    "LG(C)": "⌘C"
+    "LG(V)": "⌘V"
+    "LC(TAB)": "⌃↹"
+    "LS(LC(TAB))": "⌃⇧↹"
+    "LC(DEL)": ⌃+Del
+    "LS(TAB)": $$mdi:keyboard-tab-reverse$$
+    "LC(INS)": $$mdi:content-copy$$
+    "LS(INS)": $$mdi:content-paste$$
+    "LC(X)": $$mdi:content-cut$$
+
+  zmk_combos:
+    combo_cut: { "align": "bottom", "offset": 0.2 }
+    # combo_amps: { "align": "right", "offset": 1.1 }
+    # combo_pipe: { "align": "right", "offset": 1.1 }
