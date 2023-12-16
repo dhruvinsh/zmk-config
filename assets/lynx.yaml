@@ -1,16 +1,16 @@
 layers:
   DEF:
   - [Q, W, F, P, B, J, L, U, Y, '''']
-  - - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - - {t: A, h: '$$mdi:apple-keyboard-command$$'}
     - {t: R, h: '$$mdi:apple-keyboard-option$$'}
     - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: T, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
     - G
     - M
-    - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: E, h: '$$mdi:apple-keyboard-control$$'}
     - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: O, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: O, h: '$$mdi:apple-keyboard-command$$'}
   - [Z, X, C, D, V, K, H, ',', ., /]
   - - {t: '$$mdi:keyboard-tab$$', h: NAV}
     - SPACE
