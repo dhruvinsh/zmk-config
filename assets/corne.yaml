@@ -12,7 +12,16 @@ layers:
     - {t: E, h: '$$mdi:apple-keyboard-control$$'}
     - {t: I, h: '$$mdi:apple-keyboard-option$$'}
     - {t: O, h: '$$mdi:apple-keyboard-command$$'}
-  - [Z, X, C, D, V, K, H, ',', ., /]
+  - - Z
+    - X
+    - C
+    - D
+    - V
+    - K
+    - H
+    - ','
+    - {t: ., s: ':'}
+    - /
   - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
     - {t: '$$mdi:keyboard-tab$$', h: NAV}
     - SPACE
