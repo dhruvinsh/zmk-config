@@ -1,0 +1,19 @@
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+/ {
+    behaviors {
+        dot_inner_morph: dot_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp GREATER_THAN>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        dot_morph: dot_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&dot_inner_morph>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+

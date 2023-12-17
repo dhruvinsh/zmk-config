@@ -12,6 +12,7 @@
 
 // Now import if any extra external layers needed
 #include "combos.dtsi"
+#include "morph.dtsi"
 
 #ifdef THREE_THUMBS
 #  define TL_DEF &mt LGUI TAB
@@ -27,24 +28,6 @@
 // GUI -> ALT -> CTRL -> SHFT    |    SHFT -> CTRL -> ALT -> GUI
 #define HRML(k1,k2,k3,k4) &ht LGUI  k1 &ht LALT  k2 &ht LCTRL k3 &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1 &ht RCTRL k2 &ht RALT  k3 &ht RGUI  k4
-
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-/ {
-    behaviors {
-        dot_inner_morph: dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp GREATER_THAN>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-        dot_morph: dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&dot_inner_morph>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-};
 
 / {
     behaviors {
