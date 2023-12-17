@@ -21,7 +21,7 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-  - - {t: '$$mdi:keyboard-tab$$', h: NAV}
+  - - {t: Esc, h: NAV}
     - SPACE
     - ENTER
     - {t: Bspc, h: SYM}
