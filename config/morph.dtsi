@@ -1,19 +1,15 @@
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-/ {
-    behaviors {
-        dot_inner_morph: dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp GREATER_THAN>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-        dot_morph: dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&dot_inner_morph>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+#define MAKE_MORPH(NAME, BINDING1, BINDIGN2, MOD) \
+    / { \
+        behaviors { \
+            NAME: NAME { \
+                compatible = "zmk,behavior-mod-morph"; \
+                #binding-cells = <0>; \
+                bindings = <BINDING1>, <BINDIGN2>; \
+                mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+            }; \
+        }; \
     };
-};
 
-
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+MAKE_MORPH(dot_inner_morph, &kp COLON, &kp GREATER_THAN, CTL)
+MAKE_MORPH(dot_morph, &kp DOT, &dot_inner_morph)
