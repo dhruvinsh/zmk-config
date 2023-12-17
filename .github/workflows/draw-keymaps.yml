@@ -9,12 +9,14 @@ on:
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    with:
-      keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: assets
-      install_branch: main
-      parse_args: "lynx:'-c 10 -z config/lynx.keymap' corne:'-c 10 -z config/corne.keymap'"
-      draw_args: "lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2' corne:'-k corne_rotated -l LAYOUT_split_3x5_3'"
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+    runs-on: self-hosted
+    steps:
+      - uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+        with:
+          keymap_patterns: "config/*.keymap"
+          config_path: "keymap_drawer.config.yaml"
+          output_folder: assets
+          install_branch: main
+          parse_args: "lynx:'-c 10 -z config/lynx.keymap' corne:'-c 10 -z config/corne.keymap'"
+          draw_args: "lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2' corne:'-k corne_rotated -l LAYOUT_split_3x5_3'"
+          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
