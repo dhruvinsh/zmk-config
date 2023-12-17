@@ -10,6 +10,10 @@
         }; \
     };
 
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+MAKE_MORPH(comma_morph,       &kp COMMA,     &comma_inner_morph, SFT)
+MAKE_MORPH(comma_inner_morph, &kp SEMICOLON, &kp LESS_THAN,      CTL)
+
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-MAKE_MORPH(dot_inner_morph, &kp COLON, &kp GREATER_THAN, CTL)
-MAKE_MORPH(dot_morph, &kp DOT, &dot_inner_morph)
+MAKE_MORPH(dot_morph,         &kp DOT,       &dot_inner_morph,   SFT)
+MAKE_MORPH(dot_inner_morph,   &kp COLON,     &kp GREATER_THAN,   CTL)
