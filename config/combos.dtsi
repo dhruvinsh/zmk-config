@@ -1,3 +1,4 @@
+// vim: set ts=4 sw=4:
 /*                KEY POSITIONS
 34 keys:
 
@@ -9,15 +10,19 @@
               ╰────────╯ ╰────────╯
 */
 
-/ {
-    combos {
-      compatible = "zmk,combos";
-      combo_bspc {
-        timeout-ms = <40>;
-        bindings = <&kp BSPC>;
-        key-positions = <6 7>;
-        layers = <DEF>;
-        require-prior-idle-ms = <100>;
-      };
-    };
-};
+#define MAKE_COMBO(NAME, BINDING, POS, LAYERS) \
+    / { \
+        combos { \
+            compatible = "zmk,combos"; \
+            combo_ ## NAME { \
+                timeout-ms = <40>; \
+                bindings = <&kp BSPC>; \
+                key-positions = <POS>; \
+                layers = <LAYERS>; \
+                require-prior-idle-ms = <100>; \
+            }; \
+        }; \
+    }; 
+
+MAKE_COMBO(bspc, &kp BSPC, 6 7,   DEF)
+MAKE_COMBO(pipe, &kp PIPE, 18 19, DEF)
