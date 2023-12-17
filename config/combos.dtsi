@@ -16,7 +16,7 @@
             compatible = "zmk,combos"; \
             combo_ ## NAME { \
                 timeout-ms = <40>; \
-                bindings = <&kp BSPC>; \
+                bindings = <BINDING>; \
                 key-positions = <POS>; \
                 layers = <LAYERS>; \
                 require-prior-idle-ms = <100>; \
