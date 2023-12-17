@@ -135,5 +135,5 @@ combos:
   k: Bspc
   l: [DEF]
 - p: [18, 19]
-  k: Bspc
+  k: '|'
   l: [DEF]
