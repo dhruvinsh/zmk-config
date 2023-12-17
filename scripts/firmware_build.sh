@@ -5,19 +5,19 @@
 cd "$WORKSPACE_DIR"/app || exit 1
 
 echo "---> Building lynx left side.."
-west build -d build/lynx_left -b nice_nano_v2 -- -DSHIELD="lynx_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR"/../zmk-config
+west build -p -d build/lynx_left -b nice_nano_v2 -- -DSHIELD="lynx_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR"/../zmk-config
 
 echo "---> Building lynx right side.."
-west build -d build/lynx_right -b nice_nano_v2 -- -DSHIELD="lynx_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR"/../zmk-config
+west build -p -d build/lynx_right -b nice_nano_v2 -- -DSHIELD="lynx_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR"/../zmk-config
 
 echo "---> Building calypso left side.."
-west build -d build/calypso_left -b nice_nano_v2 -- -DSHIELD="corne_left" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/calypso_left -b nice_nano_v2 -- -DSHIELD="corne_left" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo "---> Building calypso right side.."
-west build -d build/calypso_right -b nice_nano_v2 -- -DSHIELD="corne_right" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/calypso_right -b nice_nano_v2 -- -DSHIELD="corne_right" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo "---> Building reset firmware.."
-west build -d build/reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
+west build -p -d build/reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
 
 echo "---> Copying and renaming the build.."
 sleep 2
