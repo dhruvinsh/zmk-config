@@ -18,7 +18,7 @@ layers:
     - V
     - K
     - H
-    - ','
+    - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
   - - {t: '$$mdi:keyboard-tab$$', h: NAV}
@@ -123,5 +123,8 @@ layers:
     - {type: held}
 combos:
 - p: [6, 7]
+  k: Bspc
+  l: [DEF]
+- p: [18, 19]
   k: Bspc
   l: [DEF]

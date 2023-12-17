@@ -19,7 +19,7 @@ layers:
     - V
     - K
     - H
-    - ','
+    - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
   - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
@@ -132,5 +132,8 @@ layers:
     - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [6, 7]
+  k: Bspc
+  l: [DEF]
+- p: [18, 19]
   k: Bspc
   l: [DEF]
