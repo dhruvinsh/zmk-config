@@ -2,7 +2,7 @@
 
 #define THREE_THUMBS
 
-#include "base.dtsi"
+#include "include/base.dtsi"
 
 / {
     chosen {

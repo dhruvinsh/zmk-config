@@ -10,6 +10,8 @@
               ╰────────╯ ╰────────╯
 */
 
+#define COMBO_HOOK require-prior-idle-ms = <150>;
+
 #define MAKE_COMBO(NAME, BINDING, POS, LAYERS) \
     / { \
         combos { \
@@ -19,10 +21,10 @@
                 bindings = <BINDING>; \
                 key-positions = <POS>; \
                 layers = <LAYERS>; \
-                require-prior-idle-ms = <100>; \
+                COMBO_HOOK \
             }; \
         }; \
     }; 
 
-MAKE_COMBO(bspc, &kp BSPC, 6 7,   DEF)
+MAKE_COMBO(bspc, &kp BSPC, 6  7,  DEF)
 MAKE_COMBO(pipe, &kp PIPE, 18 19, DEF)
