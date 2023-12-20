@@ -4,6 +4,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
+      - build.yaml
 
 jobs:
   build:
