@@ -25,4 +25,4 @@ This repository tracks my keyboard configuration.
 
 This awesome keymap is created via [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
-![Keymap](./assets/corne.svg)
+![Keymap](./assets/calypso.svg)

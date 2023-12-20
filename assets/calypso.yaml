@@ -1,4 +1,3 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x5_3}
 layers:
   DEF:
   - [Q, W, F, P, B, J, L, U, Y, '''']
@@ -136,4 +135,7 @@ combos:
   l: [DEF]
 - p: [18, 19]
   k: '|'
+  l: [DEF]
+- p: [11, 12]
+  k: '{'
   l: [DEF]

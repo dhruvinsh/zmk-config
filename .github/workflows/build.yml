@@ -2,8 +2,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "config/*.keymap"
-      - "config/*.dtsi"
+      - "config/**"
+      - build.yaml
 
 jobs:
   build:

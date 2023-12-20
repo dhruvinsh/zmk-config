@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "config/*.keymap"
-      - "config/*.dtsi"
+      - "config/include/**"
       - "keymap_drawer.config.yaml"
 
 jobs:
@@ -15,6 +15,6 @@ jobs:
       config_path: "keymap_drawer.config.yaml"
       output_folder: assets
       install_branch: main
-      parse_args: "lynx:'-c 10 -z config/lynx.keymap' corne:'-c 10 -z config/corne.keymap'"
-      draw_args: "lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2' corne:'-k corne_rotated -l LAYOUT_split_3x5_3'"
+      parse_args: "lynx:'-c 10 -z config/lynx.keymap' calypso:'-c 10 -z config/calypso.keymap'"
+      draw_args: "lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2' calypso:'-k corne_rotated -l LAYOUT_split_3x5_3'"
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
