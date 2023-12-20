@@ -1,4 +1,5 @@
 // vim: set ts=4 sw=4:
+
 /*                KEY POSITIONS
 34 keys:
 
@@ -28,3 +29,4 @@
 
 MAKE_COMBO(bspc, &kp BSPC, 6  7,  DEF)
 MAKE_COMBO(pipe, &kp PIPE, 18 19, DEF)
+MAKE_COMBO(lbkt, &kp LBKT, 11 12, DEF)
