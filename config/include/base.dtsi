@@ -29,6 +29,8 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI  k1 &ht LALT  k2 &ht LCTRL k3 &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1 &ht RCTRL k2 &ht RALT  k3 &ht RGUI  k4
 
+#define BT_PROFILES &bt BT_SET 0  &bt BT_SET 1 &bt BT_SET 2 &bt BT_SET 3 &bt BT_SEL 4
+
 / {
     behaviors {
         ht: hold_tap {
@@ -101,11 +103,11 @@
             display-name = "FUN";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+                                   BT_PROFILES                         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+           &bootloader &sys_reset &trans     &trans     &trans         &trans     &trans     &trans     &sys_reset &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &bt BT_CLR &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   T_XXX      &trans     &trans         &trans     &trans     T_XXX
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
