@@ -602,26 +602,38 @@ path.combo {
 <g transform="translate(30, 1440)" class="layer-FUN">
 <text x="0" y="15" class="label">FUN</text>
 <g transform="translate(0, 30)">
-<g transform="translate(45, 129)" class="key bootloader keypos-0">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key bootloader"/>
-<use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-10" y="-10" height="20" width="20.0" class="key bootloader tap glyph mdi:backup-restore"/>
+<g transform="translate(45, 129)" class="key keypos-0">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
+</text>
+<text x="0" y="40" class="key hold">0</text>
 </g>
-<g transform="translate(135, 73)" class="key trans keypos-1">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(135, 73)" class="key keypos-1">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
+</text>
+<text x="0" y="40" class="key hold">1</text>
 </g>
-<g transform="translate(225, 45)" class="key trans keypos-2">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(225, 45)" class="key keypos-2">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
+</text>
+<text x="0" y="40" class="key hold">2</text>
 </g>
-<g transform="translate(315, 70)" class="key trans keypos-3">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(315, 70)" class="key keypos-3">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
+</text>
+<text x="0" y="40" class="key hold">3</text>
 </g>
 <g transform="translate(405, 83)" class="key keypos-4">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
-<text x="0" y="40" class="key hold">1</text>
+<text x="0" y="40" class="key hold">5</text>
 </g>
 <g transform="translate(675, 83)" class="key trans keypos-5">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
@@ -639,17 +651,17 @@ path.combo {
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(1035, 129)" class="key bootloader keypos-9">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key bootloader"/>
-<use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-10" y="-10" height="20" width="20.0" class="key bootloader tap glyph mdi:backup-restore"/>
+<g transform="translate(1035, 129)" class="key trans keypos-9">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(45, 219)" class="key keypos-10">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
 <use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(135, 163)" class="key trans keypos-11">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(135, 163)" class="key bootloader keypos-11">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key bootloader"/>
+<use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-10" y="-10" height="20" width="20.0" class="key bootloader tap glyph mdi:backup-restore"/>
 </g>
 <g transform="translate(225, 135)" class="key trans keypos-12">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
@@ -659,10 +671,9 @@ path.combo {
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(405, 173)" class="key keypos-14">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
-<text x="0" y="40" class="key hold">2</text>
+<g transform="translate(405, 173)" class="key trans keypos-14">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(675, 173)" class="key trans keypos-15">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
@@ -676,9 +687,9 @@ path.combo {
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(945, 163)" class="key trans keypos-18">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(945, 163)" class="key bootloader keypos-18">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key bootloader"/>
+<use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-10" y="-10" height="20" width="20.0" class="key bootloader tap glyph mdi:backup-restore"/>
 </g>
 <g transform="translate(1035, 219)" class="key keypos-19">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
@@ -692,18 +703,17 @@ path.combo {
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(225, 225)" class="key trans keypos-22">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(315, 250)" class="key keypos-23">
+<g transform="translate(225, 225)" class="key keypos-22">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
 <use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-off"/>
 </g>
-<g transform="translate(405, 263)" class="key keypos-24">
-<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
-<text x="0" y="40" class="key hold">3</text>
+<g transform="translate(315, 250)" class="key trans keypos-23">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
+</g>
+<g transform="translate(405, 263)" class="key trans keypos-24">
+<rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-10" y="-10" height="20" width="20.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(675, 263)" class="key trans keypos-25">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key trans"/>
