@@ -93,10 +93,10 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:minus-circle-outline$$', type: none}
   FUN:
-  - - {t: BT SET, h: '0'}
-    - {t: BT SET, h: '1'}
-    - {t: BT SET, h: '2'}
-    - {t: BT SET, h: '3'}
+  - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+    - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+    - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+    - {t: '$$mdi:bluetooth-connect$$', h: '4'}
     - {t: '$$mdi:bluetooth-connect$$', h: '5'}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}

@@ -604,31 +604,23 @@ path.combo {
 <g transform="translate(0, 30)">
 <g transform="translate(45, 129)" class="key keypos-0">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
-</text>
-<text x="0" y="40" class="key hold">0</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
+<text x="0" y="40" class="key hold">1</text>
 </g>
 <g transform="translate(135, 73)" class="key keypos-1">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
-</text>
-<text x="0" y="40" class="key hold">1</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
+<text x="0" y="40" class="key hold">2</text>
 </g>
 <g transform="translate(225, 45)" class="key keypos-2">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
-</text>
-<text x="0" y="40" class="key hold">2</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
+<text x="0" y="40" class="key hold">3</text>
 </g>
 <g transform="translate(315, 70)" class="key keypos-3">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.0em">BT</tspan><tspan x="0" dy="1.0em">SET</tspan>
-</text>
-<text x="0" y="40" class="key hold">3</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:bluetooth-connect"/>
+<text x="0" y="40" class="key hold">4</text>
 </g>
 <g transform="translate(405, 83)" class="key keypos-4">
 <rect rx="4" ry="4" x="-44" y="-44" width="87" height="87" class="key"/>
