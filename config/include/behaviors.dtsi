@@ -1,0 +1,26 @@
+// vim: set ts=2 sw=2 ft=devicetree:
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+// specific config for the home row tap, I am still slow
+// TODO: once get used to, shorter the time.
+/ {
+  behaviors {
+    ht: hold_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <220>;
+      quick-tap-ms = <150>;
+      require-prior-idle-ms = <100>;
+      bindings = <&kp>, <&kp>;
+    };
+  };
+};
+
+&lt {
+  tapping-term-ms = <220>;
+  quick-tap-ms = <150>;
+  require-prior-idle-ms = <100>;
+};

@@ -17,6 +17,7 @@
 // Now import if any extra external layers needed
 #include "combos.dtsi"
 #include "morph.dtsi"
+#include "behaviors.dtsi"
 
 #ifdef THREE_THUMBS
 #  define TL_DEF &mt LGUI TAB
@@ -36,18 +37,6 @@
 #define BT_PROFILES &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 
 / {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
