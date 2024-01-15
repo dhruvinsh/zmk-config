@@ -40,9 +40,9 @@
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
+        function_layer {
         };
     };
 
@@ -63,7 +63,7 @@
             >;
         };
 
-        right_layer {
+        symbol_layer {
             display-name = "SYM";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -78,7 +78,7 @@
             >;
         };
 
-        left_layer {
+        navigation_layer {
             display-name = "NAV";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -108,7 +108,7 @@
             >;
         };
 
-        tri_layer {
+        function_layer {
             display-name = "FUN";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
