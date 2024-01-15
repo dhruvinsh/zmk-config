@@ -252,6 +252,7 @@ parse_config:
     EXCL: "!"
     COLON: ":"
     SEMI: ";"
+    SEMICOLON: ";"
     SQT: "'"
 
     ESC: "Esc"
