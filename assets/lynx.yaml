@@ -23,35 +23,26 @@ layers:
     - /
   - - {t: Esc, h: NAV}
     - SPACE
-    - ENTER
+    - {t: ENTER, h: NUM}
     - {t: Bspc, h: SYM}
   SYM:
-  - - INS
-    - '1'
-    - '2'
-    - '3'
+  - ['!', '@', '#', $, '%', ^, '&', ASTRK, LPAR, RPAR]
+  - - '~'
+    - '`'
+    - '{'
+    - (
+    - <
+    - '>'
+    - )
+    - '}'
     - {t: '$$mdi:transfer$$', type: trans}
-    - HOME
-    - $$mdi:chevron-double-down$$
-    - $$mdi:chevron-double-up$$
-    - END
-    - ':'
-  - - Del
-    - '4'
-    - '5'
-    - '6'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - LARW
-    - DARW
-    - UARW
-    - RARW
     - SEMI
   - - $$mdi:alpha-w-box$$
     - '7'
     - '8'
     - '9'
-    - '0'
-    - {t: '$$mdi:transfer$$', type: trans}
+    - _
+    - '-'
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -66,18 +57,18 @@ layers:
     - (
     - )
     - {t: '$$mdi:transfer$$', type: trans}
-    - ^
-    - LPAR
-    - RPAR
-    - '}'
-    - '~'
-  - ['!', '@', '#', $, '%', ASTRK, '-', '=', \, '`']
+    - $$mdi:chevron-double-up$$
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+  - ['!', '@', '#', $, '%', ←, ↓, ↑, →, '`']
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - '&'
+    - $$mdi:chevron-double-down$$
     - _
     - +
     - '|'
@@ -85,6 +76,41 @@ layers:
   - - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+  NUM:
+  - - INS
+    - '1'
+    - '2'
+    - '3'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - HOME
+    - '7'
+    - '8'
+    - '9'
+    - ':'
+  - - Del
+    - '4'
+    - '5'
+    - '6'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - '0'
+    - '4'
+    - '5'
+    - '6'
+    - SEMI
+  - - $$mdi:alpha-w-box$$
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - Esc
+    - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
   FUN:
   - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
