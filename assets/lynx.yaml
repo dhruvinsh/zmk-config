@@ -18,25 +18,25 @@ layers:
     - V
     - K
     - H
-    - {t: ',', s: ;}
+    - {t: ',', s: SEMICOLON}
     - {t: ., s: ':'}
     - /
   - - {t: Esc, h: NAV}
-    - SPACE
+    - $$mdi:keyboard-space$$
     - {t: ENTER, h: NUM}
-    - {t: Bspc, h: SYM}
+    - {t: '$$mdi:backspace$$', h: SYM}
   SYM:
-  - ['!', '@', '#', $, '%', ^, '&', ASTRK, LPAR, RPAR]
+  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
   - - '~'
     - '`'
     - '{'
-    - (
+    - LBRC
     - <
     - '>'
-    - )
+    - RBRC
     - '}'
     - {t: '$$mdi:transfer$$', type: trans}
-    - SEMI
+    - ;
   - - $$mdi:alpha-w-box$$
     - '7'
     - '8'
@@ -54,8 +54,8 @@ layers:
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - '{'
-    - (
-    - )
+    - LBRC
+    - RBRC
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:chevron-double-up$$
     - {t: '$$mdi:transfer$$', type: trans}
@@ -97,7 +97,7 @@ layers:
     - '4'
     - '5'
     - '6'
-    - SEMI
+    - ;
   - - $$mdi:alpha-w-box$$
     - '7'
     - '8'
@@ -149,7 +149,7 @@ layers:
     - {type: held}
 combos:
 - p: [6, 7]
-  k: Bspc
+  k: $$mdi:backspace$$
   l: [DEF]
 - p: [18, 19]
   k: '|'
