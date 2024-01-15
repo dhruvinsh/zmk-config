@@ -18,7 +18,7 @@ layers:
     - V
     - K
     - H
-    - {t: ',', s: SEMICOLON}
+    - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
   - - {t: Esc, h: NAV}
