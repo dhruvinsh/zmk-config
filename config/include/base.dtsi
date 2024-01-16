@@ -4,11 +4,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-//layers definitions
+// Layers: Default, Symbol, Navigation, Number, Function
 #define DEF 0
 #define SYM 1
 #define NAV 2
-#define FUN 3
+#define NUM 3
+#define FUN 4
 
 // some easy key equivalency
 #define XXX &none
@@ -31,17 +32,22 @@
 
 // Home row mods macro
 // GUI -> ALT -> CTRL -> SHFT    |    SHFT -> CTRL -> ALT -> GUI
-#define HRML(k1,k2,k3,k4) &ht LGUI  k1 &ht LALT  k2 &ht LCTRL k3 &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht RSHFT k1 &ht RCTRL k2 &ht RALT  k3 &ht RGUI  k4
+#define HRML(k1,k2,k3,k4) &hm LGUI  k1 &hm LALT  k2 &hm LCTRL k3 &hm LSHFT k4
+#define HRMR(k1,k2,k3,k4) &hm RSHFT k1 &hm RCTRL k2 &hm RALT  k3 &hm RGUI  k4
 
-#define BT_PROFILES &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+#define BT_PROFILES &bt BT_SEL   0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+#define CANCLE      &kp K_CANCEL
+#define NAV_UP      &mt LC(HOME) UP
+#define NAV_DOWN    &mt LC(END)  DOWN
+#define NAV_BSPC    &mt LC(BSPC) BSPC
+#define NAV_DEL     &mt LC(DEL)  DEL
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+        function_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <FUN>;
         };
     };
 
@@ -57,42 +63,57 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &comma_morph  &dot_morph &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  TL_DEF    &lt NAV ESC &kp SPACE      &kp ENTER  &lt SYM BSPC TR_DEF
+                                  TL_DEF    &lt NAV ESC &lt NUM SPACE  &kp ENTER  &lt SYM BSPC TR_DEF
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        right_layer {
+        symbol_layer {
             display-name = "SYM";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp INS    &kp N1     &kp N2     &kp N3     ___            &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS  &kp ASTRK   &kp LPAR   &kp RPAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp DEL    &kp N4     &kp N5     &kp N6     ___            &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &kp TILDE  &kp GRAVE  &kp LBRC   &kp LBKT   &kp LT         &kp GT     &kp RBKT   &kp RBRC   ___        &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         ___        ___        ___        ___        ___   
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp UNDER      &kp UNDER  &kp MINUS  ___        ___        ___   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   T_XXX      ___        &kp ESC        ___        ___        T_XXX
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        left_layer {
+        navigation_layer {
             display-name = "NAV";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            ___        &kp LBKT   &kp LBRC   &kp RBRC   ___            &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+            ___        ___        ___        ___        ___            &kp PG_UP  NAV_BSPC   NAV_DEL    ___        ___
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+            &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT   ___           &kp LEFT   NAV_DOWN   NAV_UP     &kp RIGHT  &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            ___        ___        ___        ___        ___            &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   ___   
+            ___        ___        ___        ___        ___            &kp PG_DN  &kp END    ___        ___        ___   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  T_XXX      ___        ___            ___        ___        T_XXX
+                                  T_XXX      ___        ___            ___        CANCLE     T_XXX
+        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+            >;
+        };
+      
+        number_layer {
+            display-name = "NUM";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &kp INS    &kp N1     &kp N2     &kp N3     ___            &kp HOME   &kp N7     &kp N8     &kp N9     &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp DEL    &kp N4     &kp N5     &kp N6     ___            &kp N0     &kp N4     &kp N5     &kp N6     &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         ___        &kp N1     &kp N2     &kp N3     ___   
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                  T_XXX      ___        &kp ESC        ___        ___        T_XXX
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        tri_layer {
+        function_layer {
             display-name = "FUN";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮

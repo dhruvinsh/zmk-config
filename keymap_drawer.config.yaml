@@ -251,6 +251,7 @@ parse_config:
     QMARK: "?"
     EXCL: "!"
     COLON: ":"
+    SEMI: ";"
     SEMICOLON: ";"
     SQT: "'"
 
@@ -264,9 +265,9 @@ parse_config:
     BSLH: "\\"
     EQUAL: "="
     TILDE: "~"
-    BSPC: "Bspc"
+    BSPC: $$mdi:backspace$$
     DEL: "Del"
-    STAR: "*"
+    ASTRK: "*"
     CARET: "^"
     PLUS: "+"
     AMPS: "&"
@@ -274,14 +275,17 @@ parse_config:
     UNDER: "_"
     MINUS: "-"
     PIPE: "|"
-    LBKT: "{"
-    RBKT: "}"
-    LBRC: "("
-    RBRC: ")"
+    LBKT: "["
+    RBKT: "]"
+    LBRC: "{"
+    RBRC: "}"
+    LPAR: "("
+    RPAR: ")"
     LT: "<"
     GT: ">"
     PG_UP: $$mdi:chevron-double-up$$
     PG_DN: $$mdi:chevron-double-down$$
+    SPACE: $$mdi:keyboard-space$$
 
     LEFT: ←
     RIGHT: →
