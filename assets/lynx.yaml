@@ -22,18 +22,18 @@ layers:
     - {t: ., s: ':'}
     - /
   - - {t: Esc, h: NAV}
-    - $$mdi:keyboard-space$$
-    - {t: ENTER, h: NUM}
+    - {t: '$$mdi:keyboard-space$$', h: NUM}
+    - ENTER
     - {t: '$$mdi:backspace$$', h: SYM}
   SYM:
   - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
   - - '~'
     - '`'
     - '{'
-    - LBRC
+    - '['
     - <
     - '>'
-    - RBRC
+    - ']'
     - '}'
     - {t: '$$mdi:transfer$$', type: trans}
     - ;
@@ -42,8 +42,8 @@ layers:
     - '8'
     - '9'
     - _
+    - _
     - '-'
-    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -53,9 +53,9 @@ layers:
     - {type: held}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
+    - '['
     - '{'
-    - LBRC
-    - RBRC
+    - '}'
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:chevron-double-up$$
     - {t: '$$mdi:transfer$$', type: trans}
@@ -109,8 +109,8 @@ layers:
     - '3'
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:transfer$$', type: trans}
-    - Esc
-    - {type: held}
+    - {t: Esc, type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   FUN:
   - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
@@ -155,5 +155,5 @@ combos:
   k: '|'
   l: [DEF]
 - p: [11, 12]
-  k: '{'
+  k: '['
   l: [DEF]

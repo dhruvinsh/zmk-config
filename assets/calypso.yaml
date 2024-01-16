@@ -23,8 +23,8 @@ layers:
     - /
   - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
     - {t: Esc, h: NAV}
-    - $$mdi:keyboard-space$$
-    - {t: ENTER, h: NUM}
+    - {t: '$$mdi:keyboard-space$$', h: NUM}
+    - ENTER
     - {t: '$$mdi:backspace$$', h: SYM}
     - {t: Del, h: '$$mdi:apple-keyboard-option$$'}
   SYM:
@@ -32,10 +32,10 @@ layers:
   - - '~'
     - '`'
     - '{'
-    - LBRC
+    - '['
     - <
     - '>'
-    - RBRC
+    - ']'
     - '}'
     - {t: '$$mdi:transfer$$', type: trans}
     - ;
@@ -44,8 +44,8 @@ layers:
     - '8'
     - '9'
     - _
+    - _
     - '-'
-    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -57,9 +57,9 @@ layers:
     - {t: '$$mdi:minus-circle-outline$$', type: none}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
+    - '['
     - '{'
-    - LBRC
-    - RBRC
+    - '}'
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:chevron-double-up$$
     - {t: '$$mdi:transfer$$', type: trans}
@@ -116,8 +116,8 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:minus-circle-outline$$', type: none}
     - {t: '$$mdi:transfer$$', type: trans}
-    - Esc
-    - {type: held}
+    - {t: Esc, type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:minus-circle-outline$$', type: none}
   FUN:
@@ -165,5 +165,5 @@ combos:
   k: '|'
   l: [DEF]
 - p: [11, 12]
-  k: '{'
+  k: '['
   l: [DEF]
