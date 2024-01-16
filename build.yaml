@@ -4,8 +4,8 @@ include:
   - board: nice_nano_v2
     shield: lynx_right nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: calypso_left nice_view_adapter nice_view
+    shield: calypso_left
   - board: nice_nano_v2
-    shield: calypso_right nice_view_adapter nice_view
+    shield: calypso_right
   - board: nice_nano_v2
     shield: settings_reset
