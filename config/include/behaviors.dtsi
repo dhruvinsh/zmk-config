@@ -7,7 +7,7 @@
 // TODO: once get used to, shorter the time.
 / {
   behaviors {
-    ht: hold_tap {
+    hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
@@ -23,4 +23,16 @@
   tapping-term-ms = <220>;
   quick-tap-ms = <150>;
   require-prior-idle-ms = <100>;
+};
+
+&sk {
+  release-after-ms = <1500>;
+  quick-release;
+};
+
+&mt {
+  flavor = "tap-preferred";
+  tapping-term-ms = <220>;
+  quick-tap-ms = <220>;
+  hold-trigger-key-positions = <0>;
 };
