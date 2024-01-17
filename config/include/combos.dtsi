@@ -27,6 +27,6 @@
         }; \
     }; 
 
-MAKE_COMBO(bspc, &kp BSPC, RT1 RT2, DEF)
-MAKE_COMBO(pipe, &kp PIPE, RM3 RM4, DEF)
+MAKE_COMBO(bspc, &kp BSPC, RT1 RT2, DEF SYM NAV NUM)
+MAKE_COMBO(pipe, &kp PIPE, RM3 RM4, DEF SYM)
 MAKE_COMBO(lbkt, &kp LBKT, LM3 LM2, DEF)
