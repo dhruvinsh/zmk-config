@@ -11,6 +11,15 @@
           ╰────────────┴────────────╯                 ╰─────────────┴─────────────╯     
 */
 
+/*
+* current layers
+* #define DEF 0
+* #define SYM 1
+* #define NAV 2
+* #define NUM 3
+* #define FUN 4
+*/
+
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
 #define MAKE_COMBO(NAME, BINDING, POS, LAYERS) \
