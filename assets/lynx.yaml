@@ -159,10 +159,10 @@ layers:
 combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
-  l: [DEF]
+  l: [DEF, SYM, NAV, NUM]
 - p: [18, 19]
   k: '|'
-  l: [DEF]
+  l: [DEF, SYM]
 - p: [11, 12]
   k: '['
   l: [DEF]
