@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 // specific config for the home row tap, I am still slow
+#define QUICK_TAP_MS          200
+#define REQUIRE_PRIOR_IDLE_MS 150
+#define TAPPING_TERM_MS       250
+
 // TODO: once get used to, shorter the time.
 / {
   behaviors {
