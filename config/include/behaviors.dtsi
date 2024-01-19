@@ -4,25 +4,43 @@
 #include <dt-bindings/zmk/keys.h>
 
 // specific config for the home row tap, I am still slow
+#define QUICK_TAP_MS          200
+#define REQUIRE_PRIOR_IDLE_MS 150
+#define TAPPING_TERM_MS       250
+
 // TODO: once get used to, shorter the time.
 / {
   behaviors {
-    hm: homerow_mods {
+    hml: hml {
+      label = "hml";
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
-      tapping-term-ms = <220>;
-      quick-tap-ms = <150>;
-      require-prior-idle-ms = <150>;
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
       bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <KEYS_R THUMBS>;
+    };
+
+    hmr: hmr {
+      label = "hmr";
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <KEYS_L THUMBS>;
     };
   };
 };
 
 &lt {
-  tapping-term-ms = <220>;
-  quick-tap-ms = <150>;
-  require-prior-idle-ms = <150>;
+  tapping-term-ms = <TAPPING_TERM_MS>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+  require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
 };
 
 &sk {
@@ -32,7 +50,6 @@
 
 &mt {
   flavor = "tap-preferred";
-  tapping-term-ms = <220>;
-  quick-tap-ms = <220>;
-  hold-trigger-key-positions = <0>;
+  tapping-term-ms = <TAPPING_TERM_MS>;
+  quick-tap-ms = <QUICK_TAP_MS>;
 };

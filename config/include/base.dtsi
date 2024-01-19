@@ -14,6 +14,9 @@
 // some easy key equivalency
 #define XXX &none
 #define ___ &trans
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
 // Now import if any extra external layers needed
 #include "combos.dtsi"
@@ -32,8 +35,8 @@
 
 // Home row mods macro
 // GUI -> ALT -> CTRL -> SHFT    |    SHFT -> CTRL -> ALT -> GUI
-#define HRML(k1,k2,k3,k4) &hm LGUI  k1 &hm LALT  k2 &hm LCTRL k3 &hm LSHFT k4
-#define HRMR(k1,k2,k3,k4) &hm RSHFT k1 &hm RCTRL k2 &hm RALT  k3 &hm RGUI  k4
+#define HRML(k1,k2,k3,k4) &hml LGUI  k1 &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
+#define HRMR(k1,k2,k3,k4) &hmr RSHFT k1 &hmr RCTRL k2 &hmr RALT  k3 &hmr RGUI  k4
 
 #define BT_PROFILES &bt BT_SEL   0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 #define CANCLE      &kp K_CANCEL
