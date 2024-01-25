@@ -3,39 +3,31 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+// TODO: once get used to, shorter the time.
 // specific config for the home row tap, I am still slow
 #define QUICK_TAP_MS          200
 #define REQUIRE_PRIOR_IDLE_MS 150
 #define TAPPING_TERM_MS       250
 
-// TODO: once get used to, shorter the time.
-/ {
-  behaviors {
-    hml: hml {
-      label = "hml";
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <TAPPING_TERM_MS>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
-      bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <KEYS_R THUMBS>;
-    };
-
-    hmr: hmr {
-      label = "hmr";
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <TAPPING_TERM_MS>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
-      bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <KEYS_L THUMBS>;
-    };
+// make home row mode based on hold-tap
+#define MAKE_HRM(name, trigger_keys) \
+  / { \
+      behaviors { \
+        name: name { \
+          compatible = "zmk,behavior-hold-tap"; \
+          #binding-cells = <2>; \
+          flavor = "tap-preferred"; \
+          tapping-term-ms = <TAPPING_TERM_MS>; \
+          quick-tap-ms = <QUICK_TAP_MS>; \
+          require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
+          bindings = <&kp>, <&kp>; \
+          hold-trigger-key-positions = <trigger_keys>; \
+        }; \
+      }; \
   };
-};
+
+MAKE_HRM(hml, KEYS_R THUMBS)
+MAKE_HRM(hmr, KEYS_L THUMBS)
 
 &lt {
   tapping-term-ms = <TAPPING_TERM_MS>;
