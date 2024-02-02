@@ -169,3 +169,6 @@ combos:
 - p: [17, 18]
   k: {t: ), s: ']'}
   l: [DEF, SYM]
+- p: [12, 13]
+  k: '&hml LS(LCTRL)'
+  l: [DEF, SYM, NAV, NUM]
