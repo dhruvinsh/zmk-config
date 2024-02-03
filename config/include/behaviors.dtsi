@@ -29,6 +29,20 @@
 MAKE_HRM(hml, KEYS_R THUMBS)
 MAKE_HRM(hmr, KEYS_L THUMBS)
 
+#define MAKE_SWAPPER(name) \
+  / { \
+    behaviors { \
+      name: name { \
+        compatible = "zmk,behavior-tri-state"; \
+        label = "TRI-STATE"; \
+        #binding-cells = <0>; \
+        bindings = <&kp A>, <&kp B>, <&kt C>; \
+      }; \
+    }; \
+  };
+
+MAKE_SWAPPER(swapper)
+
 &lt {
   tapping-term-ms = <TAPPING_TERM_MS>;
   quick-tap-ms = <QUICK_TAP_MS>;
@@ -46,13 +60,3 @@ MAKE_HRM(hmr, KEYS_L THUMBS)
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-/ {
-    behaviors {
-        tri-state: tri-state {
-            compatible = "zmk,behavior-tri-state";
-            label = "TRI-STATE";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&kp B>, <&kt C>;
-        };
-    };
-};
