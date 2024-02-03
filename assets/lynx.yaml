@@ -97,7 +97,7 @@ layers:
     - '8'
     - '9'
     - ':'
-  - - '&tri-state'
+  - - $$mdi:swap-horizontal$$
     - '4'
     - '5'
     - '6'
