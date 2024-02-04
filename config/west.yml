@@ -9,7 +9,7 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-swapper
+    - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
   self:
