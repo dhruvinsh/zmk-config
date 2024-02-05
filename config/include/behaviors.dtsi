@@ -60,3 +60,7 @@ MAKE_SWAPPER(swapper)
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+&num_word {
+    layers = <NUM>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
