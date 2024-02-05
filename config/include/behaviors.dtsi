@@ -68,7 +68,7 @@ MAKE_SWAPPER(swapper)
           compatible = "zmk,behavior-num-word"; \
           layers = <NUM>; \
           continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>; \
-          ignore-numbers;
+          ignore-numbers; \
       }; \
     }; \
   };
