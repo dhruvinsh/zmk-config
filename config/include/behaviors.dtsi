@@ -64,9 +64,11 @@ MAKE_SWAPPER(swapper)
   / { \
       behaviors { \
         name: name { \
+          #binding-cells = <0>; \
           compatible = "zmk,behavior-num-word"; \
           layers = <NUM>; \
           continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>; \
+          ignore-numbers;
       }; \
     }; \
   };
