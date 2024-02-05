@@ -60,7 +60,15 @@ MAKE_SWAPPER(swapper)
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-&num_word {
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
+#define MAKE_NUM_WORD(name) \
+  / { \
+      behaviors { \
+        name: name { \
+          compatible = "zmk,behavior-num-word"; \
+          layers = <NUM>; \
+          continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>; \
+      }; \
+    }; \
+  };
+
+MAKE_NUM_WORD(num_word)
