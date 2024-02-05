@@ -12,5 +12,8 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
+    - name: zmk-num-word
+      remote: dhruvinsh
+      revision: main
   self:
     path: config
