@@ -355,6 +355,10 @@ path.combo {
 <text x="990" y="141" class="combo tap">)</text>
 <text x="990" y="126" class="combo shifted">]</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:keyboard-tab"/>
+</g>
 </g>
 </g>
 <g transform="translate(30, 471)" class="layer-NAV">
@@ -530,6 +534,10 @@ path.combo {
 <text x="990" y="141" class="combo tap">)</text>
 <text x="990" y="126" class="combo shifted">]</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:keyboard-tab"/>
+</g>
 </g>
 </g>
 <g transform="translate(30, 943)" class="layer-NUM">
@@ -681,6 +689,10 @@ path.combo {
 <g class="combo combopos-0">
 <rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:backspace"/>
+</g>
+<g class="combo combopos-1">
+<rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:keyboard-tab"/>
 </g>
 </g>
 </g>
@@ -834,6 +846,10 @@ path.combo {
 <g class="combo combopos-0">
 <rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:backspace"/>
+</g>
+<g class="combo combopos-1">
+<rect rx="4" ry="4" x="881" y="32" width="38" height="38" class="combo"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="890" y="41" height="20" width="20.0" class="combo tap glyph mdi:keyboard-tab"/>
 </g>
 </g>
 </g>
