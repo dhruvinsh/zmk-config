@@ -169,6 +169,6 @@ combos:
 - p: [17, 18]
   k: {t: ), s: ']'}
   l: [DEF, NAV]
-- p: [6, 7]
+- p: [1, 2]
   k: $$mdi:keyboard-tab$$
   l: [DEF, NAV, NUM, SYM]
