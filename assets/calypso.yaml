@@ -22,39 +22,11 @@ layers:
     - {t: ., s: ':'}
     - /
   - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
-    - {t: Esc, h: NAV}
-    - {t: '$$mdi:keyboard-space$$', h: NUM}
+    - {t: Esc, h: NUM}
+    - {t: '$$mdi:keyboard-space$$', h: SYM}
     - ENTER
-    - {t: '$$mdi:backspace$$', h: SYM}
+    - {t: '$$mdi:backspace$$', h: NAV}
     - {t: Del, h: '$$mdi:apple-keyboard-option$$'}
-  SYM:
-  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - - '~'
-    - '`'
-    - '{'
-    - '['
-    - <
-    - '>'
-    - ']'
-    - '}'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - ;
-  - - $$mdi:alpha-w-box$$
-    - '7'
-    - '8'
-    - '9'
-    - _
-    - _
-    - '-'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - {t: '$$mdi:minus-circle-outline$$', type: none}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - Esc
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {type: held}
-    - {t: '$$mdi:minus-circle-outline$$', type: none}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -87,10 +59,10 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:minus-circle-outline$$', type: none}
-    - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - $$mdi:cancel$$
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:cancel$$', type: held}
     - {t: '$$mdi:minus-circle-outline$$', type: none}
   NUM:
   - - INS
@@ -122,6 +94,34 @@ layers:
     - '1'
     - '2'
     - '3'
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {t: '$$mdi:minus-circle-outline$$', type: none}
+    - {type: held}
+    - Esc
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:minus-circle-outline$$', type: none}
+  SYM:
+  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
+  - - '~'
+    - '`'
+    - '{'
+    - '['
+    - <
+    - '>'
+    - ']'
+    - '}'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - ;
+  - - $$mdi:alpha-w-box$$
+    - '7'
+    - '8'
+    - '9'
+    - _
+    - _
+    - '-'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:minus-circle-outline$$', type: none}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -169,13 +169,13 @@ layers:
 combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
-  l: [DEF, SYM, NAV, NUM]
+  l: [DEF, NAV, NUM, SYM]
 - p: [18, 19]
   k: '|'
-  l: [DEF, SYM]
+  l: [DEF, NAV]
 - p: [16, 17]
   k: {t: (, s: '['}
-  l: [DEF, SYM]
+  l: [DEF, NAV]
 - p: [17, 18]
   k: {t: ), s: ']'}
-  l: [DEF, SYM]
+  l: [DEF, NAV]

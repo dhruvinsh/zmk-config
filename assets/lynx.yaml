@@ -21,36 +21,10 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-  - - {t: Esc, h: NAV}
-    - {t: '$$mdi:keyboard-space$$', h: NUM}
+  - - {t: Esc, h: NUM}
+    - {t: '$$mdi:keyboard-space$$', h: SYM}
     - ENTER
-    - {t: '$$mdi:backspace$$', h: SYM}
-  SYM:
-  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - - '~'
-    - '`'
-    - '{'
-    - '['
-    - <
-    - '>'
-    - ']'
-    - '}'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - ;
-  - - $$mdi:alpha-w-box$$
-    - '7'
-    - '8'
-    - '9'
-    - _
-    - _
-    - '-'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - {t: '$$mdi:transfer$$', type: trans}
-    - Esc
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {type: held}
+    - {t: '$$mdi:backspace$$', h: NAV}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -82,10 +56,10 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-  - - {type: held}
+  - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - $$mdi:cancel$$
+    - {t: '$$mdi:cancel$$', type: held}
   NUM:
   - - INS
     - '1'
@@ -116,6 +90,32 @@ layers:
     - '1'
     - '2'
     - '3'
+    - {t: '$$mdi:transfer$$', type: trans}
+  - - {type: held}
+    - Esc
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+  SYM:
+  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
+  - - '~'
+    - '`'
+    - '{'
+    - '['
+    - <
+    - '>'
+    - ']'
+    - '}'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - ;
+  - - $$mdi:alpha-w-box$$
+    - '7'
+    - '8'
+    - '9'
+    - _
+    - _
+    - '-'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: Esc, type: held}
@@ -159,13 +159,13 @@ layers:
 combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
-  l: [DEF, SYM, NAV, NUM]
+  l: [DEF, NAV, NUM, SYM]
 - p: [18, 19]
   k: '|'
-  l: [DEF, SYM]
+  l: [DEF, NAV]
 - p: [16, 17]
   k: {t: (, s: '['}
-  l: [DEF, SYM]
+  l: [DEF, NAV]
 - p: [17, 18]
   k: {t: ), s: ']'}
-  l: [DEF, SYM]
+  l: [DEF, NAV]
