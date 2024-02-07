@@ -22,7 +22,7 @@
           require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
           bindings = <&kp>, <&kp>; \
           hold-trigger-key-positions = <trigger_keys>; \
-          hold-trigger-on-release;
+          hold-trigger-on-release; \
         }; \
       }; \
   };
