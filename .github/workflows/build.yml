@@ -8,3 +8,24 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  # credits: BerkeleyTrue/zmk-keyboards
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: set now
+        run: echo "NOW=$(date +'%Y.%m.%d.%H.%M')" >> $GITHUB_ENV
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Publish release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: firmware/*.uf2
+          file_glob: true
+          tag: ${{ envNOW }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
