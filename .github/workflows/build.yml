@@ -27,5 +27,5 @@ jobs:
         with:
           file: firmware/*.uf2
           file_glob: true
-          tag: ${{ envNOW }}
+          tag: ${{ env.NOW }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
