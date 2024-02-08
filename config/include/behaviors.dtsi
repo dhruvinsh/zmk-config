@@ -10,6 +10,8 @@
 #define TAPPING_TERM_MS       250
 
 // make home row mode based on hold-tap
+// TODO: hold-trigger-on-release require Patch,
+// https://github.com/celejewski/zmk/commit/d7a8482712d87963e59b74238667346221199293
 #define MAKE_HRM(name, trigger_keys) \
   / { \
       behaviors { \
