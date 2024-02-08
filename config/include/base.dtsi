@@ -4,12 +4,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// Layers: Default, Symbol, Navigation, Number, Function
+// Layers: Default, Navigation, Number, Symbol, System
 #define DEF 0
-#define SYM 1
-#define NAV 2
-#define NUM 3
-#define FUN 4
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define SYS 4
 
 // some easy key equivalency
 #define XXX &none
@@ -51,8 +51,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         function_layer {
-            if-layers = <SYM NAV>;
-            then-layer = <FUN>;
+            if-layers = <NAV SYM>;
+            then-layer = <SYS>;
         };
     };
 
@@ -119,7 +119,7 @@
         };
 
         function_layer {
-            display-name = "FUN";
+            display-name = "SYS";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                                    BT_PROFILES                         ___        ___        ___        ___        ___   
