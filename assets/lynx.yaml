@@ -21,10 +21,10 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-  - - {t: Esc, h: NUM}
-    - {t: '$$mdi:keyboard-space$$', h: SYM}
+  - - {t: Esc, h: NAV}
+    - {t: '$$mdi:keyboard-space$$', h: NUM}
     - ENTER
-    - {t: '$$mdi:backspace$$', h: NAV}
+    - {t: '$$mdi:backspace$$', h: SYM}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -56,43 +56,43 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
+  - - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - $$mdi:keyboard-tab$$
+    - $$mdi:cancel$$
+  NUM:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:cancel$$', type: held}
-  NUM:
-  - - INS
-    - '1'
-    - '2'
-    - '3'
     - {t: '$$mdi:transfer$$', type: trans}
-    - HOME
+    - {t: '$$mdi:transfer$$', type: trans}
+    - +
     - '7'
     - '8'
     - '9'
     - ':'
-  - - Del
-    - '4'
-    - '5'
-    - '6'
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - '0'
     - '4'
     - '5'
     - '6'
     - ;
-  - - $$mdi:alpha-w-box$$
-    - '7'
-    - '8'
-    - '9'
-    - '0'
+  - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - '-'
     - '1'
     - '2'
     - '3'
     - {t: '$$mdi:transfer$$', type: trans}
-  - - {type: held}
-    - Esc
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   SYM:
@@ -108,9 +108,9 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - ;
   - - $$mdi:alpha-w-box$$
-    - '7'
-    - '8'
-    - '9'
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
     - _
     - _
     - '-'
@@ -118,10 +118,10 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:transfer$$', type: trans}
-    - {t: Esc, type: held}
+    - Esc
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  FUN:
+    - {type: held}
+  SYS:
   - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
     - {t: '$$mdi:bluetooth-connect$$', h: '2'}
     - {t: '$$mdi:bluetooth-connect$$', h: '3'}
@@ -159,16 +159,16 @@ layers:
 combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
-  l: [DEF, NAV, NUM, SYM]
+  l: [DEF, SYM, NAV, NUM]
 - p: [18, 19]
   k: '|'
-  l: [DEF, NAV]
+  l: [DEF, SYM]
 - p: [16, 17]
   k: {t: (, s: '['}
-  l: [DEF, NAV]
+  l: [DEF, SYM]
 - p: [17, 18]
   k: {t: ), s: ']'}
-  l: [DEF, NAV]
+  l: [DEF, SYM]
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
-  l: [DEF, NAV, NUM, SYM]
+  l: [DEF, SYM, NAV, NUM]
