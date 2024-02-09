@@ -1,4 +1,4 @@
-// vim: set ts=2 sw=2 ft=devicetree:
+// vim: set ts=4 sw=4 ft=devicetree:
 // Copied from cradio for reference
 
 #include <behaviors.dtsi>

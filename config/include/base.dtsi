@@ -1,4 +1,4 @@
-// vim: set ts=2 sw=2 ft=devicetree:
+// vim: set ts=4 sw=4 ft=devicetree:
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -24,13 +24,13 @@
 #include "behaviors.dtsi"
 
 #ifdef THREE_THUMBS
-#  define TL_DEF &mt LGUI TAB
-#  define TR_DEF &mt RALT DEL
-#  define T_XXX &none
+    #define TL_DEF &mt LGUI TAB
+    #define TR_DEF &mt RALT DEL
+    #define T_XXX  &none
 #else
-#  define TL_DEF
-#  define TR_DEF
-#  define T_XXX
+    #define TL_DEF
+    #define TR_DEF
+    #define T_XXX
 #endif
 
 // Home row mods macro
