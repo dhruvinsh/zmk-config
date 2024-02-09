@@ -160,11 +160,11 @@ combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
   l: [DEF, SYM, NAV, NUM]
-- p: [18, 19]
-  k: '|'
-  l: [DEF, SYM]
 - p: [16, 17]
   k: {t: (, s: '['}
+  l: [DEF, SYM]
+- p: [18, 19]
+  k: '|'
   l: [DEF, SYM]
 - p: [17, 18]
   k: {t: ), s: ']'}
