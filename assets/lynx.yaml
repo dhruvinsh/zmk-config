@@ -29,7 +29,7 @@ layers:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - $$mdi:swap-horizontal$$
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:chevron-double-up$$
     - {t: '$$mdi:backspace-outline$$', h: '$$mdi:backspace$$'}
