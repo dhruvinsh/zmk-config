@@ -48,3 +48,14 @@ MAKE_HRM(hmr, KEYS_L THUMBS)
     tapping-term-ms = <TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
+
+// Alt+Tab swapper
+/ {
+    behaviors {
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+        };
+    };
+};
