@@ -34,7 +34,7 @@ MAKE_HRM(hmr, KEYS_L THUMBS)
 
 &lt {
     tapping-term-ms = <TAPPING_TERM_MS>;
-}
+};
 
 &sk {
     release-after-ms = <1500>;
