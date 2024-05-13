@@ -33,7 +33,7 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:chevron-double-up$$
     - {t: '$$mdi:backspace-outline$$', h: '$$mdi:backspace$$'}
-    - {t: Del, h: ⌃+Del}
+    - {t: Del, h: Ctl+ Del}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
@@ -42,8 +42,8 @@ layers:
     - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
     - {t: '$$mdi:transfer$$', type: trans}
     - ←
-    - {t: ↓, h: LC(END)}
-    - {t: ↑, h: LC(HOME)}
+    - {t: ↓, h: Ctl+ END}
+    - {t: ↑, h: Ctl+ HOME}
     - →
     - '`'
   - - {t: '$$mdi:transfer$$', type: trans}
