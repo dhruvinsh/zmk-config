@@ -41,7 +41,7 @@
 // Some aliases
 #define BT_PROFILES &bt BT_SEL   0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 #define BTLOADER    &bootloader
-#define CANCLE      &kp K_CANCEL
+#define CANCEL      &kp K_CANCEL
 #define NAV_UP      &mt LC(HOME) UP
 #define NAV_DOWN    &mt LC(END)  DOWN
 #define NAV_BSPC    &mt LC(BSPC) BSPC
@@ -83,7 +83,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             ___        ___        ___        ___        ___            &kp PG_DN  &kp END    ___        ___        ___   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  T_XXX      ___        ___            &kp TAB    CANCLE     T_XXX
+                                  T_XXX      ___        ___            &kp TAB    CANCEL     T_XXX
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
