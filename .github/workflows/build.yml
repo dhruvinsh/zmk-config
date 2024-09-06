@@ -32,6 +32,8 @@ jobs:
   draw:
     needs: build
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
     with:
       keymap_patterns: "config/*.keymap"
       config_path: "keymap_drawer.config.yaml"
