@@ -29,16 +29,3 @@ jobs:
           file_glob: true
           tag: ${{ env.NOW }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-  draw:
-    needs: build
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    permissions:
-      contents: write
-    with:
-      keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: assets
-      install_branch: main
-      parse_args: "lynx:'-c 10 -z config/lynx.keymap' calypso:'-c 10 -z config/calypso.keymap'"
-      draw_args: "lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2' calypso:'-k corne_rotated -l LAYOUT_split_3x5_3'"
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
