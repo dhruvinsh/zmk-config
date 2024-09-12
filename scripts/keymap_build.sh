@@ -6,6 +6,9 @@ if [ ! -d scripts ]; then
 fi
 
 echo -n "Building keymaps.."
-keymap -c keymap_drawer.config.yaml parse -c 10 -z config/boards/shields/lynx/lynx.keymap >assets/lynx.yaml
-keymap -c keymap_drawer.config.yaml draw --qmk-keyboard ferris/sweep assets/lynx.yaml >assets/lynx.svg
+keymap -c keymap_drawer.config.yaml parse -c 10 -z config/lynx.keymap >assets/lynx.yaml
+keymap -c keymap_drawer.config.yaml draw -k ferris/sweep assets/lynx.yaml >assets/lynx.svg
+
+keymap -c keymap_drawer.config.yaml parse -c 10 -z config/calypso.keymap >assets/calypso.yaml
+keymap -c keymap_drawer.config.yaml draw -k corne_rotated -l LAYOUT_split_3x5_3 assets/calypso.yaml >assets/calypso.svg
 echo " Done"
