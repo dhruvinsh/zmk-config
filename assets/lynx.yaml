@@ -21,9 +21,9 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-  - - {t: Esc, h: NAV}
+  - - {t: '$$mdi:keyboard-esc$$', h: NAV}
     - {t: '$$mdi:keyboard-space$$', h: NUM}
-    - ENTER
+    - $$mdi:keyboard-return$$
     - {t: '$$mdi:backspace$$', h: SYM}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
@@ -31,27 +31,27 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:swap-horizontal$$
     - {t: '$$mdi:transfer$$', type: trans}
-    - $$mdi:chevron-double-up$$
-    - {t: '$$mdi:backspace-outline$$', h: '$$mdi:backspace$$'}
-    - {t: Del, h: ⌃+Del}
+    - PG UP
+    - {t: '$$mdi:backspace$$', h: 'Ctl+ $$mdi:backspace$$'}
+    - {t: DEL, h: Ctl+ DEL}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-  - - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
-    - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-    - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-    - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
+    - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+    - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+    - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
     - {t: '$$mdi:transfer$$', type: trans}
-    - ←
-    - {t: ↓, h: Ctl+ END}
-    - {t: ↑, h: Ctl+ HOME}
-    - →
+    - LEFT
+    - {t: DOWN, h: Ctl+ END}
+    - {t: UP, h: Ctl+ HOME}
+    - RIGHT
     - '`'
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - $$mdi:chevron-double-down$$
+    - PG DN
     - END
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -97,28 +97,10 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
   SYM:
   - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - - '~'
-    - '`'
-    - '{'
-    - '['
-    - <
-    - '>'
-    - ']'
-    - '}'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - ;
-  - - $$mdi:alpha-w-box$$
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - _
-    - _
-    - '-'
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+  - ['~', '`', '{', '[', <, '>', ']', '}', '', ;]
+  - ['$$mdi:alpha-w-box$$', '', '', '', _, _, '-', '', '', '']
   - - {t: '$$mdi:transfer$$', type: trans}
-    - Esc
+    - $$mdi:keyboard-esc$$
     - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
   SYS:

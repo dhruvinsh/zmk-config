@@ -50,7 +50,7 @@
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        function_layer {
+        system_layer {
             if-layers = <NAV SYM>;
             then-layer = <SYS>;
         };
@@ -118,7 +118,7 @@
             >;
         };
 
-        function_layer {
+        system_layer {
             display-name = "SYS";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
