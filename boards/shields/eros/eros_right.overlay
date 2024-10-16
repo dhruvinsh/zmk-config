@@ -1,0 +1,18 @@
+// vim: set ft=dts:
+
+#include "eros.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&shifter 7 GPIO_ACTIVE_HIGH>
+        , <&shifter 6 GPIO_ACTIVE_HIGH>
+        , <&shifter 5 GPIO_ACTIVE_HIGH>
+        , <&shifter 4 GPIO_ACTIVE_HIGH>
+        , <&shifter 3 GPIO_ACTIVE_HIGH>
+        , <&shifter 2 GPIO_ACTIVE_HIGH>
+        ;
+};

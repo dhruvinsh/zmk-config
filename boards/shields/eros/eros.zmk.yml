@@ -1,0 +1,14 @@
+file_format: "1"
+id: eros
+name: Calypso
+type: shield
+url: https://github.com/foostan/crkbd
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - eros_left
+  - eros_right
+

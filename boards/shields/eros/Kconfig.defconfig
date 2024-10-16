@@ -1,0 +1,21 @@
+if SHIELD_CALYPSO_LEFT
+  config ZMK_KEYBOARD_NAME
+    default "Calypso"
+
+  config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+  # battery fetching from peripheral
+  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+  config SPI
+    default y
+endif
+
+if SHIELD_CALYPSO_LEFT || SHIELD_CALYPSO_RIGHT
+  config ZMK_SPLIT
+    default y
+endif
