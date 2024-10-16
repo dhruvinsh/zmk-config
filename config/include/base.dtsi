@@ -46,6 +46,10 @@
 #define NAV_DOWN    &mt LC(END)  DOWN
 #define NAV_BSPC    &mt LC(BSPC) BSPC
 #define NAV_DEL     &mt LC(DEL)  DEL
+// layer aliases
+#define NAV_ESC     &lt NAV ESC
+#define NUM_SPC     &lt NUM SPACE
+#define SYM_ENT     &lt SYM ENTER
 
 / {
     conditional_layers {
@@ -68,7 +72,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &comma_morph  &dot_morph &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  TL_DEF    &lt NAV ESC &lt NUM SPACE  &kp ENTER  &lt SYM BSPC TR_DEF
+                                  TL_DEF     NAV_ESC    NUM_SPC        SYM_ENT    &kp BSPC   TR_DEF
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };

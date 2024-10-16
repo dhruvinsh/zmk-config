@@ -23,8 +23,8 @@ layers:
     - /
   - - {t: '$$mdi:keyboard-esc$$', h: NAV}
     - {t: '$$mdi:keyboard-space$$', h: NUM}
-    - $$mdi:keyboard-return$$
-    - {t: '$$mdi:backspace$$', h: SYM}
+    - {t: '$$mdi:keyboard-return$$', h: SYM}
+    - $$mdi:backspace$$
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -101,8 +101,8 @@ layers:
   - ['$$mdi:alpha-w-box$$', '', '', '', _, _, '-', '', '', '']
   - - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:keyboard-esc$$
-    - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
   SYS:
   - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
     - {t: '$$mdi:bluetooth-connect$$', h: '2'}
@@ -136,8 +136,8 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
   - - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [6, 7]
   k: $$mdi:backspace$$
