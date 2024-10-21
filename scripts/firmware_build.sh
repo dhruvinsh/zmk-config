@@ -11,25 +11,25 @@ echo -e "${RED}---> Cleaning old build files..${NC}"
 rm -rf "$WORKSPACE_DIR"/../zmk-config/builds/*.uf2
 
 echo -e "${RED}---> Building lynx left side..${NC}"
-west build -p -d build/lynx_left -b nice_nano_v2 -- -DSHIELD="lynx_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/lynx_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building lynx right side..${NC}"
-west build -p -d build/lynx_right -b nice_nano_v2 -- -DSHIELD="lynx_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/lynx_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building calypso left side..${NC}"
-west build -p -d build/calypso_left -b nice_nano_v2 -- -DSHIELD="calypso_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/calypso_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building calypso right side..${NC}"
-west build -p -d build/calypso_right -b nice_nano_v2 -- -DSHIELD="calypso_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/calypso_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building reset firmware..${NC}"
-west build -p -d build/reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
+west build -p -d build/reset -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="settings_reset"
 
 echo -e "${RED}---> Building eros left side..${NC}"
-west build -p -d build/eros_left -b nice_nano_v2 -- -DSHIELD="eros_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/eros_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building eros right side..${NC}"
-west build -p -d build/eros_right -b nice_nano_v2 -- -DSHIELD="eros_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/eros_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Copying and renaming the build..${NC}"
 sleep 2
