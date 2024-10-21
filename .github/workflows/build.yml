@@ -17,6 +17,7 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
@@ -24,11 +25,16 @@ jobs:
           name: firmware
           path: firmware
 
-      - name: Publish release
-        uses: svenstaro/upload-release-action@v2
+      - name: Generate Release
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: firmware/*.uf2
-          file_glob: true
-          tag: ${{ github.ref }}
-          overwrite: true
+          token: ${{ github.token }}
+          name: Latest ZMK Firmware
+          tage_name: ${{ input.release_name || "latest" }}
+          fail_on_unmatched_files: false
+          draft: false
+          prerelease: false
+          files: |
+            firmware/*.hex
+            firmware/*.bin
+            firmware/*.uf2
