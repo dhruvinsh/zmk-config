@@ -1,3 +1,5 @@
+name: Build ZMK Firmware
+
 on:
   workflow_dispatch:
   push:
