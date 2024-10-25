@@ -22,21 +22,30 @@ west build -p -d build/calypso_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -D
 echo -e "${RED}---> Building calypso right side..${NC}"
 west build -p -d build/calypso_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
-echo -e "${RED}---> Building reset firmware..${NC}"
-west build -p -d build/reset -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="settings_reset"
-
 echo -e "${RED}---> Building eros left side..${NC}"
 west build -p -d build/eros_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
 echo -e "${RED}---> Building eros right side..${NC}"
 west build -p -d build/eros_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
+echo -e "${RED}---> Building helios..${NC}"
+west build -p -d build/helios -b blackpill_f411ce -S studio-rpc-usb-uart -- -DSHIELD="helios" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+
+echo -e "${RED}---> Building nice_nano_v2 reset firmware..${NC}"
+west build -p -d build/reset -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="settings_reset"
+
+echo -e "${RED}---> Building blackpill_f411ce reset firmware..${NC}"
+west build -p -d build/reset -b blackpill_f411ce -S studio-rpc-usb-uart -- -DSHIELD="settings_reset"
+
 echo -e "${RED}---> Copying and renaming the build..${NC}"
 sleep 2
+cp build/calypso_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_left.uf2
+cp build/calypso_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_right.uf2
 cp build/eros_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_left.uf2
 cp build/eros_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_right.uf2
 cp build/lynx_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_left.uf2
 cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
-cp build/calypso_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_left.uf2
-cp build/calypso_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_right.uf2
-cp build/reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/reset.uf2
+cp build/reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
+
+cp build/helios/zephyr/zmk.bin "$WORKSPACE_DIR"/../zmk-config/builds/helios.bin
+cp build/reset/zephyr/zmk.bin "$WORKSPACE_DIR"/../zmk-config/builds/blackpill_f411ce_reset.bin
