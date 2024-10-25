@@ -1,0 +1,6 @@
+if SHIELD_HELIOS
+
+  config ZMK_KEYBOARD_NAME
+    default "Helios"
+
+endif

@@ -1,0 +1,10 @@
+file_format: "1"
+id: helios
+name: Helios
+type: shield
+url: https://github.com/dhruvinsh/zmk-config
+requires:
+  - blackpill_f411ce
+features:
+  - keys
+  - backlight
