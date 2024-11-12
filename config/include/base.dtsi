@@ -48,8 +48,8 @@
 #define NAV_DEL     &mt LC(DEL) DEL
 #define STUDIO      &studio_unlock
 // layer aliases
-#define NAV_ESC     &lt NAV ESC
-#define NUM_SPC     &lt NUM SPACE
+#define NAV_ESC     &lt NAV &escape_morph
+#define NUM_SPC     &lt NUM &space_morph
 #define SYM_ENT     &lt SYM ENTER
 
 / {
