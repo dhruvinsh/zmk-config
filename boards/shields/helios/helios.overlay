@@ -80,3 +80,33 @@
         ;
     };
 };
+
+
+&flash0 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        boot_partition: partition@0 {
+            label = "tinyuf2";
+            reg = <0x00000000 DT_SIZE_K(32)>;
+        };
+
+        /*
+         * Use third and fourth 16K sectors for storage
+         */
+
+        storage_partition: partition@8000 {
+            label = "storage";
+            reg = <0x00008000 DT_SIZE_K(32)>;
+        };
+
+        code_partition: partition@10000 {
+            label = "code";
+            reg = <0x00010000 (DT_SIZE_K(512 - 32 - 32))>;
+            read-only;
+        };
+
+    };
+};

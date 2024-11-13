@@ -4,3 +4,11 @@ if SHIELD_HELIOS
     default "Helios"
 
 endif
+
+
+config BUILD_OUTPUT_UF2_USE_FLASH_BASE
+  default y
+
+config BUILD_OUTPUT_UF2_USE_FLASH_OFFSET
+  default y
+
