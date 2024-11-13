@@ -30,4 +30,4 @@ MAKE_MORPH(rpar_inner_morph,  &rpar_morph,   &kp RBRC,           CTL)
 MAKE_MORPH(space_morph,       &kp SPC,       &kp GRAVE,          SFT)
 
 // tap: escap | shift + tap: ~
-MAKE_MORPH(escap_morph,       &kp ESC,       &kp TILDE,          SFT)
+MAKE_MORPH(escape_morph,      &kp ESC,       &kp TILDE,          SFT)
