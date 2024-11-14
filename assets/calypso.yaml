@@ -22,8 +22,8 @@ layers:
     - {t: ., s: ':'}
     - /
   - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
-    - {t: '$$mdi:keyboard-esc$$', h: NAV}
-    - {t: '$$mdi:keyboard-space$$', h: NUM}
+    - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
+    - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
     - $$mdi:backspace$$
     - {t: DEL, h: '$$mdi:apple-keyboard-option$$'}
@@ -98,7 +98,7 @@ layers:
   - - ''
     - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - '0'
     - {t: '$$mdi:transfer$$', type: trans}
     - ''
   SYM:

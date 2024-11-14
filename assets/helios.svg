@@ -951,7 +951,6 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(833, 98)" class="key keypos-29">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key"/>
-<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(35, 154)" class="key keypos-30">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key"/>
@@ -970,6 +969,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(322, 140)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(546, 140)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -979,6 +979,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(658, 140)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;studio_un…</tspan></text>
 </g>
 <g transform="translate(714, 140)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1000,7 +1001,6 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(210, 196)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;studio_un…</tspan></text>
 </g>
 <g transform="translate(266, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
