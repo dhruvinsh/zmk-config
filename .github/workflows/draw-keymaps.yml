@@ -1,9 +1,6 @@
 name: Draw ZMK keymaps
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - "*"
 
 jobs:
   draw:
