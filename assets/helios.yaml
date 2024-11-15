@@ -1,5 +1,5 @@
 layers:
-  default:
+  DEF:
   - $$mdi:keyboard-esc$$
   - F1
   - F2
@@ -13,11 +13,11 @@ layers:
   - F10
   - F11
   - F12
-  - PSCRN
-  - SLCK
-  - PAUSE BREAK
-  - {t: device, h: toggle}
-  - system
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - {t: NUM, h: toggle}
+  - SYS
   - '='
   - '1'
   - '2'
@@ -33,230 +33,420 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - \
-  - CAPSLOCK
-  - A
-  - S
-  - D
   - F
-  - G
-  - H
+  - P
+  - B
   - J
-  - K
   - L
-  - ;
+  - U
+  - Y
   - ''''
-  - LEFT SHIFT
+  - \
+  - CAPS
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - M
+  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: '$$mdi:apple-keyboard-command$$'}
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
+  - D
   - V
-  - B
-  - N
-  - M
-  - ','
-  - .
+  - K
+  - H
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
   - /
-  - RIGHT SHIFT
+  - $$mdi:apple-keyboard-shift$$
   - '`'
-  - INSERT
+  - \
   - LEFT
   - RIGHT
   - UP
   - DOWN
   - '['
   - ']'
-  - LEFT CONTROL
-  - LEFT ALT
-  - RIGHT GUI
-  - RIGHT CONTROL
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
   - HOME
-  - PAGE UP
-  - BACKSPACE
-  - DELETE
+  - PG UP
+  - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
+  - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
   - END
-  - PAGE DOWN
-  - $$mdi:keyboard-return$$
-  - $$mdi:keyboard-space$$
-  device:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - PG DN
+  - {t: '$$mdi:keyboard-return$$', h: SYM}
+  - $$mdi:backspace$$
+  NAV:
+  - $$mdi:keyboard-esc$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - {t: NUM, h: toggle}
+  - SYS
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:swap-horizontal$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - PG UP
+  - {t: '$$mdi:backspace$$', h: 'Ctl+ $$mdi:backspace$$'}
+  - {t: UP, h: Ctl+ HOME}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: DEL, h: Ctl+ DEL}
+  - \
+  - CAPS
+  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - LEFT
+  - {t: DOWN, h: Ctl+ END}
+  - RIGHT
+  - '`'
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - PG DN
+  - END
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - \
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
+  - HOME
+  - PG UP
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - END
+  - PG DN
+  - $$mdi:keyboard-tab$$
+  - $$mdi:cancel$$
+  NUM:
+  - $$mdi:keyboard-esc$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - {t: NUM, h: toggle}
+  - SYS
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - +
+  - '7'
+  - '8'
+  - '9'
+  - '='
+  - \
+  - CAPS
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '-'
+  - '1'
+  - '2'
+  - '3'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - \
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
+  - HOME
+  - PG UP
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - END
+  - PG DN
+  - '0'
+  - {t: '$$mdi:transfer$$', type: trans}
+  SYM:
+  - $$mdi:keyboard-esc$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - {t: NUM, h: toggle}
+  - SYS
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - $$mdi:keyboard-tab$$
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - \
+  - CAPS
+  - '~'
+  - '`'
+  - '{'
+  - '['
+  - <
+  - '>'
+  - ']'
+  - '}'
+  - ''
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:alpha-w-box$$
   - ''
   - ''
   - ''
+  - _
+  - _
+  - '-'
   - ''
   - ''
   - ''
-  - ''
-  - LOCKING NUM
-  - KP EQUAL
-  - KP SLASH
-  - KP ASTERISK
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP ENTER
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP DOT
-  - KP ENTER
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP 0
-  system:
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - \
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
+  - HOME
+  - PG UP
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
+  - END
+  - PG DN
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  SYS:
+  - $$mdi:keyboard-esc$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - {t: NUM, h: toggle}
+  - {t: SYS, type: held}
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:bluetooth-off$$
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:progress-download$$
-  - ''
-  - ''
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bl BL_TOG'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - \
+  - CAPS
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - \
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
+  - HOME
+  - PG UP
+  - {type: held alternate}
+  - {type: held alternate}
+  - END
+  - PG DN
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [37, 38]
+  k: $$mdi:backspace$$
+  l: [DEF, SYM, NAV, NUM]
+- p: [49, 50]
+  k: {t: (, s: '['}
+  l: [DEF, SYM]
+- p: [51, 52]
+  k: '|'
+  l: [DEF, SYM]
+- p: [50, 51]
+  k: {t: ), s: ']'}
+  l: [DEF, SYM]
+- p: [32, 33]
+  k: $$mdi:keyboard-tab$$
+  l: [DEF, SYM, NAV, NUM]

@@ -21,12 +21,12 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-  - - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
+  - - ''
     - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
     - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
     - $$mdi:backspace$$
-    - {t: DEL, h: '$$mdi:apple-keyboard-option$$'}
+    - ''
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -35,17 +35,17 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - PG UP
     - {t: '$$mdi:backspace$$', h: 'Ctl+ $$mdi:backspace$$'}
+    - {t: UP, h: Ctl+ HOME}
+    - {t: '$$mdi:transfer$$', type: trans}
     - {t: DEL, h: Ctl+ DEL}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
     - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
     - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
     - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
     - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
     - LEFT
     - {t: DOWN, h: Ctl+ END}
-    - {t: UP, h: Ctl+ HOME}
     - RIGHT
     - '`'
   - - {t: '$$mdi:transfer$$', type: trans}
