@@ -62,10 +62,8 @@
 
 #define LH0 31  // left thumb keys
 #define LH1 30
-#define LH2     // pace holder
 
 #define RH0 32  // right thumb keys
 #define RH1 33
-#define RH2     // place holder
 
 #include "include/base.dtsi"
