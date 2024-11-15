@@ -111,3 +111,7 @@
 
     };
 };
+
+&blackpill_serial {
+    status = "disabled";
+};
