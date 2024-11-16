@@ -13,24 +13,24 @@
     };
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-MAKE_MORPH(comma_morph,       &kp COMMA,     &comma_inner_morph, SFT)
-MAKE_MORPH(comma_inner_morph, &kp SEMICOLON, &kp LESS_THAN,      CTL)
+MAKE_MORPH(comma_morph,       &kp COMMA,       &comma_inner_morph, SFT)
+MAKE_MORPH(comma_inner_morph, &kp SEMICOLON,   &kp LESS_THAN,      CTL)
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-MAKE_MORPH(dot_morph,         &kp DOT,       &dot_inner_morph,   SFT)
-MAKE_MORPH(dot_inner_morph,   &kp COLON,     &kp GREATER_THAN,   CTL)
+MAKE_MORPH(dot_morph,         &kp DOT,         &dot_inner_morph,   SFT)
+MAKE_MORPH(dot_inner_morph,   &kp COLON,       &kp GREATER_THAN,   CTL)
 
 // tap: parenthesis | shift + tap: bracket | ctrl + shift + tap: brace
-MAKE_MORPH(lpar_morph,        &kp LPAR,      &lpar_inner_morph,  SFT)
-MAKE_MORPH(lpar_inner_morph,  &kp LBKT,      &kp LBRC,           CTL)
-MAKE_MORPH(rpar_morph,        &kp RPAR,      &rpar_inner_morph,  SFT)
-MAKE_MORPH(rpar_inner_morph,  &kp RBKT,      &kp RBRC,           CTL)
+MAKE_MORPH(lpar_morph,        &kp LPAR,        &lpar_inner_morph,  SFT)
+MAKE_MORPH(lpar_inner_morph,  &kp LBKT,        &kp LBRC,           CTL)
+MAKE_MORPH(rpar_morph,        &kp RPAR,        &rpar_inner_morph,  SFT)
+MAKE_MORPH(rpar_inner_morph,  &kp RBKT,        &kp RBRC,           CTL)
 
 // tap: space | shift + tap: `
-MAKE_MORPH(space_morph,       &lt NUM SPACE, &kp GRAVE,          SFT)
+MAKE_MORPH(space_morph,       &lt NUM SPACE,   &kp GRAVE,          SFT)
 
 // tap: escap | shift + tap: ~
-MAKE_MORPH(escape_morph,      &lt NAV ESC,   &kp TILDE,          SFT)
+MAKE_MORPH(escape_morph,      &lt NAV ESC,     &kp TILDE,          SFT)
 
 // tap: print_screen | shift + tap: mute
 // tap: scroll lock  | shift + tap: vol up
