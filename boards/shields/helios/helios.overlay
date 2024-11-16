@@ -122,3 +122,11 @@
 &blackpill_serial {
     status = "disabled";
 };
+
+&blackpill_i2c {
+  status = "disabled";
+};
+
+&blackpill_spi {
+  status = "disabled";
+};
