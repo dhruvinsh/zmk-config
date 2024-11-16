@@ -21,8 +21,15 @@ This repository tracks my keyboard configuration.
 - 36x Gateron Oil Kings
 - 36x Honey Milk JP XDA PBT Keycaps
 
+## Helios aka Kinesis Advantage2
+
+88-key keyboard with a split design and a thumb cluster.
+
+- 1x Weact BlackPill V3 (STM32F411CEU6) (Tinyuf2)
+- 1x PCB by dcpedit
+
 ## Keymap
 
 This awesome keymap is created via [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
-![Keymap](./assets/calypso.svg)
+![Keymap](./assets/lynx.svg)
