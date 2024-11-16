@@ -51,7 +51,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         system_layer {
-            if-layers = <NAV SYM>;
+            if-layers = <NUM SYM>;
             then-layer = <SYS>;
         };
     };
