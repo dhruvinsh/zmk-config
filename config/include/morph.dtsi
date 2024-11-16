@@ -31,3 +31,10 @@ MAKE_MORPH(space_morph,       &lt NUM SPACE, &kp GRAVE,          SFT)
 
 // tap: escap | shift + tap: ~
 MAKE_MORPH(escape_morph,      &lt NAV ESC,   &kp TILDE,          SFT)
+
+// tap: print_screen | shift + tap: mute
+// tap: scroll lock  | shift + tap: vol up
+// tap: pause        | shift + tap: vol down
+MAKE_MORPH(print_morph,       &kp PSCRN,       &kp C_MUTE,         SFT)
+MAKE_MORPH(scrl_morph,        &kp SCLK,        &kp C_VOL_UP,       SFT)
+MAKE_MORPH(pause_morph,       &kp PAUSE_BREAK, &kp C_VOL_DN,       SFT)
