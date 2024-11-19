@@ -77,6 +77,10 @@
     status = "okay";
 };
 
+&clk_hsi48 {
+    status = "okay";
+};
+
 &pll {
   // https://github.com/qmk/qmk_firmware/blob/7f22cb52e3aaafde671fdb994d53914366baf31a/platforms/chibios/boards/GENERIC_STM32_L432XC/configs/mcuconf.h#L54-L59
   div-m = <1>;
