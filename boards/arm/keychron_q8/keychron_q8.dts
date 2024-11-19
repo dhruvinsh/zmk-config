@@ -7,6 +7,12 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include "keychron-layout.dtsi"
+
+&keychron_layout {
+    transform = <&transform>;
+};
+
 / {
     model = "Keychron Q8";
     compatible = "keychron,q8", "st,stm32l032";
@@ -16,7 +22,6 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,kscan = &kscan;
-        zmk,matrix-transform = &transform;
     };
 
 
