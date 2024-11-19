@@ -1,0 +1,3 @@
+config BOARD_KEYCHRON_Q8
+    bool "Keychron Q8"
+    depends on SOC_STM32L432XX
