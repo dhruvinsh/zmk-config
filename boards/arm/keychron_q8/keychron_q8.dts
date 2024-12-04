@@ -72,6 +72,7 @@
                   <&gpioa 8 GPIO_ACTIVE_LOW>,
                   <&gpioa 9 GPIO_ACTIVE_LOW>,
                   <&gpioh 3 GPIO_ACTIVE_LOW>;
+        wakeup-source;
     };
     led_strip: led-strip-composite {
     	  	compatible = "zmk,led-strip-composite";
