@@ -24,6 +24,8 @@
  ╰───────────────────────────╯ ╰───────────────────────────────────────╯
 */
 
+#define CONFIG_ENCODER
+
 /* key positions */
 #define LT0  20  // left-top row
 #define LT1  19

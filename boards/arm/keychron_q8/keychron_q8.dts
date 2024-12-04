@@ -26,6 +26,11 @@
         zmk,underglow = &led_strip;
     };
 
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
+    };
+
     transform: transform {
         compatible = "zmk,matrix-transform";
         // "B4", "B3", "A15", "A14", "A13"
@@ -66,6 +71,14 @@
                     <&gpioa 8 GPIO_ACTIVE_LOW>,
                     <&gpioa 9 GPIO_ACTIVE_LOW>,
                     <&gpioh 3 GPIO_ACTIVE_LOW>;
+    };
+
+    encoder: encoder {
+        compatible = "alps,ec11";
+        a-gpios = <&gpiob 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&gpioa 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <4>;
+        status = "okay";
     };
 
     led_strip: led-strip-composite {
