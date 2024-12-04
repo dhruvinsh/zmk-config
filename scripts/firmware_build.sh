@@ -31,6 +31,10 @@ west build -p -d build/eros_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSH
 echo -e "${RED}---> Building helios..${NC}"
 west build -p -d build/helios -b blackpill_f411ce -S studio-rpc-usb-uart -- -DSHIELD="helios" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
+echo -e "${RED}---> Building keychron..${NC}"
+# west build -p -d build/helios -b keychron_q8 -S studio-rpc-usb-uart -- -DSHIELD="helios" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+west build -p -d build/keychron -b keychron_q8 -S studio-rpc-usb-uart -- -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word;$WORKSPACE_DIR/../zmk-ckled2001" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+
 echo -e "${RED}---> Building nice_nano_v2 reset firmware..${NC}"
 west build -p -d build/reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
 
@@ -45,3 +49,4 @@ cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_ri
 cp build/reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
 
 cp build/helios/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/helios.uf2
+cp build/keychron/zephyr/zmk.bin "$WORKSPACE_DIR"/../zmk-config/builds/keychron.bin

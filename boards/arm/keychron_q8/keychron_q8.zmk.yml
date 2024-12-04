@@ -1,0 +1,10 @@
+file_format: "1"
+id: keychron_q8
+name: Keychron Q8
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+url: https://www.keychron.com/products/keychron-q8

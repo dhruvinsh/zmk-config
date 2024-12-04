@@ -135,3 +135,27 @@
         };
     };
 };
+
+#ifdef CONFIG_ENCODER
+    #include <dt-bindings/zmk/rgb.h>
+
+    / {
+        behaviors {
+            rgb_encoder: rgb_encoder {
+                compatible = "zmk,behavior-sensor-rotate";
+                #sensor-binding-cells = <0>;
+                bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            };
+        };
+
+        keymap {
+            default_layer {
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            };
+
+            number_layer {
+                sensor-bindings = <&rgb_encoder>;
+            };
+        };
+    };
+#endif

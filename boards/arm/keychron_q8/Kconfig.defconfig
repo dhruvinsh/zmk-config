@@ -1,0 +1,15 @@
+if BOARD_KEYCHRON_Q8
+
+config BOARD
+    default "keychron_q8"
+
+config ZMK_KEYBOARD_NAME
+    default "Keychron Q8"
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
+config ZMK_USB
+    default y
+
+endif
