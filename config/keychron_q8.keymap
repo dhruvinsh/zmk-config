@@ -11,12 +11,13 @@
 
  SW
  ╭───────────────────────────╮ ╭───────────────────────────────────────╮
- │ 0   1   2   3   4   5   6 │ │   7   8   9   10  11  12  13  14      │
- │ 15  16   17  18  19  20   │ │ 21  22  23  24    25  26  27  28  29  │
- │ 30  31   32  33  34  35   │ │  36  37  38  39    40  41   42    43  │
- │ 44   45   46  47  48  49  │ │50  51  52  53  54   55   56    57     │
- │ 58  59    60    61     62 │ │ 63    64     65            66  67  68 │
+ │ 1   2   3   4   5   6   7 │ │   8   9   10   11  12  13  14  15     │
+ │ 16  17   18  19  20  21   │ │ 22  23  24  25    26  27  28  29  30  │
+ │ 31  32   33  34  35  36   │ │  37  38  39  40    41  42   43    44  │
+ │ 45   46   47  48  49  50  │ │51  52  53  54  55   56   57    58     │
+ │ 59  60    61    62     63 │ │ 64    65     66            67  68  69 │
  ╰───────────────────────────╯ ╰───────────────────────────────────────╯
+
  ╭───────────────────────────╮ ╭───────────────────────────────────────╮
  │                           │ │                                       │
  │     LT4  LT3 LT2 LT1 LT0  │ │ RT0 RT1 RT2 RT3   RT4 RT5             │
@@ -29,51 +30,50 @@
 #define CONFIG_ENCODER
 
 /* key positions */
-#define LT0  20  // left-top row
-#define LT1  19
-#define LT2  18
-#define LT3  17
-#define LT4  16
+#define LT0  21  // left-top row
+#define LT1  20
+#define LT2  19
+#define LT3  18
+#define LT4  17
 
-#define RT0  21  // right-top row
-#define RT1  22
-#define RT2  23
-#define RT3  24
-#define RT4  25
+#define RT0  22  // right-top row
+#define RT1  23
+#define RT2  24
+#define RT3  25
+#define RT4  26
 
-#define LM0  35  // left-middle row
-#define LM1  34
-#define LM2  33
-#define LM3  32
-#define LM4  31
+#define LM0  36  // left-middle row
+#define LM1  35
+#define LM2  34
+#define LM3  33
+#define LM4  32
 
-#define RM0  36  // right-middle row
-#define RM1  37
-#define RM2  38
-#define RM3  39
-#define RM4  40
+#define RM0  37  // right-middle row
+#define RM1  38
+#define RM2  39
+#define RM3  40
+#define RM4  41
 
-#define LB0  49  // left-bottom row
-#define LB1  48
-#define LB2  47
-#define LB3  46
-#define LB4  45
+#define LB0  50  // left-bottom row
+#define LB1  49
+#define LB2  48
+#define LB3  47
+#define LB4  46
 
-#define RB0  51  // right-bottom row
-#define RB1  52
-#define RB2  53
-#define RB3  54
-#define RB4  55
+#define RB0  52  // right-bottom row
+#define RB1  53
+#define RB2  54
+#define RB3  55
+#define RB4  56
 
-#define LH0  62  // left thumb keys
-#define LH1  61
+#define LH0  63  // left thumb keys
+#define LH1  62
 
-#define RH0  63  // right thumb keys
-#define RH1  64
+#define RH0  64  // right thumb keys
+#define RH1  65
 
 /* kinesis extra keys */
-#define X_LT    &mo DEF \
-                &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6     &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC &kp C_MUTE \
+#define X_LT    &mo DEF &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6     &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC &kp C_MUTE \
                 &kp TAB
 #define X_LM    &kp CAPS
 #define X_LB    &kp LSHFT
