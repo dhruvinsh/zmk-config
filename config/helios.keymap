@@ -90,8 +90,7 @@
 #define RH1  85
 
 /* kinesis extra keys */
-#define X_LT  \
-                &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &print_morph &scrl_morph &pause_morph &tog NUM &mo SYS \
+#define X_LT    &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &print_morph &scrl_morph &pause_morph &tog NUM &mo SYS \
                 &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS \
                 &kp TAB
 #define X_LM    &kp CAPS
