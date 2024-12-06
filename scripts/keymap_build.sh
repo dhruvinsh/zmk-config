@@ -32,5 +32,5 @@ echo " Done"
 
 echo -n "Building Keychron keymaps.."
 keymap -c keymap_drawer.config.yaml parse -z config/keychron_q8.keymap >assets/keychron.yaml
-keymap -c keymap_drawer.config.yaml draw -k keychron/q8/ansi_encoder -l LAYOUT_ansi_69 assets/keychron.yaml >assets/keychron.svg
+keymap -c keymap_drawer.config.yaml draw --dts-layout ./boards/arm/keychron_q8/keychron-layout.dtsi assets/keychron.yaml >assets/keychron.svg
 echo " Done"
