@@ -27,6 +27,7 @@
  ╰───────────────────────────╯ ╰───────────────────────────────────────╯
 */
 
+// Some config for keyboard
 #define CONFIG_ENCODER
 
 /* key positions */

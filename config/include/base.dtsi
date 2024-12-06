@@ -34,7 +34,11 @@
 #define HRMR(k1,k2,k3,k4) &hmr RSHFT k1 &hmr RCTRL k2 &hmr RALT  k3 &hmr RGUI  k4
 
 // Some aliases
-#define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+#ifdef CONFIG_WIRELESS
+    #define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+#else
+    #define BT_PROFILES ___ ___ ___ ___ ___
+#endif
 #define BTLOADER    &bootloader
 #define CANCEL      &kp K_CANCEL
 #define NAV_UP      &mt LC(HOME) UP

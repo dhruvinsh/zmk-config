@@ -27,6 +27,9 @@
 //   cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
 // };
 
+// Some config for keyboard
+#define CONFIG_WIRELESS
+
 /* key positions */
 #define LT0  4  // left-top row
 #define LT1  3
