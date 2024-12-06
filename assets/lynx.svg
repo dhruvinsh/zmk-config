@@ -520,6 +520,28 @@ path.combo { stroke: #7f7f7f; }
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
 <text x="0" y="-24" class="key shifted">DEL</text>
 </g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="490" y="23" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="497" y="29" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="490" y="79" width="28" height="26" class="combo"/>
+<text x="504" y="92" class="combo tap">(</text>
+<text x="504" y="81" class="combo shifted">[</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="602" y="107" width="28" height="26" class="combo"/>
+<text x="616" y="120" class="combo tap">|</text>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="546" y="80" width="28" height="26" class="combo"/>
+<text x="560" y="93" class="combo tap">)</text>
+<text x="560" y="82" class="combo shifted">]</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="105" y="30" height="14" width="14.0" class="combo tap glyph mdi:keyboard-tab"/>
+</g>
 </g>
 </g>
 <g transform="translate(30, 678)" class="layer-NAV">

@@ -524,16 +524,16 @@ layers:
 combos:
 - p: [37, 38]
   k: $$mdi:backspace$$
-  l: [DEF, SYM, NAV, NUM]
+  l: [DEF, QWE, SYM, NAV, NUM]
 - p: [49, 50]
   k: {t: (, s: '['}
-  l: [DEF, SYM]
+  l: [DEF, QWE, SYM]
 - p: [51, 52]
   k: '|'
-  l: [DEF, SYM]
+  l: [DEF, QWE, SYM]
 - p: [50, 51]
   k: {t: ), s: ']'}
-  l: [DEF, SYM]
+  l: [DEF, QWE, SYM]
 - p: [32, 33]
   k: $$mdi:keyboard-tab$$
-  l: [DEF, SYM, NAV, NUM]
+  l: [DEF, QWE, SYM, NAV, NUM]
