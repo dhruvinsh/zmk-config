@@ -6,7 +6,8 @@
         display-name = "LAYOUT_ansi_69";
 
         keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100   75   25       0     0     0>
+            = <&key_physical_attrs  50  50   25    0       0     0     0>
+            , <&key_physical_attrs 100 100   75   25       0     0     0>
             , <&key_physical_attrs 100 100  175   25       0     0     0>
             , <&key_physical_attrs 100 100  275    0       0     0     0>
             , <&key_physical_attrs 100 100  375   25       0     0     0>
