@@ -1,6 +1,6 @@
 layers:
   DEF:
-  - DEF
+  - QWE
   - $$mdi:keyboard-esc$$
   - '1'
   - '2'
@@ -70,8 +70,79 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
+  QWE:
+  - {t: QWE, type: held}
+  - $$mdi:keyboard-esc$$
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - '='
+  - $$mdi:backspace$$
+  - MUTE
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ']'
+  - \
+  - DEL
+  - CAPS
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
+  - ''''
+  - $$mdi:keyboard-return$$
+  - HOME
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - ''
+  - M
+  - N
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - /
+  - $$mdi:apple-keyboard-shift$$
+  - UP
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
+  - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
+  - {t: '$$mdi:keyboard-return$$', h: SYM}
+  - {t: '$$mdi:backspace$$', s: DEL}
+  - $$mdi:apple-keyboard-option$$
+  - LEFT
+  - DOWN
+  - RIGHT
   NAV:
-  - DEF
+  - {t: QWE, type: held alternate}
   - $$mdi:keyboard-esc$$
   - '1'
   - '2'
@@ -142,7 +213,7 @@ layers:
   - DOWN
   - RIGHT
   NUM:
-  - DEF
+  - {t: QWE, type: held alternate}
   - $$mdi:keyboard-esc$$
   - '1'
   - '2'
@@ -213,7 +284,7 @@ layers:
   - DOWN
   - RIGHT
   SYM:
-  - DEF
+  - {t: QWE, type: held alternate}
   - $$mdi:keyboard-esc$$
   - '1'
   - '2'
@@ -260,7 +331,7 @@ layers:
   - HOME
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
-  - ''
+  - {t: QWE, h: toggle}
   - ''
   - ''
   - _
@@ -284,7 +355,7 @@ layers:
   - DOWN
   - RIGHT
   SYS:
-  - DEF
+  - {t: QWE, type: held}
   - $$mdi:keyboard-esc$$
   - '1'
   - '2'
@@ -301,11 +372,11 @@ layers:
   - $$mdi:backspace$$
   - MUTE
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'

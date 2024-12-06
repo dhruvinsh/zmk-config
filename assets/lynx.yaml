@@ -25,6 +25,32 @@ layers:
     - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
     - {t: '$$mdi:backspace$$', s: DEL}
+  QWE:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+    - G
+    - H
+    - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
+  - - Z
+    - X
+    - C
+    - V
+    - B
+    - M
+    - N
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
+    - /
+  - - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
+    - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
+    - {t: '$$mdi:keyboard-return$$', h: SYM}
+    - {t: '$$mdi:backspace$$', s: DEL}
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
@@ -98,7 +124,16 @@ layers:
   SYM:
   - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
   - ['~', '`', '{', '[', <, '>', ']', '}', '', ;]
-  - ['$$mdi:alpha-w-box$$', '', '', '', _, _, '-', '', '', '']
+  - - $$mdi:alpha-w-box$$
+    - {t: QWE, h: toggle}
+    - ''
+    - ''
+    - _
+    - _
+    - '-'
+    - ''
+    - ''
+    - ''
   - - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:keyboard-esc$$
     - {type: held}

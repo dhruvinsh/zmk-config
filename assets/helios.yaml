@@ -86,6 +86,93 @@ layers:
   - PG DN
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - {t: '$$mdi:backspace$$', s: DEL}
+  QWE:
+  - $$mdi:keyboard-esc$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: PSCRN, s: MUTE}
+  - {t: SCLK, s: VOL UP}
+  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: NUM, h: toggle}
+  - SYS
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - CAPS
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - M
+  - N
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - /
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - \
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - RCTL
+  - HOME
+  - PG UP
+  - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
+  - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
+  - END
+  - PG DN
+  - {t: '$$mdi:keyboard-return$$', h: SYM}
+  - {t: '$$mdi:backspace$$', s: DEL}
   NAV:
   - $$mdi:keyboard-esc$$
   - F1
@@ -317,7 +404,7 @@ layers:
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
-  - ''
+  - {t: QWE, h: toggle}
   - ''
   - ''
   - _
@@ -379,11 +466,11 @@ layers:
   - '0'
   - '-'
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'
