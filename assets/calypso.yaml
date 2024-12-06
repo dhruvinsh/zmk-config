@@ -25,7 +25,7 @@ layers:
     - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
     - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
-    - $$mdi:backspace$$
+    - {t: '$$mdi:backspace$$', s: DEL}
     - ''
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
@@ -80,7 +80,7 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - '0'
+    - {t: ., s: ':'}
     - '4'
     - '5'
     - '6'
@@ -98,8 +98,8 @@ layers:
   - - ''
     - {t: '$$mdi:transfer$$', type: trans}
     - {type: held}
-    - '0'
     - {t: '$$mdi:transfer$$', type: trans}
+    - '0'
     - ''
   SYM:
   - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
@@ -143,8 +143,8 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - ''
-    - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
     - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
     - ''
