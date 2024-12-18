@@ -33,7 +33,6 @@
 #define STUDIO      &studio_unlock
 #define NAV_ESC     &escape_morph
 #define NUM_SPC     &space_morph
-#define BSPCMO      &bspc_morph
 // layer aliases
 #define SYM_ENT     &lt SYM ENTER
 
@@ -58,7 +57,7 @@
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB     &kp Z      &kp X      &kp C      &kp D      &kp V        X_MB     &kp K      &kp H      &comma_morph  &dot_morph &kp FSLH  X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
-            X_LH                                      NAV_ESC    NUM_SPC      X_MH     SYM_ENT    BSPCMO                                        X_RH
+            X_LH                                      NAV_ESC    NUM_SPC      X_MH     SYM_ENT    &key_repeat                                   X_RH
         //╰──────╯                                  ╰──────────┴──────────╯ ╰──────╯ ╰──────────┴──────────╯                                  ╰──────╯
             >;
         };
@@ -73,7 +72,7 @@
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB     &kp Z      &kp X      &kp C      &kp V      &kp B        X_MB     &kp M      &kp N      &comma_morph  &dot_morph &kp FSLH  X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
-            X_LH                                      NAV_ESC    NUM_SPC      X_MH     SYM_ENT    BSPCMO                                        X_RH
+            X_LH                                      NAV_ESC    NUM_SPC      X_MH     SYM_ENT    &key_repeat                                   X_RH
         //╰──────╯                                  ╰──────────┴──────────╯ ╰──────╯ ╰──────────┴──────────╯                                  ╰──────╯
             >;
         };
