@@ -37,7 +37,7 @@
         }; \
     };
 
-MAKE_COMBO(bspc, &kp BSPC,    RT1 RT2, DEF QWE SYM NAV NUM)
+MAKE_COMBO(bspc, &bspc_morph, RT1 RT2, DEF QWE SYM NAV NUM)
 MAKE_COMBO(lbkt, &lpar_morph, RM1 RM2, DEF QWE SYM)
 MAKE_COMBO(pipe, &kp PIPE,    RM3 RM4, DEF QWE SYM)
 MAKE_COMBO(rbkt, &rpar_morph, RM2 RM3, DEF QWE SYM)
