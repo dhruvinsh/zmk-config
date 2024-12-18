@@ -13,28 +13,44 @@
 #include "behaviors.dtsi"
 #include "fillers.dtsi"
 
-// Home row mods macro
-// GUI -> ALT -> CTRL -> SHFT    |    SHFT -> CTRL -> ALT -> GUI
-#define HRML(k1,k2,k3,k4) &hml LGUI  k1 &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
-#define HRMR(k1,k2,k3,k4) &hmr RSHFT k1 &hmr RCTRL k2 &hmr RALT  k3 &hmr RGUI  k4
-
 // Some aliases
 #ifdef CONFIG_WIRELESS
     #define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 #else
     #define BT_PROFILES ___ ___ ___ ___ ___
 #endif
+
+//      Hyper       keys
+#define LEFT_HYPER  LS(LC(LA(LGUI)))
+#define LEFT_MEH    LS(LC(LALT))
+#define LHYPER      LEFT_HYPER
+#define LMEH        LEFT_MEH
+#define RHYPER      RIGHT_HYPER
+#define RIGHT_HYPER RS(RC(RA(RGUI)))
+#define RIGHT_MEH   RS(RC(RALT))
+#define RMEH        RIGHT_MEH
+//      aliases
 #define BTLOADER    &bootloader
 #define CANCEL      &kp K_CANCEL
-#define NAV_UP      &mt LC(HOME) UP
-#define NAV_DOWN    &mt LC(END) DOWN
 #define NAV_BSPC    &mt LC(BSPC) BSPC
-#define NAV_DEL     &mt LC(DEL) DEL
-#define STUDIO      &studio_unlock
+#define NAV_DEL     &mt LC(DEL)  DEL
+#define NAV_DOWN    &mt LC(END)  DOWN
 #define NAV_ESC     &escape_morph
+#define NAV_UP      &mt LC(HOME) UP
 #define NUM_SPC     &space_morph
-// layer aliases
-#define SYM_ENT     &lt SYM ENTER
+#define STUDIO      &studio_unlock
+//      layer       aliases
+#define SYM_ENT     &lt SYM      ENTER
+//      some        functions
+#define LH(key)     LS(LC(LA(LG(key))))
+#define LM(key)     LS(LC(LA(key)))
+#define RH(key)     RS(RC(RA(RG(key))))
+#define RM(key)     RS(RC(RA(key)))
+
+// Home row mods macro
+// GUI -> ALT -> CTRL -> SHFT  -> HYPER    |    HYPER -> SHFT -> CTRL -> ALT -> GUI
+#define HRML(k1,k2,k3,k4,k5) &hml LGUI  k1 &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4 &hml LHYPER k5
+#define HRMR(k1,k2,k3,k4,k5) &hmr LHYPER k1 &hmr RSHFT k2 &hmr RCTRL k3 &hmr RALT  k4 &hmr RGUI  k5
 
 / {
     conditional_layers {
@@ -53,7 +69,7 @@
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
             X_LT     &kp Q      &kp W      &kp F      &kp P      &kp B        X_MT     &kp J      &kp L      &kp U      &kp Y      &kp SQT      X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     HRML(A,        R,         S,         T)     &kp G        X_MM     &kp M      HRMR(N,        E,         I,        O)        X_RM
+            X_LM     HRML(A,        R,         S,         T,        G)        X_MM     HRMR(M,       N,        E,         I,          O)        X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB     &kp Z      &kp X      &kp C      &kp D      &kp V        X_MB     &kp K      &kp H      &comma_morph  &dot_morph &kp FSLH  X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
@@ -68,7 +84,7 @@
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
             X_LT     &kp Q      &kp W      &kp E      &kp R      &kp T        X_MT     &kp Y      &kp U      &kp I      &kp O      &kp P        X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     HRML(A,        S,         D,         F)     &kp G        X_MM     &kp H      HRMR(J,        K,         L,       SEMI)      X_RM
+            X_LM     HRML(A,        S,         D,         F,        G)        X_MM     HRMR(H,         J,        K,         L,       SEMI)      X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB     &kp Z      &kp X      &kp C      &kp V      &kp B        X_MB     &kp M      &kp N      &comma_morph  &dot_morph &kp FSLH  X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
@@ -113,7 +129,7 @@
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
             X_LT     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    X_MT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR     X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     &kp TILDE  &kp GRAVE  &kp LBRC   &kp LBKT   &kp LT       X_MM     &kp GT     &kp RBKT   &kp RBRC   XXX        &kp SEMI     X_RM
+            X_LM     HRML(TILDE,  GRAVE,     LBRC,       LBKT,       LT)      X_MM     HRMR(GT,     RBKT,     RBRC,       XXX,        SEMI)     X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB    &caps_word  &tog QWE   XXX        XXX        &kp UNDER    X_MB     &kp UNDER  &kp MINUS  XXX        XXX        XXX          X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
