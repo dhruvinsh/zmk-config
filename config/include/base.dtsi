@@ -22,13 +22,11 @@
 
 //      Hyper       keys
 #define LEFT_HYPER  LS(LC(LA(LGUI)))
-#define LEFT_MEH    LS(LC(LALT))
 #define LHYPER      LEFT_HYPER
-#define LMEH        LEFT_MEH
-#define RHYPER      RIGHT_HYPER
+#define LMEH        LS(LC(LALT))
 #define RIGHT_HYPER RS(RC(RA(RGUI)))
-#define RIGHT_MEH   RS(RC(RALT))
-#define RMEH        RIGHT_MEH
+#define RHYPER      RIGHT_HYPER
+#define RMEH        RS(RC(RALT))
 //      aliases
 #define BTLOADER    &bootloader
 #define CANCEL      &kp K_CANCEL
@@ -50,7 +48,7 @@
 // Home row mods macro
 // GUI -> ALT -> CTRL -> SHFT  -> HYPER    |    HYPER -> SHFT -> CTRL -> ALT -> GUI
 #define HRML(k1,k2,k3,k4,k5) &hml LGUI  k1 &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4 &hml LHYPER k5
-#define HRMR(k1,k2,k3,k4,k5) &hmr LHYPER k1 &hmr RSHFT k2 &hmr RCTRL k3 &hmr RALT  k4 &hmr RGUI  k5
+#define HRMR(k1,k2,k3,k4,k5) &hmr RHYPER k1 &hmr RSHFT k2 &hmr RCTRL k3 &hmr RALT  k4 &hmr RGUI  k5
 
 / {
     conditional_layers {
@@ -129,7 +127,7 @@
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
             X_LT     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    X_MT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR     X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     HRML(TILDE,  GRAVE,     LBRC,       LBKT,       LT)      X_MM     HRMR(GT,     RBKT,     RBRC,       XXX,        SEMI)     X_RM
+            X_LM     HRML(GRAVE,  LPAR,     LBRC,       LBKT,       LT)       X_MM     HRMR(GT,     RBKT,     RBRC,       RPAR,     TILDE)      X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LB    &caps_word  &tog QWE   XXX        XXX        &kp UNDER    X_MB     &kp UNDER  &kp MINUS  XXX        XXX        XXX          X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
