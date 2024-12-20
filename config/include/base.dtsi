@@ -4,14 +4,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// import definition
 #include "layers.h"
 #include "base.h"
 
-// Now import if any extra external layers needed
-#include "combos.dtsi"
-#include "morph.dtsi"
-#include "behaviors.dtsi"
+// import extra functions
 #include "fillers.dtsi"
+#include "morph.dtsi"
+#include "combos.dtsi"
+#include "behaviors.dtsi"
 
 // Some aliases
 #ifdef CONFIG_WIRELESS
@@ -33,12 +34,14 @@
 #define NAV_BSPC    &mt LC(BSPC) BSPC
 #define NAV_DEL     &mt LC(DEL)  DEL
 #define NAV_DOWN    &mt LC(END)  DOWN
-#define NAV_ESC     &escape_morph
 #define NAV_UP      &mt LC(HOME) UP
-#define NUM_SPC     &space_morph
 #define STUDIO      &studio_unlock
+
 //      layer       aliases
-#define SYM_ENT     &lt SYM      ENTER
+#define NAV_ESC     &escape_morph
+#define NUM_SPC     &space_morph
+#define SYM_ENT     &lt SYM ENTER
+
 //      some        functions
 #define LH(key)     LS(LC(LA(LG(key))))
 #define LM(key)     LS(LC(LA(key)))
