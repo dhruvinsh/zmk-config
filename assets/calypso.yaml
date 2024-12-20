@@ -5,8 +5,8 @@ layers:
     - {t: R, h: '$$mdi:apple-keyboard-option$$'}
     - {t: S, h: '$$mdi:apple-keyboard-control$$'}
     - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-    - G
-    - M
+    - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+    - {t: M, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
     - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: E, h: '$$mdi:apple-keyboard-control$$'}
     - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -25,7 +25,7 @@ layers:
     - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
     - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
-    - {t: '$$mdi:backspace$$', s: DEL}
+    - '&key_repeat'
     - ''
   QWE:
   - [Q, W, E, R, T, Y, U, I, O, P]
@@ -33,8 +33,8 @@ layers:
     - {t: S, h: '$$mdi:apple-keyboard-option$$'}
     - {t: D, h: '$$mdi:apple-keyboard-control$$'}
     - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-    - G
-    - H
+    - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+    - {t: H, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
     - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-option$$'}
@@ -53,7 +53,7 @@ layers:
     - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
     - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
     - {t: '$$mdi:keyboard-return$$', h: SYM}
-    - {t: '$$mdi:backspace$$', s: DEL}
+    - '&key_repeat'
     - ''
   NAV:
   - - {t: '$$mdi:transfer$$', type: trans}
@@ -131,7 +131,16 @@ layers:
     - ''
   SYM:
   - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - ['~', '`', '{', '[', <, '>', ']', '}', '', ;]
+  - - {t: '`', h: '$$mdi:apple-keyboard-command$$'}
+    - {t: (, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: '[', h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: <, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+    - {t: '>', h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+    - {t: ']', h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: ), h: '$$mdi:apple-keyboard-option$$'}
+    - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
   - - $$mdi:alpha-w-box$$
     - {t: QWE, h: toggle}
     - ''
@@ -187,7 +196,7 @@ layers:
     - ''
 combos:
 - p: [6, 7]
-  k: $$mdi:backspace$$
+  k: {t: '$$mdi:backspace$$', s: DEL}
   l: [DEF, QWE, SYM, NAV, NUM]
 - p: [16, 17]
   k: {t: (, s: '['}

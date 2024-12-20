@@ -240,14 +240,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
@@ -383,10 +383,12 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(322, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">G</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(546, 196)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">M</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(602, 196)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -552,12 +554,12 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 <g transform="translate(602, 448)" class="key keypos-85">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
-<text x="0" y="-52" class="key shifted">DEL</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;key_repeat</tspan></text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="616" y="127" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="623" y="133" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<text x="630" y="129" class="combo shifted">DEL</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="616" y="183" width="28" height="26" class="combo"/>
@@ -642,14 +644,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
@@ -785,10 +787,12 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(322, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">G</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(546, 196)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">H</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(602, 196)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -954,12 +958,12 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 <g transform="translate(602, 448)" class="key keypos-85">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
-<text x="0" y="-52" class="key shifted">DEL</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;key_repeat</tspan></text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="616" y="127" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="623" y="133" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<text x="630" y="129" class="combo shifted">DEL</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="616" y="183" width="28" height="26" class="combo"/>
@@ -1044,14 +1048,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
@@ -1354,6 +1358,7 @@ path.combo { stroke: #7f7f7f; }
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="616" y="127" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="623" y="133" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<text x="630" y="129" class="combo shifted">DEL</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="168" y="127" width="28" height="26" class="combo"/>
@@ -1424,14 +1429,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
@@ -1723,6 +1728,7 @@ path.combo { stroke: #7f7f7f; }
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="616" y="127" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="623" y="133" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<text x="630" y="129" class="combo shifted">DEL</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="168" y="127" width="28" height="26" class="combo"/>
@@ -1793,14 +1799,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
@@ -1915,42 +1921,53 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(98, 210)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">~</text>
+<text x="0" y="0" class="key tap">`</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(154, 196)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">`</text>
+<text x="0" y="0" class="key tap">(</text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g transform="translate(210, 196)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">{</text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g transform="translate(266, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">[</text>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-shift"/>
 </g>
 <g transform="translate(322, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">&lt;</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(546, 196)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">&gt;</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(602, 196)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">]</text>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-shift"/>
 </g>
 <g transform="translate(658, 196)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">}</text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g transform="translate(714, 196)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">)</text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g transform="translate(770, 210)" class="key keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">;</text>
+<text x="0" y="0" class="key tap">~</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(833, 210)" class="key keypos-53">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key"/>
@@ -2087,6 +2104,7 @@ path.combo { stroke: #7f7f7f; }
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="616" y="127" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="623" y="133" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<text x="630" y="129" class="combo shifted">DEL</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="616" y="183" width="28" height="26" class="combo"/>
@@ -2171,14 +2189,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(732, 24)" class="key keypos-14">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">SCLK</text>
-<text x="0" y="-20" class="key shifted">VOL UP</text>
+<text x="0" y="-20" class="key shifted">VOL DN</text>
 </g>
 <g transform="translate(771, 24)" class="key keypos-15">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.0em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
-<text x="0" y="-20" class="key shifted">VOL DN</text>
+<text x="0" y="-20" class="key shifted">VOL UP</text>
 </g>
 <g transform="translate(810, 24)" class="key keypos-16">
 <rect rx="6" ry="6" x="-17" y="-22" width="35" height="44" class="key"/>

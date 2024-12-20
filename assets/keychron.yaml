@@ -36,8 +36,8 @@ layers:
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
-  - M
+  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: M, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
   - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -65,7 +65,7 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
   - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
-  - {t: '$$mdi:backspace$$', s: DEL}
+  - '&key_repeat'
   - $$mdi:apple-keyboard-option$$
   - LEFT
   - DOWN
@@ -107,8 +107,8 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
-  - H
+  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: H, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
@@ -136,7 +136,7 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
   - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
-  - {t: '$$mdi:backspace$$', s: DEL}
+  - '&key_repeat'
   - $$mdi:apple-keyboard-option$$
   - LEFT
   - DOWN
@@ -316,16 +316,16 @@ layers:
   - \
   - DEL
   - CAPS
-  - '~'
-  - '`'
-  - '{'
-  - '['
-  - <
-  - '>'
-  - ']'
-  - '}'
-  - ''
-  - ;
+  - {t: '`', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: (, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: <, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: '>', h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
   - ''''
   - $$mdi:keyboard-return$$
   - HOME
@@ -427,7 +427,7 @@ layers:
   - RIGHT
 combos:
 - p: [23, 24]
-  k: $$mdi:backspace$$
+  k: {t: '$$mdi:backspace$$', s: DEL}
   l: [DEF, QWE, SYM, NAV, NUM]
 - p: [38, 39]
   k: {t: (, s: '['}

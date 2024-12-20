@@ -14,8 +14,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - SYS
   - '='
@@ -47,8 +47,8 @@ layers:
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
-  - M
+  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: M, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
   - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -85,7 +85,7 @@ layers:
   - END
   - PG DN
   - {t: '$$mdi:keyboard-return$$', h: SYM}
-  - {t: '$$mdi:backspace$$', s: DEL}
+  - '&key_repeat'
   QWE:
   - $$mdi:keyboard-esc$$
   - F1
@@ -101,8 +101,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - SYS
   - '='
@@ -134,8 +134,8 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
-  - H
+  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: H, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
@@ -172,7 +172,7 @@ layers:
   - END
   - PG DN
   - {t: '$$mdi:keyboard-return$$', h: SYM}
-  - {t: '$$mdi:backspace$$', s: DEL}
+  - '&key_repeat'
   NAV:
   - $$mdi:keyboard-esc$$
   - F1
@@ -188,8 +188,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - SYS
   - '='
@@ -275,8 +275,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - SYS
   - '='
@@ -362,8 +362,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - SYS
   - '='
@@ -391,16 +391,16 @@ layers:
   - )
   - \
   - CAPS
-  - '~'
-  - '`'
-  - '{'
-  - '['
-  - <
-  - '>'
-  - ']'
-  - '}'
-  - ''
-  - ;
+  - {t: '`', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: (, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: <, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
+  - {t: '>', h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
@@ -449,8 +449,8 @@ layers:
   - F11
   - F12
   - {t: PSCRN, s: MUTE}
-  - {t: SCLK, s: VOL UP}
-  - {t: PAUSE BREAK, s: VOL DN}
+  - {t: SCLK, s: VOL DN}
+  - {t: PAUSE BREAK, s: VOL UP}
   - {t: NUM, h: toggle}
   - {t: SYS, type: held}
   - '='
@@ -523,7 +523,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [37, 38]
-  k: $$mdi:backspace$$
+  k: {t: '$$mdi:backspace$$', s: DEL}
   l: [DEF, QWE, SYM, NAV, NUM]
 - p: [49, 50]
   k: {t: (, s: '['}
