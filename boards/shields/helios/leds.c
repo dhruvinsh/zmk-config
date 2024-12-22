@@ -46,7 +46,8 @@ ZMK_SUBSCRIPTION(led_indicators_listener, zmk_hid_indicators_changed);
 static int led_layer_listener_cb(const zmk_event_t *eh) {
   const struct zmk_layer_state_changed *ev = as_zmk_layer_state_changed(eh);
 
-  if (ev->layer == 1) { // Check if the event is for layer #1
+  // layer 3 -> NUM
+  if (ev->layer == 3) {
     if (ev->state) {
       led_on(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_layer)));
     } else {
