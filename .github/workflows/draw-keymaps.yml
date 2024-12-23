@@ -13,10 +13,8 @@ jobs:
       output_folder: assets
       commit_message: "chore(draw): ${{ github.event.head_commit.message }}"
       parse_args: >-
-        lynx:'-c 10 -z config/lynx.keymap'
         calypso:'-c 10 -z config/calypso.keymap'
         helios:'-z config/helios.keymap'
       draw_args:
-        lynx:'-k ferris_rotated -l LAYOUT_split_3x5_2'
         calypso:'-k corne_rotated -l LAYOUT_split_3x5_3'
         helios:'-k kinesis/stapelberg -l LAYOUT'

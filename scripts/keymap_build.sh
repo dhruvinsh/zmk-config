@@ -1,24 +1,10 @@
 #!/bin/bash
-
-# From buid job,
-# parse_args: >-
-# 	lynx:'-c 10 -z config/lynx.keymap'
-# 	calypso:'-c 10 -z config/calypso.keymap'
-# 	helios:'-z config/helios.keymap'
-# draw_args:
-# 	lynx:'-k ferris/sweep -l LAYOUT_split_3x5_2'
-# 	calypso:'-k splitkb/aurora/corne -l LAYOUT_split_3x5_3'
-# 	helios:'-k kinesis/stapelberg -l LAYOUT'
+# vim: set expandtab ts=4 sw=4 tw=0 :
 
 if [ ! -d scripts ]; then
-	echo "Run this script from the root project directory"
-	exit 1
+    echo "Run this script from the root project directory"
+    exit 1
 fi
-
-echo -n "Building Lynx keymaps.."
-keymap -c keymap_drawer.config.yaml parse -c 10 -z config/lynx.keymap >assets/lynx.yaml
-keymap -c keymap_drawer.config.yaml draw -k ferris_rotated -l LAYOUT_split_3x5_2 assets/lynx.yaml >assets/lynx.svg
-echo " Done"
 
 echo -n "Building Calypso keymaps.."
 keymap -c keymap_drawer.config.yaml parse -c 10 -z config/calypso.keymap >assets/calypso.yaml
