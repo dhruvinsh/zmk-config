@@ -15,6 +15,8 @@ jobs:
       parse_args: >-
         calypso:'-c 10 -z config/calypso.keymap'
         helios:'-z config/helios.keymap'
+        keychron_q8:'-z config/keychron_q8.keymap'
       draw_args:
         calypso:'-k corne_rotated -l LAYOUT_split_3x5_3'
         helios:'-k kinesis/stapelberg -l LAYOUT'
+        keychron_q8:'-k keychron/q8/ansi_encoder'
