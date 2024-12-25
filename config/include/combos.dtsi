@@ -12,13 +12,12 @@
 */
 
 /*
-// Layers: Default, Qwerty, Navigation, Number, Symbol, System
-#define DEF 0
-#define QWE 1
-#define NAV 2
-#define NUM 3
-#define SYM 4
-#define SYS 5
+// Layers: Qwerty, Navigation, Number, Symbol, System
+#define QWE 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define SYS 4
 */
 
 #define COMBO_HOOK require-prior-idle-ms = <150>;
@@ -37,8 +36,8 @@
         }; \
     };
 
-MAKE_COMBO(bspc, &bspc_morph, RT1 RT2, DEF QWE SYM NAV NUM)
-MAKE_COMBO(lbkt, &lpar_morph, RM1 RM2, DEF QWE SYM)
-MAKE_COMBO(pipe, &kp PIPE,    RM3 RM4, DEF QWE SYM)
-MAKE_COMBO(rbkt, &rpar_morph, RM2 RM3, DEF QWE SYM)
-MAKE_COMBO(tab,  &kp TAB,     LT3 LT2, DEF QWE SYM NAV NUM)
+MAKE_COMBO(bspc, &bspc_morph, RT1 RT2, QWE SYM NAV NUM)
+MAKE_COMBO(lbkt, &lpar_morph, RM1 RM2, QWE SYM)
+MAKE_COMBO(pipe, &kp PIPE,    RM3 RM4, QWE SYM)
+MAKE_COMBO(rbkt, &rpar_morph, RM2 RM3, QWE SYM)
+MAKE_COMBO(tab,  &kp TAB,     LT3 LT2, QWE SYM NAV NUM)

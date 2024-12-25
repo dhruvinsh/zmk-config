@@ -1,30 +1,4 @@
 layers:
-  DEF:
-  - [Q, W, F, P, B, J, L, U, Y, '''']
-  - - {t: A, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: R, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
-    - {t: M, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
-    - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: O, h: '$$mdi:apple-keyboard-command$$'}
-  - - Z
-    - X
-    - C
-    - D
-    - V
-    - K
-    - H
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - /
-  - - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
-    - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
-    - {t: '$$mdi:keyboard-return$$', h: SYM}
-    - '&key_repeat'
   QWE:
   - [Q, W, E, R, T, Y, U, I, O, P]
   - - {t: A, h: '$$mdi:apple-keyboard-command$$'}
@@ -185,16 +159,16 @@ layers:
 combos:
 - p: [6, 7]
   k: {t: '$$mdi:backspace$$', s: DEL}
-  l: [DEF, QWE, SYM, NAV, NUM]
+  l: [QWE, SYM, NAV, NUM]
 - p: [16, 17]
   k: {t: (, s: '['}
-  l: [DEF, QWE, SYM]
+  l: [QWE, SYM]
 - p: [18, 19]
   k: '|'
-  l: [DEF, QWE, SYM]
+  l: [QWE, SYM]
 - p: [17, 18]
   k: {t: ), s: ']'}
-  l: [DEF, QWE, SYM]
+  l: [QWE, SYM]
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
-  l: [DEF, QWE, SYM, NAV, NUM]
+  l: [QWE, SYM, NAV, NUM]
