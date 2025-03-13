@@ -117,8 +117,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -132,12 +132,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -1154,7 +1162,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(658, 140)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">UP</text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 78%">Ctl+ HOME</tspan></text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 88%">Ctl+HOME</tspan></text>
 </g>
 <g transform="translate(714, 140)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -1163,7 +1171,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(770, 154)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">DEL</text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 88%">Ctl+ DEL</tspan></text>
+<text x="0" y="24" class="key hold">Ctl+DEL</text>
 </g>
 <g transform="translate(833, 154)" class="key keypos-41">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key"/>
@@ -1208,7 +1216,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(658, 196)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">DOWN</text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 88%">Ctl+ END</tspan></text>
+<text x="0" y="24" class="key hold">Ctl+END</text>
 </g>
 <g transform="translate(714, 196)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
