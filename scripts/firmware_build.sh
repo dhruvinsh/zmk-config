@@ -10,6 +10,12 @@ cd "$WORKSPACE_DIR"/app || exit 1
 echo -e "${RED}---> Cleaning old build files..${NC}"
 rm -rf "$WORKSPACE_DIR"/../zmk-config/builds/*.{uf2,bin}
 
+echo -e "${RED}---> Building lynx left side..${NC}"
+west build -p -d build/lynx_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+
+echo -e "${RED}---> Building lynx right side..${NC}"
+west build -p -d build/lynx_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+
 echo -e "${RED}---> Building calypso left side..${NC}"
 west build -p -d build/calypso_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
 
@@ -37,6 +43,8 @@ cp build/calypso_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calyp
 cp build/calypso_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_right.uf2
 cp build/eros_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_left.uf2
 cp build/eros_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_right.uf2
+cp build/lynx_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_left.uf2
+cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
 cp build/reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
 
 cp build/helios/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/helios.uf2

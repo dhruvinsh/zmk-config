@@ -1,0 +1,5 @@
+config SHIELD_LYNX_LEFT
+  def_bool $(shields_list_contains,lynx_left)
+
+config SHIELD_LYNX_RIGHT
+  def_bool $(shields_list_contains,lynx_right)
