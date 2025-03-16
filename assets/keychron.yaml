@@ -36,8 +36,8 @@ layers:
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
-  - {t: M, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+  - {t: G, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - {t: M, h: 'Sft+Ctl+AltGr+$$mdi:apple-keyboard-command$$'}
   - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -107,8 +107,8 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
-  - {t: H, h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+  - {t: G, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - {t: H, h: 'Sft+Ctl+AltGr+$$mdi:apple-keyboard-command$$'}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
@@ -165,10 +165,10 @@ layers:
   - $$mdi:swap-horizontal$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
-  - {t: '$$mdi:backspace$$', h: 'Ctl+ $$mdi:backspace$$'}
-  - {t: UP, h: Ctl+ HOME}
+  - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
+  - {t: UP, h: Ctl+HOME}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: DEL, h: Ctl+ DEL}
+  - {t: DEL, h: Ctl+DEL}
   - '['
   - ']'
   - \
@@ -181,7 +181,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - LEFT
-  - {t: DOWN, h: Ctl+ END}
+  - {t: DOWN, h: Ctl+END}
   - RIGHT
   - '`'
   - ''''
@@ -320,8 +320,8 @@ layers:
   - {t: (, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '[', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: <, h: 'Meh+ $$mdi:apple-keyboard-command$$'}
-  - {t: '>', h: 'Sft+Ctl+AGr+ $$mdi:apple-keyboard-command$$'}
+  - {t: <, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - {t: '>', h: 'Sft+Ctl+AltGr+$$mdi:apple-keyboard-command$$'}
   - {t: ']', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ), h: '$$mdi:apple-keyboard-option$$'}
