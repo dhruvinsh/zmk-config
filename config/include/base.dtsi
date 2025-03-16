@@ -1,26 +1,67 @@
-// vim: set ts=4 sw=4 ft=devicetree:
+// vim: set ts=4 sw=4 ft=devicetree foldmethod=marker foldmarker=[[[,]]]:
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// import definition
-#include "layers.h"
-#include "base.h"
+//[[[
+/////////////////////////////////////////
+// Layers
+/////////////////////////////////////////
+// Layers: Default, Qwerty, Navigation, Number, Symbol, System
+#define DEF 0
+#define QWE 1
+#define NAV 2
+#define NUM 3
+#define SYM 4
+#define SYS 5
+/////////////////////////////////////////
+//]]]
 
-// import extra functions
-#include "fillers.dtsi"
-#include "morph.dtsi"
-#include "combos.dtsi"
-#include "behaviors.dtsi"
 
-// Some aliases
+
+//[[[
+/////////////////////////////////////////
+// Variables
+/////////////////////////////////////////
+#define XXX &none
+#define ___ &trans
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4 // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 // right hand
+
+#if defined LH2
+  #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // thumbs on 36 keys
+#else
+  #define THUMBS LH1 LH0 RH0 RH1 // thumbs on 34 keys
+#endif
+
 #ifdef CONFIG_WIRELESS
     #define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 #else
     #define BT_PROFILES ___ ___ ___ ___ ___
 #endif
+/////////////////////////////////////////
+//]]]
 
+
+
+//[[[
+/////////////////////////////////////////
+// Import functionalities
+/////////////////////////////////////////
+#include "fillers.dtsi"
+#include "morph.dtsi"
+#include "combos.dtsi"
+#include "behaviors.dtsi"
+/////////////////////////////////////////
+//]]]
+
+
+
+//[[[
+/////////////////////////////////////////
+// Aliases
+/////////////////////////////////////////
 //      Hyper       keys
 #define LEFT_HYPER  LS(LC(LA(LGUI)))
 #define LHYPER      LEFT_HYPER
@@ -47,11 +88,22 @@
 #define LM(key)     LS(LC(LA(key)))
 #define RH(key)     RS(RC(RA(RG(key))))
 #define RM(key)     RS(RC(RA(key)))
+/////////////////////////////////////////
+//]]]
 
+
+
+//[[[
+/////////////////////////////////////////
 // Home row mods macro
+/////////////////////////////////////////
 // GUI -> ALT -> CTRL -> SHFT  -> HYPER    |    HYPER -> SHFT -> CTRL -> ALT -> GUI
 #define HRML(k1,k2,k3,k4,k5) &hml LGUI  k1 &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4 &hml LHYPER k5
 #define HRMR(k1,k2,k3,k4,k5) &hmr RHYPER k1 &hmr RSHFT k2 &hmr RCTRL k3 &hmr RALT  k4 &hmr RGUI  k5
+/////////////////////////////////////////
+//]]]
+
+
 
 / {
     conditional_layers {
@@ -158,5 +210,5 @@
 
 
 #ifdef CONFIG_ENCODER
-#include "encoder.dtsi"
+  #include "encoder.dtsi"
 #endif

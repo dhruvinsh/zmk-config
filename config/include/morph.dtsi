@@ -1,7 +1,5 @@
 // vim: set ts=4 sw=4 ft=devicetree:
 
-#include "base.h"
-
 #define MAKE_MORPH(NAME, BINDING1, BINDIGN2, MOD) \
     / { \
         behaviors { \
