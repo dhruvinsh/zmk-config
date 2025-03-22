@@ -11,15 +11,6 @@ This repository tracks my keyboard configuration.
 - 34x [Ambients Silent Choc Switches 35g Twilight](https://lowprokb.ca/products/ambients-silent-choc-switches?variant=44873426436260)
 - 34x MBK Choc Keycaps
 
-## Calypso aka Corne
-
-36-key version of Corne, to be precise Corne-Ultralight modified by Pete J.
-
-- 2x Nice!Nano v2
-- 2x 750mah 403450 Liter Battery
-- 36x Gateron Oil Kings
-- 36x Honey Milk JP XDA PBT Keycaps
-
 ## Helios aka Kinesis Advantage2
 
 88-key keyboard with a split design and a thumb cluster.
@@ -31,4 +22,4 @@ This repository tracks my keyboard configuration.
 
 This awesome keymap is created via [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
-![Keymap](./assets/calypso.svg)
+![Keymap](./assets/lynx.svg)

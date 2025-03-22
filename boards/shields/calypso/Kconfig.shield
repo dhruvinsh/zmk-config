@@ -1,5 +1,0 @@
-config SHIELD_CALYPSO_LEFT
-  def_bool $(shields_list_contains,calypso_left)
-
-config SHIELD_CALYPSO_RIGHT
-  def_bool $(shields_list_contains,calypso_right)
