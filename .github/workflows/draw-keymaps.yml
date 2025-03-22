@@ -15,8 +15,8 @@ jobs:
       parse_args: >-
         lynx:'-c 10 -z config/lynx.keymap'
         helios:'-z config/helios.keymap'
-        keychron_q8:'-z config/keychron_q8.keymap'
+        celeste:'-z config/celeste.keymap'
       draw_args:
         lynx:'-k ferris_rotated -l LAYOUT_split_3x5_2'
         helios:'-k kinesis/stapelberg -l LAYOUT'
-        keychron_q8:'-k keychron/q8/ansi_encoder'
+        celeste:'-k keychron/q8/ansi_encoder'

@@ -1,0 +1,3 @@
+config BOARD_CELESTE
+    bool "Celeste"
+    depends on SOC_STM32L432XX

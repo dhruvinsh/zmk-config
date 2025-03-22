@@ -12,8 +12,8 @@ include:
     shield: helios
     snippet: studio-rpc-usb-uart
 
-  # Keychron Q8
-  - board: keychron_q8
+  # Celeste aka Keychron Q8
+  - board: celeste
 
   - board: nice_nano_v2
     shield: settings_reset

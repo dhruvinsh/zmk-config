@@ -3,7 +3,7 @@
 / {
     keychron_layout: keychron_layout {
         compatible = "zmk,physical-layout";
-        display-name = "LAYOUT_ansi_69";
+        display-name = "Default";
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs  50  50   25    0       0     0     0>

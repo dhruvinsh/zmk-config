@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: lynx}
 layers:
   DEF:
   - [Q, W, F, P, B, J, L, U, Y, '''']
@@ -195,6 +196,9 @@ combos:
 - p: [17, 18]
   k: {t: ), s: ']'}
   l: [DEF, QWE, SYM]
+- p: [7, 8]
+  k: \
+  l: [DEF, QWE, SYM, NAV, NUM]
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
   l: [DEF, QWE, SYM, NAV, NUM]
