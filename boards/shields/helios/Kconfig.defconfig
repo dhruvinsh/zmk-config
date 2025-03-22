@@ -1,23 +1,24 @@
 if SHIELD_HELIOS
 
-config ZMK_KEYBOARD_NAME
-  default "Helios"
+  config ZMK_KEYBOARD_NAME
+    default "Helios"
 
-config BUILD_OUTPUT_UF2_USE_FLASH_BASE
-  default y
+  config BUILD_OUTPUT_UF2_USE_FLASH_BASE
+    default y
 
-config BUILD_OUTPUT_UF2_USE_FLASH_OFFSET
-  default y
+  config BUILD_OUTPUT_UF2_USE_FLASH_OFFSET
+    default y
 
 
-if SOC_FAMILY_STM32
+  if SOC_FAMILY_STM32
 
-config ZMK_KSCAN_MATRIX_WAIT_BEFORE_INPUTS
-    default 150
+    # without this double keypress event occurs
+    config ZMK_KSCAN_MATRIX_WAIT_BEFORE_INPUTS
+        default 150
 
-config ZMK_KSCAN_MATRIX_WAIT_BETWEEN_OUTPUTS
-    default 150
+    config ZMK_KSCAN_MATRIX_WAIT_BETWEEN_OUTPUTS
+        default 150
 
-endif
+  endif
 
 endif

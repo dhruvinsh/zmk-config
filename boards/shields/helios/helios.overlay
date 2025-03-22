@@ -13,6 +13,7 @@
       zephyr,code-partition = &code_partition;
     };
 
+    // this aliases turn into C code as HID_USAGE_LED_CAPS_LOCK
     aliases {
       led-caps = &led_0;
       led-num = &led_1;
@@ -90,6 +91,7 @@
 };
 
 
+// NOTE: blackplill that I have uses tinyuf2 bootloader
 &flash0 {
     partitions {
         compatible = "fixed-partitions";

@@ -60,7 +60,7 @@ static int led_layer_listener_cb(const zmk_event_t *eh) {
 ZMK_LISTENER(layer_led_listener, led_layer_listener_cb);
 ZMK_SUBSCRIPTION(layer_led_listener, zmk_layer_state_changed);
 
-static int leds_init(const struct device *device) {
+static int leds_init(void) {
   if (!device_is_ready(led_dev)) {
     return -ENODEV;
   }
