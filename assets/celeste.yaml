@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: celeste}
 layers:
   DEF:
   - QWE
@@ -438,6 +439,9 @@ combos:
 - p: [39, 40]
   k: {t: ), s: ']'}
   l: [DEF, QWE, SYM]
+- p: [24, 25]
+  k: \
+  l: [DEF, QWE, SYM, NAV, NUM]
 - p: [18, 19]
   k: $$mdi:keyboard-tab$$
   l: [DEF, QWE, SYM, NAV, NUM]

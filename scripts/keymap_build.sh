@@ -16,7 +16,7 @@ keymap -c keymap_drawer.config.yaml parse -z config/helios.keymap >assets/helios
 keymap -c keymap_drawer.config.yaml draw -k kinesis/stapelberg -l LAYOUT assets/helios.yaml >assets/helios.svg
 echo " Done"
 
-echo -n "Building Keychron keymaps.."
-keymap -c keymap_drawer.config.yaml parse -z config/keychron_q8.keymap >assets/keychron.yaml
-keymap -c keymap_drawer.config.yaml draw --dts-layout ./boards/arm/keychron_q8/keychron-layout.dtsi assets/keychron.yaml >assets/keychron.svg
+echo -n "Building Celeste keymaps.."
+keymap -c keymap_drawer.config.yaml parse -z config/celeste.keymap >assets/celeste.yaml
+keymap -c keymap_drawer.config.yaml draw --dts-layout ./boards/arm/celeste/celeste-layout.dtsi assets/celeste.yaml >assets/celeste.svg
 echo " Done"

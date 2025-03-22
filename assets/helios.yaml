@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: helios}
 layers:
   DEF:
   - $$mdi:keyboard-esc$$
@@ -534,6 +535,9 @@ combos:
 - p: [50, 51]
   k: {t: ), s: ']'}
   l: [DEF, QWE, SYM]
+- p: [38, 39]
+  k: \
+  l: [DEF, QWE, SYM, NAV, NUM]
 - p: [32, 33]
   k: $$mdi:keyboard-tab$$
   l: [DEF, QWE, SYM, NAV, NUM]
