@@ -1,3 +1,4 @@
+// vim: set ts=4 sw=4 ft=devicetree:
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/cuddlykeyboards/ferris.dtsi>
 
@@ -7,8 +8,15 @@
 
 / {
     chosen {
-      zmk,kscan = &kscan0;
-      zmk,physical-layout = &cuddlykeyboards_ferris_layout;
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &cuddlykeyboards_ferris_layout;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
     };
 
     default_transform: keymap_transform_0 {
@@ -21,11 +29,5 @@
       RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)   RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
                               RC(3,3) RC(3,4)   RC(3,5) RC(3,6)
         >;
-    };
-
-    kscan0: kscan {
-      compatible = "zmk,kscan-gpio-matrix";
-      diode-direction = "col2row";
-      wakeup-source;
     };
 };

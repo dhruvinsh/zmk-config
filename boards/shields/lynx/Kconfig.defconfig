@@ -1,18 +1,27 @@
-if SHIELD_LYNX_LEFT
+if SHIELD_LYNX_DONGLE
   config ZMK_KEYBOARD_NAME
     default "Lynx"
 
   config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-  # battery fetching from peripheral
-  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+  config ZMK_USB
     default y
-  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
-    default y
+
+  config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+  config BT_MAX_CONN
+    default 6
+
+  config BT_MAX_PAIRED
+    default 6
 endif
 
-if SHIELD_LYNX_LEFT || SHIELD_LYNX_RIGHT
+if SHIELD_LYNX_DONGLE || SHIELD_LYNX_LEFT || SHIELD_LYNX_RIGHT
   config ZMK_SPLIT
+    default y
+
+  config ZMK_BLE
     default y
 endif

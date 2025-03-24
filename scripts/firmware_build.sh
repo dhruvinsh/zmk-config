@@ -40,6 +40,13 @@ function clean_builds {
     rm -rf "$WORKSPACE_DIR"/../zmk-config/builds/*.{uf2,bin}
 }
 
+# Function to build lynx dongle
+function build_lynx_dongle {
+    echo -e "${RED}---> Building lynx dongle side..${NC}"
+    west build -p -d build/lynx_dongle -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+    cp build/lynx_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_dongle.uf2
+}
+
 # Function to build lynx left
 function build_lynx_left {
     echo -e "${RED}---> Building lynx left side..${NC}"
@@ -81,6 +88,7 @@ mkdir -p "$WORKSPACE_DIR"/../zmk-config/builds
 # If no arguments provided, build all keyboards
 if [ $# -eq 0 ]; then
     clean_builds
+    build_lynx_dongle
     build_lynx_left
     build_lynx_right
     build_helios
@@ -93,8 +101,12 @@ fi
 for arg in "$@"; do
     case "$arg" in
     "lynx")
+        build_lynx_dongle
         build_lynx_left
         build_lynx_right
+        ;;
+    "lynx_dongle")
+        build_lynx_dongle
         ;;
     "lynx_left")
         build_lynx_left
