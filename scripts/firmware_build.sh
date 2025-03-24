@@ -10,7 +10,7 @@ function usage {
     echo "Build ZMK firmware for custom keyboards"
     echo
     echo "Options:"
-    echo "  keyboard_name    Name of keyboard to build (lynx, eros, helios, celeste, reset)"
+    echo "  keyboard_name    Name of keyboard to build (lynx, helios, celeste, reset)"
     echo "                   If no keyboard is specified, all keyboards will be built"
     echo "  -h, --help       Display this help message"
     echo
@@ -18,9 +18,6 @@ function usage {
     echo "  lynx             Build lynx (left and right sides)"
     echo "  lynx_left        Build only lynx left side"
     echo "  lynx_right       Build only lynx right side"
-    echo "  eros             Build eros (left and right sides)"
-    echo "  eros_left        Build only eros left side"
-    echo "  eros_right       Build only eros right side"
     echo "  helios           Build helios"
     echo "  celeste          Build celeste"
     echo "  reset            Build nice_nano_v2 reset firmware"
@@ -57,20 +54,6 @@ function build_lynx_right {
     cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
 }
 
-# Function to build eros left
-function build_eros_left {
-    echo -e "${RED}---> Building eros left side..${NC}"
-    west build -p -d build/eros_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
-    cp build/eros_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_left.uf2
-}
-
-# Function to build eros right
-function build_eros_right {
-    echo -e "${RED}---> Building eros right side..${NC}"
-    west build -p -d build/eros_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="eros_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
-    cp build/eros_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/eros_right.uf2
-}
-
 # Function to build helios
 function build_helios {
     echo -e "${RED}---> Building helios..${NC}"
@@ -100,8 +83,6 @@ if [ $# -eq 0 ]; then
     clean_builds
     build_lynx_left
     build_lynx_right
-    build_eros_left
-    build_eros_right
     build_helios
     build_celeste
     build_reset
@@ -111,49 +92,37 @@ fi
 # Process arguments
 for arg in "$@"; do
     case "$arg" in
-        "lynx")
-            build_lynx_left
-            build_lynx_right
-            ;;
-        "lynx_left")
-            build_lynx_left
-            ;;
-        "lynx_right")
-            build_lynx_right
-            ;;
-        "eros")
-            build_eros_left
-            build_eros_right
-            ;;
-        "eros_left")
-            build_eros_left
-            ;;
-        "eros_right")
-            build_eros_right
-            ;;
-        "helios")
-            build_helios
-            ;;
-        "celeste")
-            build_celeste
-            ;;
-        "reset")
-            build_reset
-            ;;
-        "all")
-            clean_builds
-            build_lynx_left
-            build_lynx_right
-            build_eros_left
-            build_eros_right
-            build_helios
-            build_celeste
-            build_reset
-            ;;
-        *)
-            echo "Unknown keyboard: $arg"
-            usage
-            ;;
+    "lynx")
+        build_lynx_left
+        build_lynx_right
+        ;;
+    "lynx_left")
+        build_lynx_left
+        ;;
+    "lynx_right")
+        build_lynx_right
+        ;;
+    "helios")
+        build_helios
+        ;;
+    "celeste")
+        build_celeste
+        ;;
+    "reset")
+        build_reset
+        ;;
+    "all")
+        clean_builds
+        build_lynx_left
+        build_lynx_right
+        build_helios
+        build_celeste
+        build_reset
+        ;;
+    *)
+        echo "Unknown keyboard: $arg"
+        usage
+        ;;
     esac
 done
 
