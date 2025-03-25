@@ -47,6 +47,13 @@ function build_lynx_dongle {
     cp build/lynx_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_dongle.uf2
 }
 
+# Function to build lynx dongle
+function build_lynx_xiao_dongle {
+    echo -e "${RED}---> Building lynx dongle side..${NC}"
+    west build -p -d build/lynx_xiao_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+    cp build/lynx_xiao_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_xiao_dongle.uf2
+}
+
 # Function to build lynx left
 function build_lynx_left {
     echo -e "${RED}---> Building lynx left side..${NC}"
@@ -76,10 +83,17 @@ function build_celeste {
 }
 
 # Function to build reset firmware
-function build_reset {
+function build_nn_reset {
     echo -e "${RED}---> Building nice_nano_v2 reset firmware..${NC}"
-    west build -p -d build/reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
-    cp build/reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
+    west build -p -d build/nn_reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
+    cp build/nn_reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
+}
+
+# Function to build reset firmware
+function build_xiao_reset {
+    echo -e "${RED}---> Building xiao ble reset firmware..${NC}"
+    west build -p -d build/xiao_reset -b seeeduino_xiao_ble -- -DSHIELD="settings_reset"
+    cp build/xiao_reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/xiao_reset.uf2
 }
 
 # Create builds directory if it doesn't exist
@@ -89,11 +103,13 @@ mkdir -p "$WORKSPACE_DIR"/../zmk-config/builds
 if [ $# -eq 0 ]; then
     clean_builds
     build_lynx_dongle
+    build_lynx_xiao_dongle
     build_lynx_left
     build_lynx_right
     build_helios
     build_celeste
-    build_reset
+    build_nn_reset
+    build_xiao_reset
     exit 0
 fi
 
@@ -102,11 +118,15 @@ for arg in "$@"; do
     case "$arg" in
     "lynx")
         build_lynx_dongle
+        build_lynx_xiao_dongle
         build_lynx_left
         build_lynx_right
         ;;
     "lynx_dongle")
         build_lynx_dongle
+        ;;
+    "lynx_xiao_dongle")
+        build_lynx_xiao_dongle
         ;;
     "lynx_left")
         build_lynx_left
@@ -120,16 +140,22 @@ for arg in "$@"; do
     "celeste")
         build_celeste
         ;;
-    "reset")
-        build_reset
+    "nn_reset")
+        build_nn_reset
+        ;;
+    "xiao_reset")
+        build_xiao_reset
         ;;
     "all")
         clean_builds
+        build_lynx_dongle
+        build_lynx_xiao_dongle
         build_lynx_left
         build_lynx_right
         build_helios
         build_celeste
-        build_reset
+        build_nn_reset
+        build_xiao_reset
         ;;
     *)
         echo "Unknown keyboard: $arg"
