@@ -43,7 +43,7 @@ function clean_builds {
 # Function to build lynx dongle
 function build_lynx_dongle {
     echo -e "${RED}---> Building lynx dongle side..${NC}"
-    west build -p -d build/lynx_dongle -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+    west build -p -d build/lynx_dongle -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle weact" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
     cp build/lynx_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_dongle.uf2
 }
 

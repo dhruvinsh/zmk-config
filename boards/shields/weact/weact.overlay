@@ -1,0 +1,64 @@
+/ {
+    chosen {
+        zephyr,display = &st7735s;
+    };
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 25)>;
+        };
+    };
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 25)>;
+            low-power-enable;
+        };
+    };
+};
+
+board_spi: &spi0 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+
+    st7735s: st7735r@0 {
+        compatible = "sitronix,st7735r";
+        spi-max-frequency = <1000000>;
+        reg = <0>;
+        width = <128>;
+        height = <160>;
+        cmd-data-gpios = <&pro_micro 7 GPIO_ACTIVE_LOW>;
+        reset-gpios = <&pro_micro 8  GPIO_ACTIVE_LOW>;
+        x-offset = <0>;
+        y-offset = <0>;
+        madctl = <0xC0>;
+        colmod = <0x05>;
+        caset = [00 00 00 4F];
+        raset = [00 00 00 9F];
+        vmctr1 = <0x0e>;
+        invctr = <0x07>;
+        pwctr1 = [a2 02 84];
+        pwctr2 = [c5];
+        pwctr3 = [0a 00];
+        pwctr4 = [8a 2a];
+        pwctr5 = [8a ee];
+        frmctr1 = [01 2c 2d];
+        frmctr2 = [01 2c 2d];
+        frmctr3 = [01 2c 2d 01 2c 2d];
+        gamctrp1 = [02 1c 07 12 37 32 29 2d 29 25 2b 39 00 01 03 10];
+        gamctrn1 = [03 1d 07 06 2e 2c 29 2d 2e 2e 37 3f 00 00 02 10];
+    };
+};
+
+&pro_micro_i2c {
+    status = "disabled";
+};
