@@ -90,7 +90,7 @@ layers:
   NUM:
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - FUN
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - +
@@ -148,6 +148,41 @@ layers:
     - $$mdi:keyboard-esc$$
     - {type: held}
     - {t: '$$mdi:transfer$$', type: trans}
+  FUN:
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - F7
+    - F8
+    - F9
+    - F13
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - F4
+    - F5
+    - F6
+    - F12
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - F1
+    - F2
+    - F3
+    - F11
+  - - {t: '$$mdi:transfer$$', type: trans}
+    - {type: held}
+    - {t: '$$mdi:transfer$$', type: trans}
+    - F10
   SYS:
   - - {t: '$$mdi:bluetooth-connect$$', h: '1'}
     - {t: '$$mdi:bluetooth-connect$$', h: '2'}
