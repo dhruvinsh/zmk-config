@@ -22,6 +22,10 @@
     };
 };
 
+&pro_micro_i2c {
+    status = "disabled";
+};
+
 board_spi: &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
