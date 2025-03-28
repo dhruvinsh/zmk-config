@@ -2,6 +2,13 @@
     chosen {
         zephyr,display = &st7735s;
     };
+
+    pwmleds {
+        compatible = "pwm-leds";
+        disp_b1: pwm_led_1 {
+            pwms = <&pwm1 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
+        };
+    };
 };
 
 &pinctrl {
@@ -20,10 +27,31 @@
             low-power-enable;
         };
     };
+
+    pwm1_default: pwm1_default {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 0)>;
+            nordic,invert;
+        };
+    };
+
+    pwm1_sleep: pwm1_sleep {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 0)>;
+            low-power-enable;
+        };
+    };
 };
 
 &pro_micro_i2c {
     status = "disabled";
+};
+
+&pwm1 {
+    status = "okay";
+    pinctrl-0 = <&pwm1_default>;
+    pinctrl-1 = <&pwm1_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 // https://github.com/zephyrproject-rtos/zephyr/blob/zephyr-v3.5.0/boards/shields/st7735r/st7735r_ada_160x128.overlay

@@ -6,6 +6,12 @@ if SHIELD_WEACT
   config SPI
     default y
 
+  config PWM
+    default y
+
+  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
   config DISP_WIDTH
     int "width of the mip, sharp, memory display"
     default 160
