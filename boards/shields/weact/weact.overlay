@@ -26,30 +26,28 @@
     status = "disabled";
 };
 
+// https://github.com/zephyrproject-rtos/zephyr/blob/zephyr-v3.5.0/boards/shields/st7735r/st7735r_ada_160x128.overlay
 board_spi: &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
 
     st7735s: st7735r@0 {
         compatible = "sitronix,st7735r";
-        spi-max-frequency = <1000000>;
+        spi-max-frequency = <20000000>;
         reg = <0>;
-        width = <128>;
-        height = <160>;
         cmd-data-gpios = <&pro_micro 7 GPIO_ACTIVE_LOW>;
         reset-gpios = <&pro_micro 8  GPIO_ACTIVE_LOW>;
+        width = <160>;
+        height = <128>;
         x-offset = <0>;
         y-offset = <0>;
-        madctl = <0xC0>;
-        colmod = <0x05>;
-        caset = [00 00 00 4F];
-        raset = [00 00 00 9F];
+        madctl = <0x60>;
+        colmod = <0x55>;
         vmctr1 = <0x0e>;
-        invctr = <0x07>;
         pwctr1 = [a2 02 84];
         pwctr2 = [c5];
         pwctr3 = [0a 00];
@@ -61,8 +59,4 @@ board_spi: &spi0 {
         gamctrp1 = [02 1c 07 12 37 32 29 2d 29 25 2b 39 00 01 03 10];
         gamctrn1 = [03 1d 07 06 2e 2c 29 2d 2e 2e 37 3f 00 00 02 10];
     };
-};
-
-&pro_micro_i2c {
-    status = "disabled";
 };
