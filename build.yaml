@@ -1,27 +1,6 @@
 include:
-  # lynx aka urchin
-  - board: seeeduino_xiao_ble
-    shield: lynx_dongle
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: lynx_dongle
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: lynx_left
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: lynx_right
-    snippet: studio-rpc-usb-uart
 
   # Helios aka kinesis adv2
   - board: blackpill_f411ce
     shield: helios
     snippet: studio-rpc-usb-uart
-
-  # Celeste aka Keychron Q8
-  - board: celeste
-
-  - board: nice_nano_v2
-    shield: settings_reset
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
