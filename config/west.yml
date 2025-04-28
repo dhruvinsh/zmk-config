@@ -18,5 +18,8 @@ manifest:
     - name: zmk-ckled2001
       remote: dhruvinsh
       revision: main
+    - name: zmk-prospector
+      remote: dhruvinsh
+      revision: main
   self:
     path: config
