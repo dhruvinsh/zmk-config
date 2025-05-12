@@ -134,16 +134,7 @@ layers:
     - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
     - {t: ), h: '$$mdi:apple-keyboard-option$$'}
     - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
-  - - $$mdi:alpha-w-box$$
-    - {t: QWE, h: toggle}
-    - ''
-    - ''
-    - _
-    - _
-    - '-'
-    - ''
-    - ''
-    - ''
+  - ['$$mdi:alpha-w-box$$', ), '}', ']', RT, _, '-', '', '', '']
   - - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:keyboard-esc$$
     - {type: held}
@@ -205,7 +196,7 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
   - - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: QWE, h: toggle}
     - $$mdi:bluetooth-off$$
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:backup-restore$$', type: bootloader}

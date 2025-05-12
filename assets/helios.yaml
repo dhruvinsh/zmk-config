@@ -405,10 +405,10 @@ layers:
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
-  - {t: QWE, h: toggle}
-  - ''
-  - ''
-  - _
+  - )
+  - '}'
+  - ']'
+  - RT
   - _
   - '-'
   - ''
@@ -579,7 +579,7 @@ layers:
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWE, h: toggle}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
