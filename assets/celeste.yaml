@@ -278,7 +278,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ''
   - '0'
   - $$mdi:apple-keyboard-option$$
   - LEFT

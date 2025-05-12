@@ -1418,9 +1418,8 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(434, 266)" class="key held keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
-<g transform="translate(518, 266)" class="key trans keypos-64">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(518, 266)" class="key keypos-64">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
 <g transform="translate(623, 266)" class="key keypos-65">
 <rect rx="6" ry="6" x="-75" y="-26" width="150" height="52" class="key"/>
