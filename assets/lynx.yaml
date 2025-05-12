@@ -134,7 +134,7 @@ layers:
     - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
     - {t: ), h: '$$mdi:apple-keyboard-option$$'}
     - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
-  - ['$$mdi:alpha-w-box$$', ), '}', ']', RT, _, '-', '', '', '']
+  - ['$$mdi:alpha-w-box$$', ), '}', ']', '>', _, '-', '', '', '']
   - - {t: '$$mdi:transfer$$', type: trans}
     - $$mdi:keyboard-esc$$
     - {type: held}
