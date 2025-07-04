@@ -43,42 +43,42 @@ function clean_builds {
 # Function to build lynx dongle
 function build_lynx_dongle {
   echo -e "${RED}---> Building lynx dongle side..${NC}"
-  west build -p -d build/lynx_dongle -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle prospector_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word;$WORKSPACE_DIR/../zmk-prospector" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/lynx_dongle -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle prospector_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-prospector" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/lynx_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_dongle.uf2
 }
 
 # Function to build lynx dongle
 function build_lynx_xiao_dongle {
   echo -e "${RED}---> Building lynx dongle side..${NC}"
-  west build -p -d build/lynx_xiao_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/lynx_xiao_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="lynx_dongle" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/lynx_xiao_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_xiao_dongle.uf2
 }
 
 # Function to build lynx left
 function build_lynx_left {
   echo -e "${RED}---> Building lynx left side..${NC}"
-  west build -p -d build/lynx_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/lynx_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/lynx_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_left.uf2
 }
 
 # Function to build lynx right
 function build_lynx_right {
   echo -e "${RED}---> Building lynx right side..${NC}"
-  west build -p -d build/lynx_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/lynx_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="lynx_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
 }
 
 # Function to build helios
 function build_helios {
   echo -e "${RED}---> Building helios..${NC}"
-  west build -p -d build/helios -b blackpill_f411ce -S studio-rpc-usb-uart -- -DSHIELD="helios" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/helios -b blackpill_f411ce -S studio-rpc-usb-uart -- -DSHIELD="helios" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/helios/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/helios.uf2
 }
 
 # Function to build celeste
 function build_celeste {
   echo -e "${RED}---> Building celeste..${NC}"
-  west build -p -d build/celeste -b celeste -S studio-rpc-usb-uart -- -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-tri-state;$WORKSPACE_DIR/../zmk-num-word;$WORKSPACE_DIR/../zmk-ckled2001" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/celeste -b celeste -S studio-rpc-usb-uart -- -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-ckled2001" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/celeste/zephyr/zmk.bin "$WORKSPACE_DIR"/../zmk-config/builds/celeste.bin
 }
 
@@ -117,17 +117,17 @@ fi
 for arg in "$@"; do
   case "$arg" in
   "lynx")
-    build_lynx_dongle
-    build_lynx_xiao_dongle
+    # build_lynx_dongle
+    # build_lynx_xiao_dongle
     build_lynx_left
     build_lynx_right
     ;;
-  "lynx_dongle")
-    build_lynx_dongle
-    ;;
-  "lynx_xiao_dongle")
-    build_lynx_xiao_dongle
-    ;;
+  # "lynx_dongle")
+  #   build_lynx_dongle
+  #   ;;
+  # "lynx_xiao_dongle")
+  #   build_lynx_xiao_dongle
+  #   ;;
   "lynx_left")
     build_lynx_left
     ;;
