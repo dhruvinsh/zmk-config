@@ -1,0 +1,19 @@
+if SHIELD_SELENE_LEFT
+  config ZMK_KEYBOARD_NAME
+    default "Selene"
+
+  config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+  # battery fetching from peripheral
+  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
+  config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+endif
+
+if SHIELD_SELENE_LEFT || SHIELD_SELENE_RIGHT
+  config ZMK_SPLIT
+    default y
+endif

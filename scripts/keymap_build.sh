@@ -19,4 +19,9 @@ echo " Done"
 echo -n "Building Celeste keymaps.."
 keymap -c keymap_drawer.config.yaml parse -z config/celeste.keymap >assets/celeste.yaml
 keymap -c keymap_drawer.config.yaml draw --dts-layout ./boards/arm/celeste/celeste-layout.dtsi assets/celeste.yaml >assets/celeste.svg
+echo "Done"
+
+echo -n "Building Selene keymaps.."
+keymap -c keymap_drawer.config.yaml parse -z config/selene.keymap >assets/selene.yaml
+keymap -c keymap_drawer.config.yaml draw -d boards/shields/selene/selene-layout.dtsi assets/selene.yaml >assets/selene.svg
 echo " Done"

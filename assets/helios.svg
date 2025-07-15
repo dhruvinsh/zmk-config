@@ -1740,7 +1740,9 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(546, 448)" class="key keypos-84">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
-</g>
+<a href="#SYM">
+<text x="0" y="0" class="key tap layer-activator">SYM</text>
+</a></g>
 <g transform="translate(602, 448)" class="key keypos-85">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
 <text x="0" y="0" class="key tap">0</text>
@@ -2100,14 +2102,15 @@ path.combo { stroke: #7f7f7f; }
 <tspan x="0" dy="-0.6em">PG</tspan><tspan x="0" dy="1.2em">UP</tspan>
 </text>
 </g>
-<g transform="translate(266, 448)" class="key trans keypos-80">
-<rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g transform="translate(322, 448)" class="key keypos-81">
+<g transform="translate(266, 448)" class="key keypos-80">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
 <use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-esc"/>
 </g>
+<g transform="translate(322, 448)" class="key held alternate keypos-81">
+<rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key held alternate"/>
+<a href="#NUM">
+<text x="0" y="0" class="key held alternate tap layer-activator">NUM</text>
+</a></g>
 <g transform="translate(378, 476)" class="key keypos-82">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">END</text>

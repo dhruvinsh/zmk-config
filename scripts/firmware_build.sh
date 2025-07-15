@@ -68,6 +68,20 @@ function build_lynx_right {
   cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
 }
 
+# Function to build selene left
+function build_selene_left {
+  echo -e "${RED}---> Building selene left side..${NC}"
+  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_left.uf2
+}
+
+# Function to build selene right
+function build_selene_right {
+  echo -e "${RED}---> Building selene right side..${NC}"
+  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_right.uf2
+}
+
 # Function to build helios
 function build_helios {
   echo -e "${RED}---> Building helios..${NC}"
@@ -121,6 +135,7 @@ for arg in "$@"; do
     # build_lynx_xiao_dongle
     build_lynx_left
     build_lynx_right
+    build_nn_reset
     ;;
   # "lynx_dongle")
   #   build_lynx_dongle
@@ -133,6 +148,17 @@ for arg in "$@"; do
     ;;
   "lynx_right")
     build_lynx_right
+    ;;
+  "selene")
+    build_selene_left
+    build_selene_right
+    build_xiao_reset
+    ;;
+  "selene_left")
+    build_selene_left
+    ;;
+  "selene_right")
+    build_selene_right
     ;;
   "helios")
     build_helios
@@ -152,6 +178,8 @@ for arg in "$@"; do
     build_lynx_xiao_dongle
     build_lynx_left
     build_lynx_right
+    build_selene_left
+    build_selene_right
     build_helios
     build_celeste
     build_nn_reset

@@ -1,23 +1,6 @@
-layout: {zmk_keyboard: celeste}
+layout: {zmk_keyboard: selene}
 layers:
   DEF:
-  - QWE
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - Q
   - W
   - F
@@ -28,11 +11,6 @@ layers:
   - U
   - Y
   - ''''
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
@@ -43,52 +21,25 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - Z
   - X
   - C
   - D
   - V
-  - ''
   - K
   - H
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
   - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - '&key_repeat'
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   QWE:
-  - {t: QWE, type: held}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -99,11 +50,6 @@ layers:
   - I
   - O
   - P
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -114,52 +60,25 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - Z
   - X
   - C
   - V
   - B
-  - ''
   - M
   - N
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
   - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - '&key_repeat'
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   NAV:
-  - {t: QWE, type: held alternate}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -170,11 +89,6 @@ layers:
   - {t: UP, h: Ctl+HOME}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: DEL, h: Ctl+DEL}
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
   - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
   - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
@@ -185,52 +99,25 @@ layers:
   - {t: DOWN, h: Ctl+END}
   - RIGHT
   - '`'
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ''
   - PG DN
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
   - $$mdi:cancel$$
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   NUM:
-  - {t: QWE, type: held alternate}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - FUN
@@ -241,11 +128,6 @@ layers:
   - '8'
   - '9'
   - '='
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -256,52 +138,25 @@ layers:
   - '5'
   - '6'
   - ;
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ''
   - '-'
   - '1'
   - '2'
   - '3'
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - SYM
   - '0'
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   SYM:
-  - {t: QWE, type: held alternate}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - '!'
   - '@'
   - '#'
@@ -312,11 +167,6 @@ layers:
   - '*'
   - (
   - )
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: '`', h: '$$mdi:apple-keyboard-command$$'}
   - {t: (, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
@@ -327,52 +177,25 @@ layers:
   - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ), h: '$$mdi:apple-keyboard-option$$'}
   - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - $$mdi:alpha-w-box$$
   - )
   - '}'
   - ']'
   - '>'
-  - ''
   - _
   - '-'
   - ''
   - ''
   - ''
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - $$mdi:keyboard-esc$$
   - {t: NUM, type: held alternate}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   FUN:
-  - {t: QWE, type: held}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -383,11 +206,6 @@ layers:
   - F8
   - F9
   - F13
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -398,67 +216,35 @@ layers:
   - F5
   - F6
   - F12
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ''
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
   - F11
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - F10
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
   SYS:
-  - {t: QWE, type: held}
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - $$mdi:backspace$$
-  - MUTE
-  - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '['
-  - ']'
-  - \
-  - DEL
-  - CAPS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -469,50 +255,40 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ''''
-  - $$mdi:keyboard-return$$
-  - HOME
-  - $$mdi:apple-keyboard-shift$$
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: QWE, h: toggle}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
-  - UP
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - Q
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
-  - LEFT
-  - DOWN
-  - RIGHT
+  - Q
 combos:
-- p: [23, 24]
+- p: [6, 7]
   k: {t: '$$mdi:backspace$$', s: DEL}
   l: [DEF, QWE, SYM, NAV, NUM]
-- p: [38, 39]
+- p: [16, 17]
   k: {t: (, s: '['}
   l: [DEF, QWE, SYM]
-- p: [40, 41]
+- p: [18, 19]
   k: '|'
   l: [DEF, QWE, SYM]
-- p: [39, 40]
+- p: [17, 18]
   k: {t: ), s: ']'}
   l: [DEF, QWE, SYM]
-- p: [24, 25]
+- p: [7, 8]
   k: \
   l: [DEF, QWE, SYM, NAV, NUM]
-- p: [18, 19]
+- p: [1, 2]
   k: $$mdi:keyboard-tab$$
   l: [DEF, QWE, SYM, NAV, NUM]

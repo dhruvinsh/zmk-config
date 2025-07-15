@@ -346,7 +346,7 @@ layers:
   - {type: held}
   - END
   - PG DN
-  - ''
+  - SYM
   - '0'
   SYM:
   - $$mdi:keyboard-esc$$
@@ -429,8 +429,8 @@ layers:
   - RCTL
   - HOME
   - PG UP
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-esc$$
+  - {t: NUM, type: held alternate}
   - END
   - PG DN
   - {type: held}

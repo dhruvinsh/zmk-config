@@ -12,6 +12,14 @@ include:
     shield: helios
     snippet: studio-rpc-usb-uart
 
+  # Selne aka Totem
+  - board: seeeduino_xiao_ble
+    shield: selene_left
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: selene_right
+    snippet: studio-rpc-usb-uart
+
   # Celeste aka Keychron Q8
   - board: celeste
 
