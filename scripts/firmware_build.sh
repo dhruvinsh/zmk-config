@@ -71,14 +71,14 @@ function build_lynx_right {
 # Function to build selene left
 function build_selene_left {
   echo -e "${RED}---> Building selene left side..${NC}"
-  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_left.uf2
 }
 
 # Function to build selene right
 function build_selene_right {
   echo -e "${RED}---> Building selene right side..${NC}"
-  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_right.uf2
 }
 

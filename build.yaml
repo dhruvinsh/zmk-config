@@ -14,10 +14,10 @@ include:
 
   # Selne aka Totem
   - board: seeeduino_xiao_ble
-    shield: selene_left
+    shield: selene_left rgbled_adapter
     snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
-    shield: selene_right
+    shield: selene_right rgbled_adapter
     snippet: studio-rpc-usb-uart
 
   # Celeste aka Keychron Q8
