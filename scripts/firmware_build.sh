@@ -68,6 +68,13 @@ function build_lynx_right {
   cp build/lynx_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/lynx_right.uf2
 }
 
+# Function to build selene dongle
+function build_selene_dongle {
+  echo -e "${RED}---> Building selene dongle side..${NC}"
+  west build -p -d build/selene_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_dongle prospector_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/selene_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_dongle.uf2
+}
+
 # Function to build selene left
 function build_selene_left {
   echo -e "${RED}---> Building selene left side..${NC}"
@@ -120,6 +127,9 @@ if [ $# -eq 0 ]; then
   build_lynx_xiao_dongle
   build_lynx_left
   build_lynx_right
+  build_selene_dongle
+  build_selene_left
+  build_selene_right
   build_helios
   build_celeste
   build_nn_reset
@@ -150,9 +160,13 @@ for arg in "$@"; do
     build_lynx_right
     ;;
   "selene")
+    build_selene_dongle
     build_selene_left
     build_selene_right
     build_xiao_reset
+    ;;
+  "selene_dongle")
+    build_selene_dongle
     ;;
   "selene_left")
     build_selene_left
