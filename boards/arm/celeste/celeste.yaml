@@ -1,7 +1,0 @@
-identifier: keychron_q8
-name: Keychron Q8
-type: mcu
-arch: arm
-toolchain:
-  - zephyr
-  - gnuarmemb

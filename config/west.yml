@@ -19,9 +19,6 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
-    - name: zmk-ckled2001
-      remote: dhruvinsh
-      revision: main
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main
