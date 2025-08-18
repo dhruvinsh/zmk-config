@@ -10,6 +10,17 @@ include:
     shield: selene_right rgbled_adapter
     snippet: studio-rpc-usb-uart
 
+  # Themis aka Standalon Totem
+  - board: seeeduino_xiao_ble
+    shield: selene_left rgbled_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
+    artifact-name: themis_left
+  - board: seeeduino_xiao_ble
+    shield: selene_right rgbled_adapter
+    snippet: studio-rpc-usb-uart
+    artifact-name: themis_right
+
   # firmware reset
   - board: seeeduino_xiao_ble
     shield: settings_reset
