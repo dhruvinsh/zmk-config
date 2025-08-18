@@ -46,15 +46,29 @@ function build_selene_dongle {
 # Function to build selene left
 function build_selene_left {
   echo -e "${RED}---> Building selene left side..${NC}"
-  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_left.uf2
+}
+
+# Function to build standalon selene left
+function build_standalon_selene_left {
+  echo -e "${RED}---> Building standalon selene left side..${NC}"
+  west build -p -d build/standalon_selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
+  cp build/standalon_selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/standalon_selene_left.uf2
 }
 
 # Function to build selene right
 function build_selene_right {
   echo -e "${RED}---> Building selene right side..${NC}"
-  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_right.uf2
+}
+
+# Function to build standalon selene right
+function build_standalon_selene_right {
+  echo -e "${RED}---> Building standalon selene right side..${NC}"
+  west build -p -d build/standalon_selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/standalon_selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/standalon_selene_right.uf2
 }
 
 # Function to build reset firmware
@@ -73,6 +87,8 @@ if [ $# -eq 0 ]; then
   build_selene_dongle
   build_selene_left
   build_selene_right
+  build_standalon_selene_left
+  build_standalon_selene_right
   build_xiao_reset
   exit 0
 fi
@@ -84,6 +100,8 @@ for arg in "$@"; do
     build_selene_dongle
     build_selene_left
     build_selene_right
+    build_standalon_selene_left
+    build_standalon_selene_right
     build_xiao_reset
     ;;
   "selene_dongle")
@@ -94,6 +112,12 @@ for arg in "$@"; do
     ;;
   "selene_right")
     build_selene_right
+    ;;
+  "standalon_selene_left")
+    build_standalon_selene_left
+    ;;
+  "standalon_selene_right")
+    build_standalon_selene_right
     ;;
   "xiao_reset")
     build_xiao_reset
