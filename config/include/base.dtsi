@@ -36,11 +36,7 @@
   #define THUMBS LH1 LH0 RH0 RH1 // thumbs on 34 keys
 #endif
 
-#ifdef CONFIG_WIRELESS
-    #define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-#else
-    #define BT_PROFILES ___ ___ ___ ___ ___
-#endif
+#define BT_PROFILES &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 /////////////////////////////////////////
 //]]]
 
@@ -227,15 +223,4 @@
         };
     };
 };
-/////////////////////////////////////////
-
-
-
-//[[[
-/////////////////////////////////////////
-// Encoder related config
-/////////////////////////////////////////
-#ifdef CONFIG_ENCODER
-  #include "encoder.dtsi"
-#endif
 /////////////////////////////////////////

@@ -27,9 +27,6 @@
              ╰─────────┴─────────╯
 */
 
-// Some config for keyboard
-#define CONFIG_WIRELESS
-
 /* key positions */
 #define LT0  4  // left-top row
 #define LT1  3
