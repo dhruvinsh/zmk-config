@@ -40,3 +40,6 @@ MAKE_MORPH(pause_morph,       &kp PAUSE_BREAK, &kp C_VOL_UP,       SFT)
 
 // tap: backspace | shift + tap: delete
 MAKE_MORPH(bspc_morph,        &kp BSPC,        &kp DEL,            SFT)
+
+// tap: caps_word | shift + tap: caps lock
+MAKE_MORPH(cap_morph,         &caps_word,      &kp CAPS,           SFT)
