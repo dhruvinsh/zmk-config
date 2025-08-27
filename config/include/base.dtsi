@@ -181,11 +181,11 @@
             display-name = "SYM";
             bindings = <
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
-            X_LT     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    X_MT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR     X_RT
+            X_LT     &kp GRAVE  &kp GT     &kp LT     &kp MINUS   &kp PIPE    X_MT     &kp CARET  &kp LBRC   &kp RBRC   &kp DOLLAR &kp RIGHT    X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     HRML(GRAVE,  LPAR,     LBRC,       LBKT,       LT)       X_MM     HRMR(GT,     RBKT,     RBRC,       RPAR,     TILDE)      X_RM
+            X_LM     HRML(EXCL,  ASTRK,     FSLH,       EQUAL,    AMPS)       X_MM     HRMR(HASH,   LPAR,     RPAR,       SEMI,     DQT)        X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LB    &caps_word  &kp RPAR   &kp RBRC   &kp RBKT   &kp GT       X_MB     &kp UNDER  &kp MINUS  XXX        XXX        XXX          X_RB
+            X_LB     &kp TILDE  &kp PLUS  &kp RBKT   &kp LBKT    &kp PRCNT    X_MB     &kp AT     &kp COLON  &kp COMMA  &kp DOT    &kp SQT      X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
             X_LH                                      &kp ESC    &mo NUM      X_MH     ___        ___                                           X_RH
         //╰──────╯                                  ╰──────────┴──────────╯ ╰──────╯ ╰──────────┴──────────╯                                  ╰──────╯
