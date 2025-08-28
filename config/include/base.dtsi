@@ -181,7 +181,7 @@
             display-name = "SYM";
             bindings = <
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
-            X_LT     &kp GRAVE  &kp GT     &kp LT     &kp MINUS   &kp PIPE    X_MT     &kp CARET  &kp LBRC   &kp RBRC   &kp DOLLAR &kp RIGHT    X_RT
+            X_LT     &kp GRAVE  &kp LT     &kp GT     &kp MINUS   &kp PIPE    X_MT     &kp CARET  &kp LBRC   &kp RBRC   &kp DOLLAR &kp RIGHT    X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
             X_LM     HRML(EXCL,  ASTRK,     FSLH,       EQUAL,    AMPS)       X_MM     HRMR(HASH,   LPAR,     RPAR,       SEMI,     DQT)        X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
