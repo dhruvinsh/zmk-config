@@ -62,17 +62,11 @@
 //      Hyper       keys
 #define LEFT_HYPER  LS(LC(LA(LGUI)))
 #define LHYPER      LEFT_HYPER
-#define LMEH        LS(LC(LALT))
 #define RIGHT_HYPER RS(RC(RA(RGUI)))
 #define RHYPER      RIGHT_HYPER
-#define RMEH        RS(RC(RALT))
 //      aliases
 #define BTLOADER    &bootloader
 #define CANCEL      &kp K_CANCEL
-#define NAV_BSPC    &mt LC(BSPC) BSPC
-#define NAV_DEL     &mt LC(DEL)  DEL
-#define NAV_DOWN    &mt LC(END)  DOWN
-#define NAV_UP      &mt LC(HOME) UP
 #define STUDIO      &studio_unlock
 
 //      layer       aliases
@@ -151,11 +145,11 @@
             display-name = "NAV";
             bindings = <
         //╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────╮
-            X_LT     ___        ___        ___        &swapper   ___          X_MT     &kp PG_UP  NAV_BSPC   NAV_UP     ___        NAV_DEL      X_RT
+            X_LT     ___        ___        ___        &swapper   ___          X_MT     &kp PG_UP  &kp HOME   &kp UP     &kp END    &cap_morph   X_RT
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LM     &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  ___          X_MM     &cap_morph &kp LEFT   NAV_DOWN   &kp RIGHT  &kp GRAVE    X_RM
+            X_LM     &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  ___          X_MM     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL      X_RM
         //├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────┤
-            X_LB     ___        ___        ___        ___        ___          X_MB     &kp PG_DN  &kp END    ___        ___        ___          X_RB
+            X_LB     ___        ___        ___        ___        ___          X_MB     ___        ___        ___        ___        ___          X_RB
         //├──────┤ ╰──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────┤ ├──────────┼──────────┼──────────┴──────────┴──────────╯ ├──────┤
             X_LH                                      ___        ___          X_MH     &kp TAB    CANCEL                                        X_RH
         //╰──────╯                                  ╰──────────┴──────────╯ ╰──────╯ ╰──────────┴──────────╯                                  ╰──────╯
