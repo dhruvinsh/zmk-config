@@ -72,7 +72,7 @@
 
 #define X_LB &kp Q
 #define X_RB &kp Q
-#define X_LH &kp Q
+#define X_LH &mo FUN
 #define X_RH &kp Q
 
 #include "include/base.dtsi"
