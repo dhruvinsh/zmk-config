@@ -1,7 +1,7 @@
 include:
   # Selne aka Totem
   - board: seeeduino_xiao_ble
-    shield: selene_dongle prospector_adapter
+    shield: selene_dongle dongle_screen
     snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: selene_left rgbled_adapter
@@ -21,6 +21,16 @@ include:
     snippet: studio-rpc-usb-uart
     artifact-name: themis_right
 
+  # calypso aka skeletyl
+  - board: nice_nano_v2
+    shield: calypso_left
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2
+    shield: calypso_right
+    snippet: studio-rpc-usb-uart
+
   # firmware reset
   - board: seeeduino_xiao_ble
+    shield: settings_reset
+  - board: nice_nano_v2
     shield: settings_reset

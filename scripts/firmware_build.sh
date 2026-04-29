@@ -14,6 +14,9 @@ function usage {
   echo "  selene_dongle    Build only Selene dongle side"
   echo "  selene_left      Build only Selene left side"
   echo "  selene_right     Build only Selene right side"
+  echo "  calypso          Build Calypso keyboard firmware (moved to legacy branch)"
+  echo "  calypso_left     Build Calypso left side firmware (moved to legacy branch)"
+  echo "  calypso_right    Build Calypso right side firmware (moved to legacy branch)"
   echo "  xiao_reset       Build Seeeduino XIAO BLE reset firmware"
   echo "  -h, --help       Display this help message"
   echo
@@ -39,36 +42,50 @@ function clean_builds {
 # Function to build selene dongle
 function build_selene_dongle {
   echo -e "${RED}---> Building selene dongle side..${NC}"
-  west build -p -d build/selene_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_dongle prospector_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_dongle -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_dongle dongle_screen" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_dongle.uf2
 }
 
 # Function to build selene left
 function build_selene_left {
   echo -e "${RED}---> Building selene left side..${NC}"
-  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_left.uf2
 }
 
 # Function to build standalon selene left
 function build_standalon_selene_left {
   echo -e "${RED}---> Building standalon selene left side..${NC}"
-  west build -p -d build/standalon_selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
+  west build -p -d build/standalon_selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
   cp build/standalon_selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/standalon_selene_left.uf2
 }
 
 # Function to build selene right
 function build_selene_right {
   echo -e "${RED}---> Building selene right side..${NC}"
-  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_right.uf2
 }
 
 # Function to build standalon selene right
 function build_standalon_selene_right {
   echo -e "${RED}---> Building standalon selene right side..${NC}"
-  west build -p -d build/standalon_selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/prospector-zmk-module" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  west build -p -d build/standalon_selene_right -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_right rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
   cp build/standalon_selene_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/standalon_selene_right.uf2
+}
+
+# Function to build calypso left
+function build_calypso_left {
+  echo -e "${RED}---> Building calypso left side..${NC}"
+  west build -p -d build/calypso_left -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_left" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/calypso_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_left.uf2
+}
+
+# Function to build calypso right
+function build_calypso_right {
+  echo -e "${RED}---> Building calypso right side..${NC}"
+  west build -p -d build/calypso_right -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="calypso_right" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/calypso_right/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/calypso_right.uf2
 }
 
 # Function to build reset firmware
@@ -76,6 +93,13 @@ function build_xiao_reset {
   echo -e "${RED}---> Building xiao ble reset firmware..${NC}"
   west build -p -d build/xiao_reset -b seeeduino_xiao_ble -- -DSHIELD="settings_reset"
   cp build/xiao_reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/xiao_reset.uf2
+}
+
+# Function to build reset firmware
+function build_nice_nano_v2_reset {
+  echo -e "${RED}---> Building nice_nano_v2 reset firmware..${NC}"
+  west build -p -d build/nice_reset -b nice_nano_v2 -- -DSHIELD="settings_reset"
+  cp build/nice_reset/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/nice_nano_v2_reset.uf2
 }
 
 # Create builds directory if it doesn't exist
@@ -89,6 +113,8 @@ if [ $# -eq 0 ]; then
   build_selene_right
   build_standalon_selene_left
   build_standalon_selene_right
+  calypso_left
+  calypso_right
   build_xiao_reset
   exit 0
 fi
@@ -119,8 +145,22 @@ for arg in "$@"; do
   "standalon_selene_right")
     build_standalon_selene_right
     ;;
+  "calypso")
+    build_calypso_left
+    build_calypso_right
+    build_nice_nano_v2_reset
+    ;;
+  "calypso_left")
+    build_calypso_left
+    ;;
+  "calypso_right")
+    build_calypso_right
+    ;;
   "xiao_reset")
     build_xiao_reset
+    ;;
+  "nice_nano_v2")
+    build_nice_nano_v2_reset
     ;;
   *)
     echo "Unknown keyboard or missing Selene config: $arg"
