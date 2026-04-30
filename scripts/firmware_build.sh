@@ -56,7 +56,7 @@ function build_selene_left {
 # Function to build standalon selene left
 function build_standalon_selene_left {
   echo -e "${RED}---> Building standalon selene left side..${NC}"
-  west build -p -d build/standalon_selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
+  west build -p -d build/standalon_selene_left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD="selene_left rgbled_adapter" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=\"themis\" -DCONFIG_ZMK_STUDIO=y
   cp build/standalon_selene_left/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/standalon_selene_left.uf2
 }
 
