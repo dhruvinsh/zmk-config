@@ -26,11 +26,6 @@ MAKE_MORPH(lpar_inner_morph,  &kp LBKT,        &kp LBRC,           CTL)
 MAKE_MORPH(rpar_morph,        &kp RPAR,        &rpar_inner_morph,  SFT)
 MAKE_MORPH(rpar_inner_morph,  &kp RBKT,        &kp RBRC,           CTL)
 
-// tap: escap | shift + tap: ~
-MAKE_MORPH(escape_morph,      &lt NAV ESC,     &kp TILDE,          SFT)
-// tap: space | shift + tap: `
-MAKE_MORPH(space_morph,       &lt NUM SPACE,   &kp GRAVE,          SFT)
-
 // tap: print_screen | shift + tap: mute
 // tap: scroll lock  | shift + tap: vol down
 // tap: pause        | shift + tap: vol up
