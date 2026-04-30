@@ -34,8 +34,8 @@ layers:
   - /
   - Q
   - FUN
-  - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
-  - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-return$$', h: NUM}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - '&key_repeat'
   - Q
@@ -73,8 +73,8 @@ layers:
   - /
   - Q
   - FUN
-  - {t: '$$mdi:keyboard-esc$$', h: NAV, s: '~'}
-  - {t: '$$mdi:keyboard-space$$', h: NUM, s: '`'}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-return$$', h: NUM}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - '&key_repeat'
   - Q
@@ -190,7 +190,7 @@ layers:
   - ''''
   - Q
   - FUN
-  - $$mdi:keyboard-esc$$
+  - SPC
   - {t: NUM, type: held alternate}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -289,6 +289,9 @@ combos:
 - p: [7, 8]
   k: \
   l: [DEF, QWE, SYM, NAV, NUM]
-- p: [1, 2]
+- p: [11, 12]
   k: $$mdi:keyboard-tab$$
+  l: [DEF, QWE, SYM, NAV, NUM]
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
   l: [DEF, QWE, SYM, NAV, NUM]
