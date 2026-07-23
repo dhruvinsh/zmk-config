@@ -69,6 +69,6 @@
 #define RH2 35
 
 #define X_LH &none
-#define X_RH &none
+#define X_RH SMART_SHIFT
 
 #include "include/base.dtsi"
