@@ -1,0 +1,55 @@
+// vim: set ts=4 sw=4 ft=devicetree:
+
+/////////////////////////////////////////////////////////////////////////////
+// balanced-layer-tap.dtsi -- balanced-flavor layer-tap (&tlt)
+/////////////////////////////////////////////////////////////////////////////
+//
+// A balanced-flavor replacement for ZMK's built-in `&lt`. ZMK's built-in
+// &lt default flavor is "tap-preferred", which buffers any interrupting key
+// until the tapping-term timer expires -- i.e. it is "timerful". "balanced"
+// instead resolves the hold as soon as an interrupting key is both pressed
+// AND released within the tapping term, so a real hold engages the layer
+// immediately and a real tap lets the interrupting key through immediately.
+// quick-tap-ms additionally lets a double-tap-and-hold auto-repeat the tap
+// keycode instead of re-triggering the layer hold.
+//
+// This is a new named behavior (&tlt) rather than a label-override of `&lt`
+// itself: label-overrides (`&lt { ... };`) are only valid at the devicetree
+// top level, which is impossible in the Glove80 injection context (see
+// ROOT-NODE CONTRACT below), and a named behavior also avoids globally
+// mutating `&lt` for anything else that might rely on its stock
+// tap-preferred behavior.
+//
+// Standalone: this file has no dependency on any other module in this repo
+// (in particular, it does not require timerless.dtsi) -- it works on its own.
+//
+// ROOT-NODE CONTRACT: every construct below is a bare `behaviors { ... };`
+// block (or a preprocessor directive) -- there is no `/ { ... };` wrapper
+// anywhere in this file. That makes the whole file valid textually INSIDE a
+// devicetree root node, which is the only context this file is ever used in.
+// Two supported contexts:
+//   1. Glove80 web editor "Custom Defined Behaviors" box: this box injects
+//      whatever you paste directly INSIDE the root node -- paste this
+//      file's content as-is, no wrapper needed.
+//   2. Normal ZMK config repo: #include it wrapped in the root node yourself:
+//        / {
+//        #include "balanced-layer-tap.dtsi"
+//        };
+//
+// USAGE: bind layer-tap keys as `&tlt <layer> <keycode>`.
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef QUICK_TAP_MS
+#define QUICK_TAP_MS 175
+#endif
+
+behaviors {
+    tlt: tlt {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <QUICK_TAP_MS>;
+        bindings = <&mo>, <&kp>;
+    };
+};

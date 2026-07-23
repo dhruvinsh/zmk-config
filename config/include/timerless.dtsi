@@ -1,0 +1,86 @@
+// vim: set ts=4 sw=4 ft=devicetree:
+
+/////////////////////////////////////////////////////////////////////////////
+// timerless.dtsi -- urob-style timerless home row mods
+/////////////////////////////////////////////////////////////////////////////
+//
+// A self-contained port of urob's "timerless"/balanced home row mod recipe
+// (https://github.com/urob/zmk-config) built on ZMK's mainline "balanced"
+// hold-tap flavor. No zmk-helpers, no other file in this repo is required.
+//
+// ROOT-NODE CONTRACT: every construct below is a bare `behaviors { ... };`
+// block (or a preprocessor directive) -- there is no `/ { ... };` wrapper
+// anywhere in this file. That makes the whole file valid textually INSIDE a
+// devicetree root node, which is the only context this file is ever used in.
+// Two supported contexts:
+//   1. Glove80 web editor "Custom Defined Behaviors" box: this box injects
+//      whatever you paste directly INSIDE the root node, so paste your own
+//      #define lines for KEYS_L / KEYS_R / THUMBS (using Glove80's own
+//      key-position numbers, taken from the layout editor) followed by this
+//      file's content -- no wrapper needed, e.g.:
+//        #define KEYS_L 0 1 2 3 4 5 6 7 8 9 10 ...
+//        #define KEYS_R 40 41 42 43 ...
+//        #define THUMBS 76 77 78 79
+//        <paste the rest of this file here>
+//   2. Normal ZMK config repo: #include it wrapped in the root node yourself:
+//        / {
+//        #include "timerless.dtsi"
+//        };
+//
+// CONTRACT: before #include-ing this file, the includer MUST #define:
+//   KEYS_L  -- key-position indices under the left hand
+//   KEYS_R  -- key-position indices under the right hand
+//   THUMBS  -- key-position indices of the thumb keys
+// These three lists feed hold-trigger-key-positions on the hml/hmr hold-taps
+// below (hml is triggered by the opposite hand + thumbs, and vice versa).
+//
+// TIMING: TAPPING_TERM_MS / QUICK_TAP_MS / REQUIRE_PRIOR_IDLE_MS can be
+// tuned by #define-ing them (to a different value) before this file is
+// included -- the #ifndef guards below make the first definition win.
+//
+// USAGE: home row mods as `&hml <mod> <keycode>` / `&hmr <mod> <keycode>`.
+//
+// COMPANION MODULES (both optional, both independently paste-able):
+//   - balanced-layer-tap.dtsi: a balanced-flavor `&tlt` layer-tap. The stock
+//     `&lt` defaults to the "tap-preferred" flavor, which buffers any
+//     interrupting key until the tapping-term timer expires -- that defeats
+//     the timerless feel this module gives the home row mods, so a
+//     balanced-flavor layer-tap is needed for thumb-key layer taps too.
+//   - smart-shift.dtsi: a dedicated shift thumb key. REQUIRE_PRIOR_IDLE_MS
+//     defined by THIS module makes HRM-shift unreliable for capitalizing
+//     mid-typing-flow (a shift held down while the hands are still "hot"
+//     from recent typing resolves as a tap, i.e. lowercase), so a dedicated
+//     shift is strongly recommended alongside these home row mods.
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef TAPPING_TERM_MS
+#define TAPPING_TERM_MS 280
+#endif
+#ifndef QUICK_TAP_MS
+#define QUICK_TAP_MS 175
+#endif
+#ifndef REQUIRE_PRIOR_IDLE_MS
+#define REQUIRE_PRIOR_IDLE_MS 150
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// Home row mods
+/////////////////////////////////////////////////////////////////////////////
+// hold-trigger-on-release is mainline behavior in ZMK v0.3 -- no patch needed.
+#define MAKE_HRM(name, trigger_keys) \
+    behaviors { \
+        name: name { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            flavor = "balanced"; \
+            tapping-term-ms = <TAPPING_TERM_MS>; \
+            quick-tap-ms = <QUICK_TAP_MS>; \
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
+            bindings = <&kp>, <&kp>; \
+            hold-trigger-key-positions = <trigger_keys>; \
+            hold-trigger-on-release; \
+        }; \
+    };
+
+MAKE_HRM(hml, KEYS_R THUMBS)
+MAKE_HRM(hmr, KEYS_L THUMBS)

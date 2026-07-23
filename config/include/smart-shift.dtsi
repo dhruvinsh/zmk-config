@@ -1,0 +1,83 @@
+// vim: set ts=4 sw=4 ft=devicetree:
+
+/////////////////////////////////////////////////////////////////////////////
+// smart-shift.dtsi -- dedicated shift thumb key (simplified urob magic-shift)
+/////////////////////////////////////////////////////////////////////////////
+//
+// A dedicated shift thumb key, a simplified port of urob's magic-shift
+// (https://github.com/urob/zmk-config):
+//   tap         -> sticky shift: capitalizes only the next key pressed
+//   shift + tap -> caps-word: capitalizes until the next word break
+//   hold        -> regular (momentary) shift
+//
+// WHY THIS EXISTS: it's a companion to timerless.dtsi's home row mods, not a
+// replacement for a shift HRM. timerless.dtsi's require-prior-idle-ms
+// instantly resolves any HRM pressed mid-typing-flow as a tap (that's the
+// point -- it's what makes fast typing feel timerless), but it also means a
+// shift HRM held down to capitalize a letter in the middle of a fast word
+// will misfire as a lowercase tap. urob's own readme calls a dedicated shift
+// key a prerequisite for exactly this reason.
+//
+// Deliberately NO require-prior-idle-ms here: unlike the home row mods, this
+// key is meant to be pressed mid-typing-flow (e.g. mid-word, to capitalize
+// the next letter) by design, so it must not be gated behind an idle period.
+//
+// sticky_shift is a private node rather than the stock `&sk`: this repo
+// overrides `&sk` globally (see behaviors.dtsi) and the Glove80 firmware has
+// its own `&sk` defaults, either of which would silently change this key's
+// behavior depending on paste target. A private node pins quick-release /
+// ignore-modifiers / a 1-second timeout regardless of what else is loaded.
+//
+// ROOT-NODE CONTRACT: every construct below is a bare `behaviors { ... };`
+// block (or a preprocessor directive) -- there is no `/ { ... };` wrapper
+// anywhere in this file. That makes the whole file valid textually INSIDE a
+// devicetree root node, which is the only context this file is ever used in.
+// Two supported contexts:
+//   1. Glove80 web editor "Custom Defined Behaviors" box: this box injects
+//      whatever you paste directly INSIDE the root node -- paste this
+//      file's content as-is, no wrapper needed.
+//   2. Normal ZMK config repo: #include it wrapped in the root node yourself:
+//        / {
+//        #include "smart-shift.dtsi"
+//        };
+//
+// Standalone: this file has no dependency on any other module in this repo.
+//
+// USAGE: `&smart_shift LSHFT 0` (in the Glove80 editor's per-key custom
+// binding field, type the binding out -- the SMART_SHIFT define may not be
+// in scope there).
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef QUICK_TAP_MS
+#define QUICK_TAP_MS 175
+#endif
+
+behaviors {
+    sticky_shift: sticky_shift {
+        compatible = "zmk,behavior-sticky-key";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        ignore-modifiers;
+    };
+
+    smart_shift_tap: smart_shift_tap {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&sticky_shift LSHFT>, <&caps_word>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    smart_shift: smart_shift {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <QUICK_TAP_MS>;
+        bindings = <&kp>, <&smart_shift_tap>;
+    };
+};
+
+// convenience alias: use SMART_SHIFT directly as a keymap binding
+#define SMART_SHIFT &smart_shift LSHFT 0
