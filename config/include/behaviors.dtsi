@@ -3,48 +3,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// TODO: once get used to, shorter the time.
-// specific config for the home row tap, I am still slow
-#define QUICK_TAP_MS          200
-#define REQUIRE_PRIOR_IDLE_MS 150
-#define TAPPING_TERM_MS       250
-
-// make home row mode based on hold-tap
-// TODO: hold-trigger-on-release require Patch,
-// https://github.com/celejewski/zmk/commit/d7a8482712d87963e59b74238667346221199293
-#define MAKE_HRM(name, trigger_keys) \
-    / { \
-        behaviors { \
-            name: name { \
-                compatible = "zmk,behavior-hold-tap"; \
-                #binding-cells = <2>; \
-                flavor = "balanced"; \
-                tapping-term-ms = <TAPPING_TERM_MS>; \
-                quick-tap-ms = <QUICK_TAP_MS>; \
-                require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-                bindings = <&kp>, <&kp>; \
-                hold-trigger-key-positions = <trigger_keys>; \
-                hold-trigger-on-release; \
-            }; \
-        }; \
-    };
-
-MAKE_HRM(hml, KEYS_R THUMBS)
-MAKE_HRM(hmr, KEYS_L THUMBS)
-
-&lt {
-    tapping-term-ms = <TAPPING_TERM_MS>;
-};
-
 &sk {
     release-after-ms = <1500>;
     quick-release;
-};
-
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 // Alt+Tab swapper
