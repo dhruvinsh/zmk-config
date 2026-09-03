@@ -46,6 +46,12 @@ function build_selene_dongle {
   cp build/selene_dongle/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_dongle.uf2
 }
 
+function build_selene_dongle_nice {
+  echo -e "${RED}---> Building selene dongle (nice) side..${NC}"
+  west build -p -d build/selene_dongle_nice -b nice_nano_v2 -S studio-rpc-usb-uart -- -DSHIELD="selene_dongle dongle_screen" -DZMK_EXTRA_MODULES="$WORKSPACE_DIR/../zmk-config;$WORKSPACE_DIR/../zmk-modules/zmk-tri-state;$WORKSPACE_DIR/../zmk-modules/zmk-num-word;$WORKSPACE_DIR/../zmk-modules/zmk-rgbled-widget;$WORKSPACE_DIR/../zmk-modules/zmk-dongle-screen" -DZMK_CONFIG="$WORKSPACE_DIR"/../zmk-config/config
+  cp build/selene_dongle_nice/zephyr/zmk.uf2 "$WORKSPACE_DIR"/../zmk-config/builds/selene_dongle_nice.uf2
+}
+
 # Function to build selene left
 function build_selene_left {
   echo -e "${RED}---> Building selene left side..${NC}"
@@ -124,14 +130,17 @@ for arg in "$@"; do
   case "$arg" in
   "selene")
     build_selene_dongle
+    build_selene_dongle_nice
     build_selene_left
     build_selene_right
     build_standalon_selene_left
     build_standalon_selene_right
     build_xiao_reset
+    build_nice_nano_v2_reset
     ;;
   "selene_dongle")
     build_selene_dongle
+    build_selene_dongle_nice
     ;;
   "selene_left")
     build_selene_left
